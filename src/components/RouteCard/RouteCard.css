@@ -1,0 +1,63 @@
+.route-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-stone-300);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.route-card:hover,
+.route-card:focus-visible {
+  border-color: var(--color-green-600);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.route-card__name {
+  margin: 0 0 0.25rem;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-green-800);
+}
+
+.route-card__desc {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.45;
+}
+
+.route-card__meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+.route-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-stone-200);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.route-card__badge--easy {
+  background: #d4edda;
+  color: #155724;
+}
+
+.route-card__badge--moderate {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.route-card__badge--hard {
+  background: #f8d7da;
+  color: #721c24;
+}

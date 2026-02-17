@@ -1,0 +1,154 @@
+/* ════════════════════════════════════════════
+   Pedra en Sec – Design Tokens & Global Styles
+   ════════════════════════════════════════════ */
+
+/* ── Custom Properties ───────────────── */
+:root {
+  /* Greens (nature) */
+  --color-green-600: #4d8b31;
+  --color-green-700: #3a6b27;
+  --color-green-800: #2d5320;
+  --color-green-900: #1e3a14;
+
+  /* Stone / Earth tones */
+  --color-stone-100: #f5f0eb;
+  --color-stone-200: #e8e0d8;
+  --color-stone-300: #d4c9bd;
+  --color-stone-400: #b8a99a;
+  --color-stone-500: #8b7d6b;
+
+  /* Neutral */
+  --color-white: #ffffff;
+  --color-surface: #faf8f5;
+  --color-bg: #f2ede7;
+  --color-text: #2c2c2c;
+  --color-text-secondary: #5a5a5a;
+
+  /* Typography */
+  --font-heading: 'Georgia', 'Times New Roman', serif;
+  --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* Spacing & Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+}
+
+/* ── Reset & Base ────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+/* ── Focus ring ──────────────────────── */
+:focus-visible {
+  outline: 3px solid var(--color-green-600);
+  outline-offset: 2px;
+}
+
+/* ── Skip-to-content ─────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-green-700);
+  color: var(--color-white);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  z-index: 9999;
+  transition: top 0.15s;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ── Headings ────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.25;
+}
+
+/* ── Links ───────────────────────────── */
+a {
+  color: var(--color-green-700);
+  text-decoration-skip-ink: auto;
+}
+
+a:hover {
+  color: var(--color-green-800);
+}
+
+/* ── Images ──────────────────────────── */
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ── Buttons base ────────────────────── */
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* ── Scrollbar (subtle) ──────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-stone-200);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-stone-400);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-stone-500);
+}
+
+/* ── Leaflet baseline ────────────────── */
+.leaflet-container {
+  font-family: var(--font-body) !important;
+}
+
+/* ── Utility: visually hidden ────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

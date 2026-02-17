@@ -1,0 +1,230 @@
+[
+  {
+    "id": "ruta-pedra-sec-valldemossa",
+    "name": "Ruta de Pedra en Sec – Valldemossa",
+    "shortDescription": "Sendero ancestral entre olivares y bancales de piedra en la Serra de Tramuntana.",
+    "longDescription": "Esta ruta recorre los antiguos caminos empedrados que conectaban Valldemossa con los bancales de cultivo construidos sin argamasa. A lo largo del trayecto se pueden observar muros de contención, casetas de pastor (barraques) y canalizaciones de agua que datan del siglo XVIII. La técnica de pedra en sec fue declarada Patrimonio Inmaterial de la Humanidad por la UNESCO en 2018. El sendero ofrece vistas espectaculares del valle y el mar, y constituye un ejemplo vivo de la relación entre el ser humano y el paisaje mediterráneo.",
+    "difficulty": "moderada",
+    "distanceKm": 8.5,
+    "durationHours": 3.5,
+    "path": [
+      { "lat": 39.7106, "lng": 2.6230 },
+      { "lat": 39.7120, "lng": 2.6260 },
+      { "lat": 39.7135, "lng": 2.6295 },
+      { "lat": 39.7155, "lng": 2.6320 },
+      { "lat": 39.7180, "lng": 2.6350 },
+      { "lat": 39.7200, "lng": 2.6380 },
+      { "lat": 39.7225, "lng": 2.6410 },
+      { "lat": 39.7250, "lng": 2.6440 }
+    ],
+    "pois": [
+      {
+        "id": "poi-valldemossa-1",
+        "name": "Mirador des Lledoners",
+        "position": { "lat": 39.7120, "lng": 2.6260 },
+        "triggerRadius": 50,
+        "narration": "Bienvenido al Mirador des Lledoners. Desde aquí puedes contemplar los bancales de piedra en seco que han dado forma a este paisaje durante siglos. Cada muro fue construido sin mortero, piedra sobre piedra, por generaciones de payeses mallorquines.",
+        "image": "/images/mirador-lledoners.webp"
+      },
+      {
+        "id": "poi-valldemossa-2",
+        "name": "Barraca de Pastor",
+        "position": { "lat": 39.7155, "lng": 2.6320 },
+        "triggerRadius": 40,
+        "narration": "Ante ti se alza una barraca de pastor, una construcción circular de piedra en seco con falsa cúpula. Estas estructuras servían de refugio a los pastores durante las tormentas y las noches de transhumancia. Su técnica constructiva se remonta a la prehistoria.",
+        "image": "/images/barraca-pastor.webp"
+      },
+      {
+        "id": "poi-valldemossa-3",
+        "name": "Font des Poll",
+        "position": { "lat": 39.7225, "lng": 2.6410 },
+        "triggerRadius": 45,
+        "narration": "La Font des Poll es una fuente canalizada con técnicas de pedra en sec. El agua se recoge de la montaña y se conduce a través de canales de piedra hasta este punto, donde los agricultores regaban sus huertos de montaña.",
+        "image": "/images/font-des-poll.webp"
+      }
+    ],
+    "photos": [
+      "/images/valldemossa-ruta-1.webp",
+      "/images/valldemossa-ruta-2.webp",
+      "/images/valldemossa-ruta-3.webp"
+    ],
+    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "color": "#4a7c59"
+  },
+  {
+    "id": "ruta-arta-ses-paisses",
+    "name": "Artà – Ses Païsses",
+    "shortDescription": "Recorrido por el poblado talayótico de Ses Païsses y sus muros ciclópeos.",
+    "longDescription": "La ruta parte del pueblo de Artà y lleva hasta el yacimiento arqueológico de Ses Païsses, uno de los poblados talayóticos mejor conservados de Mallorca. Sus enormes muros de piedra, algunos con bloques de más de dos toneladas, fueron levantados hace más de 3.000 años utilizando la técnica de construcción en seco. El recorrido atraviesa bosque de encinas y permite entender cómo las comunidades prehistóricas de las Baleares dominaban el arte de construir sin argamasa. La visita incluye el talayot central, las habitaciones y la muralla perimetral.",
+    "difficulty": "fácil",
+    "distanceKm": 4.2,
+    "durationHours": 2,
+    "path": [
+      { "lat": 39.6960, "lng": 3.3490 },
+      { "lat": 39.6945, "lng": 3.3510 },
+      { "lat": 39.6930, "lng": 3.3530 },
+      { "lat": 39.6915, "lng": 3.3555 },
+      { "lat": 39.6900, "lng": 3.3575 },
+      { "lat": 39.6885, "lng": 3.3600 }
+    ],
+    "pois": [
+      {
+        "id": "poi-arta-1",
+        "name": "Entrada al Poblado Talayótico",
+        "position": { "lat": 39.6930, "lng": 3.3530 },
+        "triggerRadius": 60,
+        "narration": "Estás entrando en el poblado talayótico de Ses Païsses, habitado entre el 1000 y el 300 antes de Cristo. La imponente puerta de entrada está formada por tres grandes losas de piedra, un ejemplo magistral de construcción megalítica en seco.",
+        "image": "/images/ses-paisses-entrada.webp"
+      },
+      {
+        "id": "poi-arta-2",
+        "name": "Talayot Central",
+        "position": { "lat": 39.6900, "lng": 3.3575 },
+        "triggerRadius": 50,
+        "narration": "El talayot central es una torre de piedra troncocónica que servía como punto de vigilancia y posiblemente como lugar de reunión. Construido sin ningún tipo de mortero, ha resistido más de tres milenios gracias a la perfección del encaje de sus piedras.",
+        "image": "/images/talayot-central.webp"
+      }
+    ],
+    "photos": [
+      "/images/arta-ruta-1.webp",
+      "/images/arta-ruta-2.webp"
+    ],
+    "color": "#8b6914"
+  },
+  {
+    "id": "ruta-deia-cala",
+    "name": "Deià – Camí des Ribassos",
+    "shortDescription": "Descenso por terrazas de piedra desde Deià hasta la cala.",
+    "longDescription": "Este camino tradicional desciende desde el pueblo de Deià hasta la Cala de Deià a través de una sucesión de bancales (ribassos) construidos con la técnica de pedra en sec. Los muros de contención transformaron las empinadas laderas en superficies cultivables donde se plantaban olivos, almendros y cítricos. Durante el descenso, el visitante puede apreciar la ingeniería hidráulica tradicional, con canales de piedra que distribuyen el agua de lluvia entre los diferentes niveles de cultivo. Es una de las mejores muestras de cómo la pedra en sec ha modelado el paisaje cultural de la Tramuntana.",
+    "difficulty": "fácil",
+    "distanceKm": 3.0,
+    "durationHours": 1.5,
+    "path": [
+      { "lat": 39.7480, "lng": 2.6490 },
+      { "lat": 39.7465, "lng": 2.6505 },
+      { "lat": 39.7450, "lng": 2.6520 },
+      { "lat": 39.7435, "lng": 2.6540 },
+      { "lat": 39.7420, "lng": 2.6555 },
+      { "lat": 39.7405, "lng": 2.6570 }
+    ],
+    "pois": [
+      {
+        "id": "poi-deia-1",
+        "name": "Mirador de los Olivos",
+        "position": { "lat": 39.7465, "lng": 2.6505 },
+        "triggerRadius": 45,
+        "narration": "Desde este mirador puedes ver cómo los bancales de pedra en sec se extienden ladera abajo como escalones de gigante. Los olivos centenarios que crecen en cada terraza producen el aceite de oliva virgen de la Tramuntana, reconocido con Denominación de Origen.",
+        "image": "/images/deia-olivos.webp"
+      },
+      {
+        "id": "poi-deia-2",
+        "name": "Canal de Piedra",
+        "position": { "lat": 39.7435, "lng": 2.6540 },
+        "triggerRadius": 40,
+        "narration": "Observa el canal de piedra que serpentea entre los bancales. Este sistema de irrigación, conocido como síquia, conduce el agua desde los manantiales de montaña hasta los cultivos. Cada piedra fue colocada con precisión para mantener la pendiente correcta y evitar filtraciones.",
+        "image": "/images/deia-canal.webp"
+      }
+    ],
+    "photos": [
+      "/images/deia-ruta-1.webp",
+      "/images/deia-ruta-2.webp",
+      "/images/deia-ruta-3.webp"
+    ],
+    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "color": "#5b8c5a"
+  },
+  {
+    "id": "ruta-soller-barranc",
+    "name": "Sóller – Barranc de Biniaraix",
+    "shortDescription": "Espectacular ascenso por el desfiladero con miles de metros de muros de piedra.",
+    "longDescription": "El Barranc de Biniaraix es considerado la obra maestra de la pedra en sec en Mallorca. Este impresionante desfiladero alberga más de 2.000 metros de muros de contención que permitieron crear bancales de cultivo en pendientes de hasta 45 grados. El camino empedrado, restaurado con técnicas tradicionales, asciende junto al torrente entre paredes verticales de roca. A lo largo del recorrido se encuentran antiguas casas de nieve (cases de neu), donde se almacenaba hielo compactado para venderlo en Palma. Es una experiencia única que muestra la tenacidad y el ingenio de los constructores de piedra balear.",
+    "difficulty": "difícil",
+    "distanceKm": 11.0,
+    "durationHours": 5,
+    "path": [
+      { "lat": 39.7690, "lng": 2.7340 },
+      { "lat": 39.7710, "lng": 2.7320 },
+      { "lat": 39.7730, "lng": 2.7290 },
+      { "lat": 39.7755, "lng": 2.7260 },
+      { "lat": 39.7780, "lng": 2.7230 },
+      { "lat": 39.7800, "lng": 2.7200 },
+      { "lat": 39.7825, "lng": 2.7170 },
+      { "lat": 39.7850, "lng": 2.7140 },
+      { "lat": 39.7870, "lng": 2.7110 }
+    ],
+    "pois": [
+      {
+        "id": "poi-soller-1",
+        "name": "Inicio del Barranc",
+        "position": { "lat": 39.7710, "lng": 2.7320 },
+        "triggerRadius": 55,
+        "narration": "Estás en la entrada del Barranc de Biniaraix. A partir de aquí, el camino empedrado te llevará entre muros de pedra en sec que alcanzan hasta 8 metros de altura. Estos muros sostienen los bancales donde los habitantes de Biniaraix cultivaban cítricos y hortalizas.",
+        "image": "/images/barranc-inicio.webp"
+      },
+      {
+        "id": "poi-soller-2",
+        "name": "Escalera del Salt des Cans",
+        "position": { "lat": 39.7755, "lng": 2.7260 },
+        "triggerRadius": 45,
+        "narration": "La escalera del Salt des Cans es una de las secciones más impresionantes del camino. Tallada y construida enteramente en piedra, salva un desnivel de casi 100 metros. Cada peldaño fue encajado con maestría para resistir siglos de uso y las crecidas del torrente.",
+        "image": "/images/salt-des-cans.webp"
+      },
+      {
+        "id": "poi-soller-3",
+        "name": "Cases de Neu de s'Ofre",
+        "position": { "lat": 39.7850, "lng": 2.7140 },
+        "triggerRadius": 60,
+        "narration": "Las cases de neu o casas de nieve son construcciones de pedra en sec que servían para almacenar y compactar la nieve en invierno. El hielo resultante se transportaba en mulas hasta Palma para conservar alimentos y preparar helados. Un ejemplo fascinante de industria tradicional basada en la piedra.",
+        "image": "/images/cases-de-neu.webp"
+      }
+    ],
+    "photos": [
+      "/images/soller-ruta-1.webp",
+      "/images/soller-ruta-2.webp",
+      "/images/soller-ruta-3.webp",
+      "/images/soller-ruta-4.webp"
+    ],
+    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "color": "#6b4226"
+  },
+  {
+    "id": "ruta-eivissa-corona",
+    "name": "Eivissa – Ses Feixes i Corona",
+    "shortDescription": "Paisaje agrícola de piedra en seco en la Ibiza rural.",
+    "longDescription": "Aunque menos conocida que la Tramuntana mallorquina, Ibiza conserva un extraordinario patrimonio de pedra en sec en su interior rural. Esta ruta parte de Santa Gertrudis y recorre los campos de cultivo de la zona de Corona, donde las paredes de piedra delimitan parcelas, protegen del viento y crean microclimas favorables para el cultivo de higueras, algarrobos y almendros. Las feixes son sistemas de bancales de regadío únicos en el Mediterráneo. A lo largo del camino, el visitante descubre torres de defensa, pozos y era de trillar, todos construidos con la misma técnica ancestral.",
+    "difficulty": "fácil",
+    "distanceKm": 5.5,
+    "durationHours": 2.5,
+    "path": [
+      { "lat": 39.0010, "lng": 1.4810 },
+      { "lat": 39.0025, "lng": 1.4830 },
+      { "lat": 39.0040, "lng": 1.4855 },
+      { "lat": 39.0055, "lng": 1.4875 },
+      { "lat": 39.0070, "lng": 1.4900 },
+      { "lat": 39.0085, "lng": 1.4920 }
+    ],
+    "pois": [
+      {
+        "id": "poi-eivissa-1",
+        "name": "Ses Feixes",
+        "position": { "lat": 39.0025, "lng": 1.4830 },
+        "triggerRadius": 50,
+        "narration": "Ses feixes son un sistema único de parcelas de cultivo separadas por canales de agua y delimitadas por muros de piedra en seco. Este ingenioso sistema de regadío, de origen árabe, permitía cultivar hortalizas durante todo el año aprovechando el nivel freático.",
+        "image": "/images/ses-feixes.webp"
+      },
+      {
+        "id": "poi-eivissa-2",
+        "name": "Torre de Defensa",
+        "position": { "lat": 39.0055, "lng": 1.4875 },
+        "triggerRadius": 45,
+        "narration": "Esta torre de defensa rural fue construida en el siglo XVI para proteger a los payeses ibicencos de los ataques piratas. Sus gruesos muros de piedra en seco, de más de un metro de espesor, la convertían en un refugio casi inexpugnable.",
+        "image": "/images/torre-defensa.webp"
+      }
+    ],
+    "photos": [
+      "/images/eivissa-ruta-1.webp",
+      "/images/eivissa-ruta-2.webp"
+    ],
+    "color": "#7a6c5d"
+  }
+]
