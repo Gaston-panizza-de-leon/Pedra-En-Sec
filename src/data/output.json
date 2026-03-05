@@ -1,59 +1,5 @@
 [
   {
-    "id": "ruta-pedra-sec-valldemossa",
-    "name": "Ruta de Pedra en Sec – Valldemossa",
-    "shortDescription": "Sendero ancestral entre olivares y bancales de piedra en la Serra de Tramuntana.",
-    "longDescription": "Esta ruta recorre los antiguos caminos empedrados que conectaban Valldemossa con los bancales de cultivo construidos sin argamasa. A lo largo del trayecto se pueden observar muros de contención, casetas de pastor (barraques) y canalizaciones de agua que datan del siglo XVIII. La técnica de pedra en sec fue declarada Patrimonio Inmaterial de la Humanidad por la UNESCO en 2018. El sendero ofrece vistas espectaculares del valle y el mar, y constituye un ejemplo vivo de la relación entre el ser humano y el paisaje mediterráneo.",
-    "difficulty": "moderada",
-    "distanceKm": 8.5,
-    "durationHours": 3.5,
-    "path": [
-      { "lat": 39.7106, "lng": 2.6230 },
-      { "lat": 39.7120, "lng": 2.6260 },
-      { "lat": 39.7135, "lng": 2.6295 },
-      { "lat": 39.7155, "lng": 2.6320 },
-      { "lat": 39.7180, "lng": 2.6350 },
-      { "lat": 39.7200, "lng": 2.6380 },
-      { "lat": 39.7225, "lng": 2.6410 },
-      { "lat": 39.7250, "lng": 2.6440 }
-    ],
-    "pois": [
-      {
-        "id": "poi-arta-1",
-        "name": "Entrada al Poblado Talayótico",
-        "triggerArea": {
-          "type": "polygon",
-          "coordinates": [
-            { "lat": 39.6931, "lng": 3.3529 },
-            { "lat": 39.6932, "lng": 3.3532 },
-            { "lat": 39.6929, "lng": 3.3533 },
-            { "lat": 39.6928, "lng": 3.3530 }
-          ]
-        },
-        "narration": "Estás entrando en el poblado talayótico de Ses Païsses...",
-        "image": "/images/ses-paisses-entrada.webp"
-      },
-      {
-        "id": "poi-valldemossa-1",
-        "name": "Mirador des Lledoners",
-        "triggerArea": {
-          "type": "circle",
-          "center": { "lat": 39.7120, "lng": 2.6260 },
-          "radiusMeters": 50
-        },
-        "narration": "Bienvenido al Mirador des Lledoners...",
-        "image": "/images/mirador-lledoners.webp"
-      }
-    ],
-    "photos": [
-      "/images/valldemossa-ruta-1.webp",
-      "/images/valldemossa-ruta-2.webp",
-      "/images/valldemossa-ruta-3.webp"
-    ],
-    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    "color": "#4a7c59"
-  },
-   {
     "id": "ruta-pedra-sec-unificada",
     "name": "Ruta de Pedra en Sec",
     "shortDescription": "",
@@ -640,5 +586,4 @@
     "video": "",
     "color": "#4a7c59"
   }
-
 ]
