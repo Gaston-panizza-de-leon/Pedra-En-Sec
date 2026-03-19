@@ -1,0 +1,22 @@
+name: Despliegue automático a DonDominio
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    name: Desplegar por FTP
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Obtener el código del repositorio
+        uses: actions/checkout@v4
+
+      - name: Subir archivos a DonDominio
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /public/
