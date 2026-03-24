@@ -51,7 +51,6 @@
     "video": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "color": "#4a7c59"
   },
-<<<<<<< Updated upstream
   {
     "id": "ruta-arta-ses-paisses",
     "name": "Artà – Ses Païsses",
@@ -60,16 +59,6 @@
     "difficulty": "fácil",
     "distanceKm": 4.2,
     "durationHours": 2,
-=======
-   {
-    "id": "ruta-pedra-sec-unificada",
-    "name": "Ruta de Pedra en Sec",
-    "shortDescription": "Recorrido completo por los senderos tradicionales y sistemas de riego ancestrales de las Islas Baleares.",
-    "longDescription": "Esta ruta integral te lleva a través de los espectaculares paisajes de pedra en sec de Mallorca, Menorca e Ibiza. Descubrirás los antiguos sistemas de cultivo en terrazas, los caminos empedrados que conectan pueblos tradicionales, y conocerás la ingeniería hidráulica medieval que ha permitido la supervivencia de estos ecosistemas. La ruta pasa por puntos emblemáticos de la arquitectura vernácula balear, incluyendo barraques, casetas de pastor y fuentes ancestrales. Un viaje fascinante a través del tiempo y la sostenibilidad.",
-    "difficulty": "moderada",
-    "distanceKm": 24.5,
-    "durationHours": 8.5,
->>>>>>> Stashed changes
     "path": [
       { "lat": 39.6960, "lng": 3.3490 },
       { "lat": 39.6945, "lng": 3.3510 },
@@ -96,7 +85,6 @@
         "image": "/images/talayot-central.webp"
       }
     ],
-<<<<<<< Updated upstream
     "photos": [
       "/images/arta-ruta-1.webp",
       "/images/arta-ruta-2.webp"
@@ -238,51 +226,5 @@
       "/images/eivissa-ruta-2.webp"
     ],
     "color": "#7a6c5d"
-=======
-    "pois": [
-      {
-        "id": "poi-ruta-unificada-1",
-        "name": "Mirador de Sa Calobra",
-        "triggerArea": {
-          "type": "circle",
-          "center": { "lat": 39.7850, "lng": 2.7990 },
-          "radiusMeters": 75
-        },
-        "narration": "Bienvenido al Mirador de Sa Calobra, uno de los puntos más espectaculares de toda la serra. Desde aquí puedes apreciar la magnitud de los bancales de piedra seca tallados en la montaña.",
-        "image": "/images/riego1.webp"
-      },
-      {
-        "id": "poi-ruta-unificada-2",
-        "name": "Barraques de Roter",
-        "triggerArea": {
-          "type": "circle",
-          "center": { "lat": 39.7120, "lng": 2.6270 },
-          "radiusMeters": 100
-        },
-        "narration": "Las barraques son pequeñas casetas construidas íntegramente con piedra en seco. Servían como refugio para los pastores durante el trabajo en los campos.",
-        "image": "/images/patrimonio.webp"
-      },
-      {
-        "id": "poi-ruta-unificada-3",
-        "name": "Sistema de Riego Ancestral",
-        "triggerArea": {
-          "type": "circle",
-          "center": { "lat": 39.6800, "lng": 2.5100 },
-          "radiusMeters": 60
-        },
-        "narration": "Este ingenioso sistema de canalizaciones de agua data del siglo XV. Las piedras han sido minuciosamente encajadas para dirigir el agua a través de toda la montaña.",
-        "image": "/images/riego1.webp"
-      }
-    ],
-    "photos": [
-      "/images/muro-pedra-en-sec.webp",
-      "/images/cami-pedra-en-sec.webp",
-      "/images/patrimonio.webp",
-      "/images/sostenibilidad1.webp",
-      "/images/turismo1.webp"
-    ],
-    "video": "https://www.youtube.com/embed/videoid123",
-    "color": "#4a7c59"
->>>>>>> Stashed changes
   }
 ]
