@@ -1,0 +1,84 @@
+.route-modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  animation: routeModalFadeIn 0.25s ease;
+}
+
+.route-modal {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  animation: routeModalScaleIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.route-modal__close {
+  position: sticky;
+  top: 0.75rem;
+  float: right;
+  margin-right: 0.75rem;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-stone-200);
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  color: var(--color-green-800);
+  z-index: 1;
+  transition: background 0.15s;
+}
+
+.route-modal__close:hover,
+.route-modal__close:focus-visible {
+  background: var(--color-stone-300);
+}
+
+.route-modal__body {
+  padding: 1.5rem 2rem 2rem;
+}
+
+@keyframes routeModalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes routeModalScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .route-modal-overlay {
+    padding: 0.75rem;
+  }
+
+  .route-modal {
+    max-height: 90vh;
+  }
+
+  .route-modal__body {
+    padding: 1rem 1.25rem 1.5rem;
+  }
+}
