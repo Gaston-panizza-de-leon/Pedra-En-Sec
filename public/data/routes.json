@@ -1,0 +1,118 @@
+[
+  {
+    "id": "ruta-pedra-sec-mallorca",
+    "name": "Ruta de Pedra en Sec - Mallorca",
+    "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
+    "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
+    "difficulty": "moderada",
+    "distanceKm": 185,
+    "durationHours": 72,
+    "sourceGeoJson": "export_mallorca.geojson",
+    "simplificationToleranceMeters": 35,
+    "pois": [
+      {
+        "id": "poi-mallorca-1",
+        "name": "Mirador de Valldemossa",
+        "triggerArea": {
+          "type": "circle",
+          "center": { "lat": 39.7106, "lng": 2.6230 },
+          "radiusMeters": 60
+        },
+        "narration": "Est�s en un tramo emblem�tico de la Ruta de Pedra en Sec en Mallorca.",
+        "image": "/images/mallorca-mirador.webp"
+      }
+    ],
+    "photos": [
+      "/images/mallorca-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#4a7c59"
+  },
+  {
+    "id": "ruta-cami-cavalls-menorca",
+    "name": "Cami de Cavalls - Menorca",
+    "shortDescription": "Itinerario circular costero de Menorca, historicamente usado para vigilancia y conexion entre calas.",
+    "longDescription": "La ruta de Menorca recorre tramos del Cami de Cavalls y permite interpretar muros, bancales y caminos tradicionales de piedra seca en un contexto litoral.",
+    "difficulty": "moderada",
+    "distanceKm": 185,
+    "durationHours": 70,
+    "sourceGeoJson": "export_menorca.geojson",
+    "simplificationToleranceMeters": 30,
+    "pois": [
+      {
+        "id": "poi-menorca-1",
+        "name": "Tramo historico del Cami de Cavalls",
+        "triggerArea": {
+          "type": "circle",
+          "center": { "lat": 40.0293, "lng": 4.1652 },
+          "radiusMeters": 60
+        },
+        "narration": "Aqu� puedes observar un tramo representativo del Cami de Cavalls en Menorca.",
+        "image": "/images/menorca-cami-cavalls.webp"
+      }
+    ],
+    "photos": [
+      "/images/menorca-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#3f7c85"
+  },
+  {
+    "id": "ruta-sa-pujada-ibiza",
+    "name": "Cam� de sa Pujada - Ibiza",
+    "shortDescription": "Ruta senderista de Ibiza con segmentos tradicionales y vistas costeras.",
+    "longDescription": "Recorrido por Ibiza basado en geometria GeoJSON de caminos historicos, adaptado para visualizacion web manteniendo la forma del trazado original.",
+    "difficulty": "facil",
+    "distanceKm": 22,
+    "durationHours": 8,
+    "sourceGeoJson": "export_ibiza.geojson",
+    "simplificationToleranceMeters": 25,
+    "pois": [
+      {
+        "id": "poi-ibiza-1",
+        "name": "Inicio de Cam� de sa Pujada",
+        "triggerArea": {
+          "type": "circle",
+          "center": { "lat": 38.9850, "lng": 1.5334 },
+          "radiusMeters": 50
+        },
+        "narration": "Est�s comenzando un tramo destacado de Cam� de sa Pujada en Ibiza.",
+        "image": "/images/ibiza-sa-pujada.webp"
+      }
+    ],
+    "photos": [
+      "/images/ibiza-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#d17a22"
+  },
+  {
+    "id": "ruta-cami-pujada-formentera",
+    "name": "Cam� de sa Pujada - Formentera",
+    "shortDescription": "Trazado historico de Formentera con segmentos de piedra seca y entorno mediterraneo.",
+    "longDescription": "Ruta de Formentera extraida de GeoJSON y preparada para uso interactivo, preservando los segmentos reales de camino sin uniones artificiales.",
+    "difficulty": "facil",
+    "distanceKm": 12,
+    "durationHours": 4,
+    "sourceGeoJson": "export_formentera.geojson",
+    "simplificationToleranceMeters": 18,
+    "pois": [
+      {
+        "id": "poi-formentera-1",
+        "name": "Mirador de La Mola",
+        "triggerArea": {
+          "type": "circle",
+          "center": { "lat": 38.6729, "lng": 1.5200 },
+          "radiusMeters": 50
+        },
+        "narration": "Desde este punto se aprecia la red de caminos tradicionales de Formentera.",
+        "image": "/images/formentera-mola.webp"
+      }
+    ],
+    "photos": [
+      "/images/formentera-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#7b9e3b"
+  }
+]

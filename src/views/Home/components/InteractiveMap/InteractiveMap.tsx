@@ -32,13 +32,23 @@ interface InteractiveMapProps {
   routes: Route[];
 }
 
+function getRouteSegments(route: Route): LatLng[][] {
+  if (Array.isArray(route.pathSegments) && route.pathSegments.length > 0) {
+    return route.pathSegments.filter((segment) => segment.length > 1);
+  }
+  return route.path.length > 1 ? [route.path] : [];
+}
+
 /** Fly to the selected route bounds */
 function FlyToRoute({ route }: { route: Route | null }) {
   const map = useMap();
 
-  if (route && route.path.length > 0) {
+  if (route) {
+    const points = getRouteSegments(route).flat();
+    if (points.length < 2) return null;
+
     const bounds = L.latLngBounds(
-      route.path.map((p) => [p.lat, p.lng] as [number, number]),
+      points.map((p) => [p.lat, p.lng] as [number, number]),
     );
     map.flyToBounds(bounds, { padding: [60, 60], maxZoom: 14, duration: 0.8 });
   }
@@ -98,9 +108,10 @@ export function InteractiveMap({ routes }: InteractiveMapProps) {
           const isSelected = selectedRoute?.id === route.id;
           const isActive = isHovered || isSelected;
 
-          const positions: [number, number][] = route.path.map(
-            (p: LatLng) => [p.lat, p.lng] as [number, number],
+          const positions: [number, number][][] = getRouteSegments(route).map((segment) =>
+            segment.map((p: LatLng) => [p.lat, p.lng] as [number, number]),
           );
+          if (positions.length === 0) return null;
 
           return (
             <Polyline
