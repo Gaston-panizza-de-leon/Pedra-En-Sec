@@ -8,6 +8,7 @@ import {
   useMap,
 } from 'react-leaflet';
 import L from 'leaflet';
+import { Fragment } from 'react';
 import { useAppStore } from '../../../../store/useAppStore';
 import { getPoiPosition } from '../../../../hooks/useGuidedMode';
 import type { Route, LatLng } from '../../../../types';
@@ -115,27 +116,41 @@ export function InteractiveMap({ routes }: InteractiveMapProps) {
           if (positions.length === 0) return null;
 
           return (
-            <Polyline
-              key={route.id}
-              positions={positions}
-              pathOptions={{
-                color: isActive ? route.color : '#999',
-                weight: isActive ? 5 : 3,
-                opacity: isActive ? 1 : 0.4,
-                dashArray: isActive ? undefined : '8 6',
-              }}
-              eventHandlers={{
-                mouseover: () => setHoveredRouteId(route.id),
-                mouseout: () => setHoveredRouteId(null),
-                click: () => openDetail(route),
-              }}
-            >
-              <Tooltip sticky direction="top" offset={[0, -10]}>
-                <strong>{route.name}</strong>
-                <br />
-                {route.shortDescription}
-              </Tooltip>
-            </Polyline>
+            <Fragment key={route.id}>
+              {/* Invisible hit area: larger hover/click target while keeping visual stroke thin */}
+              <Polyline
+                positions={positions}
+                pathOptions={{
+                  color: route.color,
+                  weight: isActive ? 18 : 14,
+                  opacity: 0.01,
+                }}
+                eventHandlers={{
+                  mouseover: () => setHoveredRouteId(route.id),
+                  mouseout: () => setHoveredRouteId(null),
+                  click: () => openDetail(route),
+                }}
+              >
+                <Tooltip sticky direction="top" offset={[0, -10]}>
+                  <strong>{route.name}</strong>
+                  <br />
+                  {route.shortDescription}
+                </Tooltip>
+              </Polyline>
+
+              <Polyline
+                positions={positions}
+                pathOptions={{
+                  color: route.color,
+                  weight: isActive ? 5 : 3,
+                  opacity: isActive ? 1 : 0.68,
+                  dashArray: isActive ? undefined : '7 5',
+                  lineCap: 'round',
+                  lineJoin: 'round',
+                }}
+                interactive={false}
+              />
+            </Fragment>
           );
         })}
 

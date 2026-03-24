@@ -142,11 +142,26 @@ function centroid(points: LatLng[]): LatLng | null {
 }
 
 function normalizePoi(poi: CatalogPoi): PointOfInterest {
-  const centerFromArea = isLatLng(poi.triggerArea?.center) ? poi.triggerArea.center : null;
-  const polygonCentroid =
+  const polygonCoordinates =
     poi.triggerArea?.type === 'polygon' && Array.isArray(poi.triggerArea.coordinates)
-      ? centroid(poi.triggerArea.coordinates.filter(isLatLng))
-      : null;
+      ? poi.triggerArea.coordinates.filter(isLatLng)
+      : [];
+
+  if (polygonCoordinates.length > 0) {
+    return {
+      id: poi.id,
+      name: poi.name,
+      triggerArea: {
+        type: 'polygon',
+        coordinates: polygonCoordinates,
+      },
+      narration: poi.narration,
+      image: poi.image,
+    };
+  }
+
+  const centerFromArea = isLatLng(poi.triggerArea?.center) ? poi.triggerArea.center : null;
+  const polygonCentroid = centroid(polygonCoordinates);
 
   const position = isLatLng(poi.position) ? poi.position : centerFromArea || polygonCentroid;
 
@@ -163,8 +178,11 @@ function normalizePoi(poi: CatalogPoi): PointOfInterest {
   return {
     id: poi.id,
     name: poi.name,
-    position,
-    triggerRadius,
+    triggerArea: {
+      type: 'circle',
+      center: position,
+      radiusMeters: triggerRadius,
+    },
     narration: poi.narration,
     image: poi.image,
   };

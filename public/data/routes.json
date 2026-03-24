@@ -18,7 +18,7 @@
           "center": { "lat": 39.7106, "lng": 2.6230 },
           "radiusMeters": 60
         },
-        "narration": "Est�s en un tramo emblem�tico de la Ruta de Pedra en Sec en Mallorca.",
+        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
         "image": "/images/mallorca-mirador.webp"
       }
     ],
@@ -30,7 +30,7 @@
   },
   {
     "id": "ruta-cami-cavalls-menorca",
-    "name": "Cami de Cavalls - Menorca",
+    "name": "Camí de Cavalls - Menorca",
     "shortDescription": "Itinerario circular costero de Menorca, historicamente usado para vigilancia y conexion entre calas.",
     "longDescription": "La ruta de Menorca recorre tramos del Cami de Cavalls y permite interpretar muros, bancales y caminos tradicionales de piedra seca en un contexto litoral.",
     "difficulty": "moderada",
@@ -41,13 +41,13 @@
     "pois": [
       {
         "id": "poi-menorca-1",
-        "name": "Tramo historico del Cami de Cavalls",
+        "name": "Tramo histórico del Camí de Cavalls",
         "triggerArea": {
           "type": "circle",
           "center": { "lat": 40.0293, "lng": 4.1652 },
           "radiusMeters": 60
         },
-        "narration": "Aqu� puedes observar un tramo representativo del Cami de Cavalls en Menorca.",
+        "narration": "Aquí puedes observar un tramo representativo del Camí de Cavalls en Menorca.",
         "image": "/images/menorca-cami-cavalls.webp"
       }
     ],
@@ -59,7 +59,7 @@
   },
   {
     "id": "ruta-sa-pujada-ibiza",
-    "name": "Cam� de sa Pujada - Ibiza",
+    "name": "Camí de sa Pujada - Ibiza",
     "shortDescription": "Ruta senderista de Ibiza con segmentos tradicionales y vistas costeras.",
     "longDescription": "Recorrido por Ibiza basado en geometria GeoJSON de caminos historicos, adaptado para visualizacion web manteniendo la forma del trazado original.",
     "difficulty": "facil",
@@ -70,13 +70,13 @@
     "pois": [
       {
         "id": "poi-ibiza-1",
-        "name": "Inicio de Cam� de sa Pujada",
+        "name": "Inicio de Camí de sa Pujada",
         "triggerArea": {
           "type": "circle",
           "center": { "lat": 38.9850, "lng": 1.5334 },
           "radiusMeters": 50
         },
-        "narration": "Est�s comenzando un tramo destacado de Cam� de sa Pujada en Ibiza.",
+        "narration": "Estás comenzando un tramo destacado de Camí de sa Pujada en Ibiza.",
         "image": "/images/ibiza-sa-pujada.webp"
       }
     ],
@@ -88,7 +88,7 @@
   },
   {
     "id": "ruta-cami-pujada-formentera",
-    "name": "Cam� de sa Pujada - Formentera",
+    "name": "Camí de sa Pujada - Formentera",
     "shortDescription": "Trazado historico de Formentera con segmentos de piedra seca y entorno mediterraneo.",
     "longDescription": "Ruta de Formentera extraida de GeoJSON y preparada para uso interactivo, preservando los segmentos reales de camino sin uniones artificiales.",
     "difficulty": "facil",
