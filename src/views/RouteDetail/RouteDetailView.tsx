@@ -1,5 +1,6 @@
 import { MapContainer, TileLayer, Polyline, Marker, Tooltip } from 'react-leaflet';
 import { useAppStore } from '../../store/useAppStore';
+import { getPoiPosition } from '../../hooks/useGuidedMode';
 import { TTSButton } from '../../components/TTSButton/TTSButton';
 import type { Route } from '../../types';
 import './RouteDetailView.css';
@@ -95,16 +96,19 @@ export function RouteDetailView() {
                 positions={positions}
                 pathOptions={{ color: route.color, weight: 4, opacity: 0.9 }}
               />
-              {route.pois.map((poi) => (
+              {route.pois.map((poi) => {
+                const pos = getPoiPosition(poi);
+                return (
                 <Marker
                   key={poi.id}
-                  position={[poi.position.lat, poi.position.lng]}
+                  position={[pos.lat, pos.lng]}
                 >
                   <Tooltip direction="top" offset={[0, -20]}>
                     {poi.name}
                   </Tooltip>
                 </Marker>
-              ))}
+                );
+              })}
             </MapContainer>
           </div>
         </section>

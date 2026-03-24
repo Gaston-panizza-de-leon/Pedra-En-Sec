@@ -8,13 +8,28 @@ export interface LatLng {
   lng: number;
 }
 
+/** A circular trigger zone */
+interface TriggerAreaCircle {
+  type: 'circle';
+  center: LatLng;
+  radiusMeters: number;
+}
+
+/** A polygon trigger zone */
+interface TriggerAreaPolygon {
+  type: 'polygon';
+  coordinates: LatLng[];
+}
+
+/** Trigger zone that activates TTS narration */
+export type TriggerArea = TriggerAreaCircle | TriggerAreaPolygon;
+
 /** A point of interest along a route */
 export interface PointOfInterest {
   id: string;
   name: string;
-  position: LatLng;
-  /** Radius in meters that triggers TTS narration */
-  triggerRadius: number;
+  /** Zone that triggers TTS narration when the user enters it */
+  triggerArea: TriggerArea;
   /** Short narration text read aloud by Web Speech API */
   narration: string;
   /** Optional thumbnail */

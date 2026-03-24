@@ -9,6 +9,7 @@ import {
 } from 'react-leaflet';
 import L from 'leaflet';
 import { useAppStore } from '../../../../store/useAppStore';
+import { getPoiPosition } from '../../../../hooks/useGuidedMode';
 import type { Route, LatLng } from '../../../../types';
 import './InteractiveMap.css';
 
@@ -128,16 +129,19 @@ export function InteractiveMap({ routes }: InteractiveMapProps) {
         })}
 
         {/* POI markers for selected route */}
-        {selectedRoute?.pois.map((poi) => (
+        {selectedRoute?.pois.map((poi) => {
+          const pos = getPoiPosition(poi);
+          return (
           <Marker
             key={poi.id}
-            position={[poi.position.lat, poi.position.lng]}
+            position={[pos.lat, pos.lng]}
           >
             <Tooltip direction="top" offset={[0, -20]}>
               {poi.name}
             </Tooltip>
           </Marker>
-        ))}
+          );
+        })}
 
         {/* User position when in guided mode */}
         {guidedMode && <UserPositionMarker />}

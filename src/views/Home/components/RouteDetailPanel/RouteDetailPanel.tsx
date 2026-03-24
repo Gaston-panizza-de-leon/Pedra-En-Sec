@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import type { Route } from '../../../../types';
 import { useAppStore } from '../../../../store/useAppStore';
 import { TTSButton } from '../../../../components/TTSButton/TTSButton';
+import { PhotoLightbox } from '../../../../components/PhotoLightbox/PhotoLightbox';
 import './RouteDetailPanel.css';
 
 interface RouteDetailPanelProps {
@@ -19,6 +21,9 @@ function difficultyClass(d: Route['difficulty']) {
 }
 
 export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
+  const [isPhotoLightboxOpen, setIsPhotoLightboxOpen] = useState(false);
+  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+
   const guidedMode = useAppStore((s) => s.guidedMode);
   const toggleGuidedMode = useAppStore((s) => s.toggleGuidedMode);
   const selectRoute = useAppStore((s) => s.selectRoute);
@@ -29,6 +34,27 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
     selectRoute(route);
     closeDetail();
     setView('routeDetail');
+  };
+
+  const openPhotoLightbox = (index: number) => {
+    setCurrentPhotoIndex(index);
+    setIsPhotoLightboxOpen(true);
+  };
+
+  const closePhotoLightbox = () => {
+    setIsPhotoLightboxOpen(false);
+  };
+
+  const goToNextPhoto = () => {
+    setCurrentPhotoIndex((prev) =>
+      prev === route.photos.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const goToPrevPhoto = () => {
+    setCurrentPhotoIndex((prev) =>
+      prev === 0 ? route.photos.length - 1 : prev - 1
+    );
   };
 
   return (
@@ -62,13 +88,20 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
           <h3 className="route-detail-panel__section-title">Fotos</h3>
           <div className="route-detail-panel__gallery" role="group" aria-label="Galería de fotos">
             {route.photos.map((src, i) => (
-              <img
+              <button
                 key={i}
-                className="route-detail-panel__photo"
-                src={src}
-                alt={`Foto ${i + 1} de la ruta ${route.name}`}
-                loading="lazy"
-              />
+                className="route-detail-panel__photo-button"
+                onClick={() => openPhotoLightbox(i)}
+                type="button"
+                aria-label={`Ver foto ${i + 1} en tamaño completo`}
+              >
+                <img
+                  className="route-detail-panel__photo"
+                  src={src}
+                  alt={`Foto ${i + 1} de la ruta ${route.name}`}
+                  loading="lazy"
+                />
+              </button>
             ))}
           </div>
         </>
@@ -137,6 +170,17 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
           Ver completo
         </button>
       </div>
+
+      {/* Photo Lightbox */}
+      <PhotoLightbox
+        isOpen={isPhotoLightboxOpen}
+        photos={route.photos}
+        currentIndex={currentPhotoIndex}
+        routeName={route.name}
+        onClose={closePhotoLightbox}
+        onNext={goToNextPhoto}
+        onPrev={goToPrevPhoto}
+      />
     </div>
   );
 }
