@@ -45,8 +45,10 @@ export interface Route {
   difficulty: 'fácil' | 'moderada' | 'difícil';
   distanceKm: number;
   durationHours: number;
-  /** Ordered coordinates that draw the polyline */
+  /** Ordered coordinates for legacy single-polyline consumers */
   path: LatLng[];
+  /** Optional disjoint segments for branched routes (MultiLineString) */
+  pathSegments?: LatLng[][];
   /** Points of interest along the route */
   pois: PointOfInterest[];
   /** Photo URLs (can be local public or remote) */
