@@ -1,0 +1,937 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-03-17T20:17:29Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/25634643",
+        "highway": "track",
+        "historic": "road",
+        "name": "Camí de sa Pujada",
+        "name:ca": "Camí de sa Pujada",
+        "surface": "sand",
+        "tracktype": "grade5"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.5199949,
+            38.6728621
+          ],
+          [
+            1.5196167,
+            38.6728896
+          ],
+          [
+            1.5190886,
+            38.6728846
+          ],
+          [
+            1.5182533,
+            38.6727147
+          ],
+          [
+            1.5170242,
+            38.6726312
+          ],
+          [
+            1.5167116,
+            38.6726487
+          ],
+          [
+            1.516384,
+            38.6726671
+          ],
+          [
+            1.5161384,
+            38.6724103
+          ],
+          [
+            1.515967,
+            38.6723731
+          ],
+          [
+            1.5159086,
+            38.6723134
+          ],
+          [
+            1.5154363,
+            38.6722336
+          ],
+          [
+            1.5152028,
+            38.6721941
+          ],
+          [
+            1.5148969,
+            38.6721292
+          ]
+        ]
+      },
+      "id": "way/25634643"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/28140142",
+        "highway": "service",
+        "historic": "road",
+        "name": "Camí de sa Pujada",
+        "name:ca": "Camí de sa Pujada",
+        "surface": "compacted"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.5375534,
+            38.6730446
+          ],
+          [
+            1.5374434,
+            38.6729807
+          ],
+          [
+            1.5373724,
+            38.6729744
+          ],
+          [
+            1.5371936,
+            38.6730413
+          ],
+          [
+            1.5366978,
+            38.6731985
+          ],
+          [
+            1.5362767,
+            38.6733063
+          ],
+          [
+            1.5358422,
+            38.6734173
+          ],
+          [
+            1.5356423,
+            38.6734435
+          ],
+          [
+            1.53558,
+            38.6734183
+          ],
+          [
+            1.5352109,
+            38.6732691
+          ],
+          [
+            1.5348084,
+            38.6731912
+          ],
+          [
+            1.5346682,
+            38.6731625
+          ]
+        ]
+      },
+      "id": "way/28140142"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/41800844",
+        "highway": "track",
+        "name": "Camí de sa Pujada",
+        "name:ca": "Camí de sa Pujada",
+        "width": "2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.5390408,
+            38.6722581
+          ],
+          [
+            1.5404875,
+            38.6714912
+          ],
+          [
+            1.5413775,
+            38.6708519
+          ],
+          [
+            1.5420378,
+            38.6704315
+          ],
+          [
+            1.5431226,
+            38.6697366
+          ],
+          [
+            1.5447327,
+            38.6689724
+          ],
+          [
+            1.5456794,
+            38.6685923
+          ],
+          [
+            1.5458647,
+            38.668507
+          ]
+        ]
+      },
+      "id": "way/41800844"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/41800845",
+        "highway": "residential",
+        "lit": "no",
+        "maxspeed": "30",
+        "name": "Camí de Sa Talaiassa, Camí de sa Pujada",
+        "name:ca": "Camí de Sa Talaiassa, Camí de sa Pujada",
+        "oneway": "no",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "3"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.5478002,
+            38.6694049
+          ],
+          [
+            1.5478633,
+            38.6694206
+          ],
+          [
+            1.5479102,
+            38.6694268
+          ],
+          [
+            1.547998,
+            38.6694143
+          ],
+          [
+            1.5480825,
+            38.6693955
+          ],
+          [
+            1.5483158,
+            38.669347
+          ],
+          [
+            1.5484924,
+            38.6693102
+          ],
+          [
+            1.5487145,
+            38.669264
+          ],
+          [
+            1.5488503,
+            38.6692531
+          ],
+          [
+            1.5492701,
+            38.6692347
+          ],
+          [
+            1.549588,
+            38.6692207
+          ],
+          [
+            1.550056,
+            38.6693384
+          ],
+          [
+            1.5501349,
+            38.6693582
+          ],
+          [
+            1.550235,
+            38.6693662
+          ],
+          [
+            1.5510269,
+            38.6693726
+          ],
+          [
+            1.5510801,
+            38.6693685
+          ],
+          [
+            1.5513066,
+            38.6693509
+          ],
+          [
+            1.5513373,
+            38.6693485
+          ],
+          [
+            1.5518171,
+            38.6692538
+          ],
+          [
+            1.5520374,
+            38.6692073
+          ],
+          [
+            1.5528645,
+            38.6692525
+          ],
+          [
+            1.5529353,
+            38.6692492
+          ],
+          [
+            1.5529823,
+            38.6692417
+          ],
+          [
+            1.553028,
+            38.6692238
+          ],
+          [
+            1.5530754,
+            38.6692038
+          ]
+        ]
+      },
+      "id": "way/41800845"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/75481283",
+        "highway": "path",
+        "historic": "road",
+        "name": "Camí de sa Pujada",
+        "name:ca": "Camí de sa Pujada",
+        "sac_scale": "hiking",
+        "surface": "ground"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.5296086,
+            38.6713999
+          ],
+          [
+            1.5294389,
+            38.6714016
+          ],
+          [
+            1.5291187,
+            38.6714018
+          ],
+          [
+            1.5285988,
+            38.6713045
+          ],
+          [
+            1.5274898,
+            38.6711435
+          ],
+          [
+            1.5269233,
+            38.6709224
+          ],
+          [
+            1.5266315,
+            38.6708553
+          ],
+          [
+            1.5262195,
+            38.6709224
+          ],
+          [
+            1.5261165,
+            38.671043
+          ],
+          [
+            1.5260478,
+            38.671378
+          ],
+          [
+            1.5257474,
+            38.6714987
+          ],
+          [
+            1.52555,
+            38.6715925
+          ],
+          [
+            1.5250178,
+            38.6719811
+          ],
+          [
+            1.5249344,
+            38.6719811
+          ],
+          [
+            1.5245887,
+            38.6719811
+          ],
+          [
+            1.5235644,
+            38.6724228
+          ]
+        ]
+      },
+      "id": "way/75481283"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/75481288",
+        "highway": "residential",
+        "historic": "road",
+        "name": "Camí de sa Pujada",
+        "name:ca": "Camí de sa Pujada",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.5235644,
+            38.6724228
+          ],
+          [
+            1.5231507,
+            38.6725067
+          ],
+          [
+            1.5225711,
+            38.6727146
+          ],
+          [
+            1.5222597,
+            38.6728329
+          ],
+          [
+            1.5221077,
+            38.6728523
+          ],
+          [
+            1.5210804,
+            38.6728626
+          ]
+        ]
+      },
+      "id": "way/75481288"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/159096043",
+        "foot": "yes",
+        "highway": "pedestrian",
+        "lit": "yes",
+        "name": "Carrer de Sa Pujada",
+        "name:ca": "Carrer de Sa Pujada",
+        "smoothness": "good",
+        "surface": "paving_stones",
+        "width": "6"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.5173501,
+            38.6772404
+          ],
+          [
+            1.5179421,
+            38.676935
+          ],
+          [
+            1.5182836,
+            38.6767415
+          ]
+        ]
+      },
+      "id": "way/159096043"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1205947013",
+        "highway": "residential",
+        "historic": "road",
+        "maxspeed": "20",
+        "name": "Camí de sa Pujada",
+        "name:ca": "Camí de sa Pujada",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.5210804,
+            38.6728626
+          ],
+          [
+            1.5201125,
+            38.6728558
+          ],
+          [
+            1.5200965,
+            38.6728557
+          ],
+          [
+            1.5200448,
+            38.6728587
+          ]
+        ]
+      },
+      "id": "way/1205947013"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1205948212",
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "name": "Carrer de Sa Pujada",
+        "name:ca": "Carrer de Sa Pujada",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.5182836,
+            38.6767415
+          ],
+          [
+            1.5184202,
+            38.6766667
+          ],
+          [
+            1.5185617,
+            38.6766026
+          ],
+          [
+            1.5186312,
+            38.6765833
+          ]
+        ]
+      },
+      "id": "way/1205948212"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1288310442",
+        "highway": "service",
+        "historic": "road",
+        "name": "Camí de sa Pujada",
+        "name:ca": "Camí de sa Pujada"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.5346682,
+            38.6731625
+          ],
+          [
+            1.5344054,
+            38.6731248
+          ],
+          [
+            1.5343772,
+            38.6730955
+          ],
+          [
+            1.5343464,
+            38.6730724
+          ],
+          [
+            1.5343088,
+            38.6730588
+          ],
+          [
+            1.5342753,
+            38.6730504
+          ],
+          [
+            1.5342136,
+            38.6730808
+          ],
+          [
+            1.5341439,
+            38.6731059
+          ],
+          [
+            1.5340098,
+            38.6730965
+          ],
+          [
+            1.5338354,
+            38.6730672
+          ],
+          [
+            1.5335779,
+            38.673062
+          ],
+          [
+            1.5334679,
+            38.6730609
+          ],
+          [
+            1.5334009,
+            38.6730442
+          ],
+          [
+            1.5333365,
+            38.6730243
+          ],
+          [
+            1.5332614,
+            38.6730033
+          ],
+          [
+            1.5331206,
+            38.6729782
+          ],
+          [
+            1.5330214,
+            38.6729531
+          ],
+          [
+            1.532953,
+            38.6729237
+          ],
+          [
+            1.532902,
+            38.6728902
+          ],
+          [
+            1.53278,
+            38.6728379
+          ],
+          [
+            1.5326995,
+            38.6727981
+          ],
+          [
+            1.5326244,
+            38.6727541
+          ],
+          [
+            1.5325506,
+            38.6727196
+          ],
+          [
+            1.532443,
+            38.672613
+          ]
+        ]
+      },
+      "id": "way/1288310442"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1335384533",
+        "highway": "unclassified",
+        "maxspeed": "30",
+        "name": "Camí de Sa Talaiassa, Camí de sa Pujada",
+        "name:ca": "Camí de Sa Talaiassa, Camí de sa Pujada",
+        "surface": "asphalt",
+        "width": "3"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.5458647,
+            38.668507
+          ],
+          [
+            1.5459873,
+            38.6686014
+          ],
+          [
+            1.5469181,
+            38.6690039
+          ],
+          [
+            1.5478002,
+            38.6694049
+          ]
+        ]
+      },
+      "id": "way/1335384533"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1335542609",
+        "highway": "unclassified",
+        "name": "Camí de sa Pujada",
+        "name:ca": "Camí de sa Pujada",
+        "surface": "compacted",
+        "width": "2"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.5385569,
+            38.6725008
+          ],
+          [
+            1.5390408,
+            38.6722581
+          ]
+        ]
+      },
+      "id": "way/1335542609"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1335542610",
+        "highway": "path",
+        "name": "Camí de sa Pujada",
+        "name:ca": "Camí de sa Pujada",
+        "sac_scale": "hiking",
+        "surface": "ground"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.5377279,
+            38.6729444
+          ],
+          [
+            1.537736,
+            38.672878
+          ],
+          [
+            1.5380693,
+            38.6727396
+          ],
+          [
+            1.5385569,
+            38.6725008
+          ]
+        ]
+      },
+      "id": "way/1335542610"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1335735224",
+        "highway": "residential",
+        "lit": "yes",
+        "name": "Carrer de Sa Pujada",
+        "name:ca": "Carrer de Sa Pujada",
+        "sidewalk": "no",
+        "surface": "ground"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.5186312,
+            38.6765833
+          ],
+          [
+            1.5187902,
+            38.6765391
+          ],
+          [
+            1.5192637,
+            38.67646
+          ]
+        ]
+      },
+      "id": "way/1335735224"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1359410805",
+        "highway": "service",
+        "historic": "road",
+        "name": "Camí de sa Pujada",
+        "name:ca": "Camí de sa Pujada",
+        "surface": "compacted"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.5375888,
+            38.672923
+          ],
+          [
+            1.5375534,
+            38.6730446
+          ]
+        ]
+      },
+      "id": "way/1359410805"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1385037222",
+        "highway": "track",
+        "historic": "road",
+        "name": "Camí de sa Pujada",
+        "name:ca": "Camí de sa Pujada",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tracktype": "grade1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.5200448,
+            38.6728587
+          ],
+          [
+            1.5199949,
+            38.6728621
+          ]
+        ]
+      },
+      "id": "way/1385037222"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1388330684",
+        "highway": "path",
+        "historic": "road",
+        "name": "Camí de sa Pujada",
+        "name:ca": "Camí de sa Pujada",
+        "sac_scale": "mountain_hiking",
+        "surface": "ground",
+        "trail_visibility": "excellent"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.532443,
+            38.672613
+          ],
+          [
+            1.5323813,
+            38.6725628
+          ],
+          [
+            1.5323344,
+            38.6725324
+          ],
+          [
+            1.5321869,
+            38.6723398
+          ],
+          [
+            1.5320031,
+            38.6721963
+          ],
+          [
+            1.5318342,
+            38.6721471
+          ],
+          [
+            1.5317004,
+            38.6720764
+          ],
+          [
+            1.5315545,
+            38.6719624
+          ],
+          [
+            1.530988,
+            38.671681
+          ],
+          [
+            1.530363,
+            38.6713796
+          ],
+          [
+            1.5302342,
+            38.6713503
+          ],
+          [
+            1.5301618,
+            38.6713681
+          ]
+        ]
+      },
+      "id": "way/1388330684"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1388330685",
+        "highway": "path",
+        "historic": "road",
+        "name": "Camí de sa Pujada",
+        "name:ca": "Camí de sa Pujada",
+        "sac_scale": "mountain_hiking",
+        "surface": "rock",
+        "trail_visibility": "excellent"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.5301618,
+            38.6713681
+          ],
+          [
+            1.5299593,
+            38.6714152
+          ],
+          [
+            1.5298413,
+            38.6714267
+          ],
+          [
+            1.5297621,
+            38.6713995
+          ],
+          [
+            1.5296522,
+            38.6713995
+          ],
+          [
+            1.5296086,
+            38.6713999
+          ]
+        ]
+      },
+      "id": "way/1388330685"
+    }
+  ]
+}

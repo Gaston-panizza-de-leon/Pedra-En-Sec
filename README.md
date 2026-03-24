@@ -1,75 +1,50 @@
-# React + TypeScript + Vite
+# Pedra en Sec
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicacion React + TypeScript + Vite para explorar rutas de Pedra en Sec.
 
-Currently, two official plugins are available:
+## Pipeline de rutas GeoJSON (runtime)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+La app carga las rutas en tiempo de ejecucion, leyendo:
 
-## React Compiler
+- Catalogo de metadatos y POIs: `src/data/routes.json`
+- Geometrias por ruta: archivos `*.geojson` en `src/data/`
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### Como funciona
 
-Note: This will impact Vite dev & build performances.
+1. En el catalogo defines cada ruta con metadatos y POIs.
+2. Para cada ruta defines `sourceGeoJson` con el archivo correspondiente.
+3. La UI carga y convierte las geometrias directamente desde esos GeoJSON (LineString/MultiLineString).
 
-## Expanding the ESLint configuration
+### Añadir una nueva ruta GeoJSON
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Copia tu archivo GeoJSON a `src/data/`.
+2. Añade una entrada al array de `src/data/routes.json` con:
+   - `id`, `name`, `difficulty`, etc.
+   - `sourceGeoJson`: nombre del archivo GeoJSON
+   - `simplificationToleranceMeters`: tolerancia en metros (recomendado 15-25)
+### Ejecucion
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Build
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+El build compila la app sin regenerar rutas automaticamente:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
 ```
+
+Internamente ejecuta:
+
+1. `tsc -b`
+2. `vite build`
+
+## Notas tecnicas
+
+- El generador soporta `LineString` y `MultiLineString`.
+- Convierte coordenadas GeoJSON de `[lng, lat]` a `{ lat, lng }`.
+- Preserva bifurcaciones como segmentos separados (`pathSegments`) para evitar lineas rectas artificiales entre ramas desconectadas.
+- Normaliza POIs para garantizar `position` y `triggerRadius`, manteniendo compatibilidad con `triggerArea`.
