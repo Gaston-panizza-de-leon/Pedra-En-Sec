@@ -1,13 +1,13 @@
 [
   {
-    "id": "ruta-pedra-sec-mallorca",
+    "id": "RPS_etapa1",
     "name": "Ruta de Pedra en Sec - Mallorca",
     "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
     "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
     "difficulty": "moderada",
     "distanceKm": 185,
     "durationHours": 72,
-    "sourceGeoJson": "export_mallorca.geojson",
+    "sourceGeoJson": "RPS_etapa1.geojson",
     "simplificationToleranceMeters": 35,
     "pois": [
       {
@@ -15,7 +15,10 @@
         "name": "Mirador de Valldemossa",
         "triggerArea": {
           "type": "circle",
-          "center": { "lat": 39.7106, "lng": 2.6230 },
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
           "radiusMeters": 60
         },
         "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
@@ -26,7 +29,551 @@
       "/images/mallorca-ruta-1.webp"
     ],
     "video": "",
-    "color": "#4a7c59"
+    "color": "#708090"
+  },
+  {
+    "id": "RPS_etapa2",
+    "name": "Ruta de Pedra en Sec - Mallorca",
+    "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
+    "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
+    "difficulty": "moderada",
+    "distanceKm": 185,
+    "durationHours": 72,
+    "sourceGeoJson": "RPS_etapa2.geojson",
+    "simplificationToleranceMeters": 35,
+    "pois": [
+      {
+        "id": "poi-mallorca-1",
+        "name": "Mirador de Valldemossa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
+        "image": "/images/mallorca-mirador.webp"
+      }
+    ],
+    "photos": [
+      "/images/mallorca-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#E2725B"
+  },
+  {
+    "id": "RPS_etapa3",
+    "name": "Ruta de Pedra en Sec - Mallorca",
+    "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
+    "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
+    "difficulty": "moderada",
+    "distanceKm": 185,
+    "durationHours": 72,
+    "sourceGeoJson": "RPS_etapa3.geojson",
+    "simplificationToleranceMeters": 35,
+    "pois": [
+      {
+        "id": "poi-mallorca-1",
+        "name": "Mirador de Valldemossa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
+        "image": "/images/mallorca-mirador.webp"
+      }
+    ],
+    "photos": [
+      "/images/mallorca-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#4B3621"
+  },
+  {
+    "id": "RPS_etapa4",
+    "name": "Ruta de Pedra en Sec - Mallorca",
+    "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
+    "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
+    "difficulty": "moderada",
+    "distanceKm": 185,
+    "durationHours": 72,
+    "sourceGeoJson": "RPS_etapa4.geojson",
+    "simplificationToleranceMeters": 35,
+    "pois": [
+      {
+        "id": "poi-mallorca-1",
+        "name": "Mirador de Valldemossa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
+        "image": "/images/mallorca-mirador.webp"
+      }
+    ],
+    "photos": [
+      "/images/mallorca-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#676767"
+  },
+  {
+    "id": "RPS_etapa5",
+    "name": "Ruta de Pedra en Sec - Mallorca",
+    "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
+    "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
+    "difficulty": "moderada",
+    "distanceKm": 185,
+    "durationHours": 72,
+    "sourceGeoJson": "RPS_etapa5.geojson",
+    "simplificationToleranceMeters": 35,
+    "pois": [
+      {
+        "id": "poi-mallorca-1",
+        "name": "Mirador de Valldemossa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
+        "image": "/images/mallorca-mirador.webp"
+      }
+    ],
+    "photos": [
+      "/images/mallorca-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#0B3D1D"
+  },
+  {
+    "id": "RPS_etapa6",
+    "name": "Ruta de Pedra en Sec - Mallorca",
+    "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
+    "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
+    "difficulty": "moderada",
+    "distanceKm": 185,
+    "durationHours": 72,
+    "sourceGeoJson": "RPS_etapa6.geojson",
+    "simplificationToleranceMeters": 35,
+    "pois": [
+      {
+        "id": "poi-mallorca-1",
+        "name": "Mirador de Valldemossa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
+        "image": "/images/mallorca-mirador.webp"
+      }
+    ],
+    "photos": [
+      "/images/mallorca-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#8A9A5B"
+  },
+  {
+    "id": "RPS_etapa7",
+    "name": "Ruta de Pedra en Sec - Mallorca",
+    "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
+    "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
+    "difficulty": "moderada",
+    "distanceKm": 185,
+    "durationHours": 72,
+    "sourceGeoJson": "RPS_etapa7.geojson",
+    "simplificationToleranceMeters": 35,
+    "pois": [
+      {
+        "id": "poi-mallorca-1",
+        "name": "Mirador de Valldemossa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
+        "image": "/images/mallorca-mirador.webp"
+      }
+    ],
+    "photos": [
+      "/images/mallorca-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#4F7942"
+  },
+  {
+    "id": "RPS_etapa8",
+    "name": "Ruta de Pedra en Sec - Mallorca",
+    "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
+    "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
+    "difficulty": "moderada",
+    "distanceKm": 185,
+    "durationHours": 72,
+    "sourceGeoJson": "RPS_etapa8.geojson",
+    "simplificationToleranceMeters": 35,
+    "pois": [
+      {
+        "id": "poi-mallorca-1",
+        "name": "Mirador de Valldemossa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
+        "image": "/images/mallorca-mirador.webp"
+      }
+    ],
+    "photos": [
+      "/images/mallorca-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#005F69"
+  },
+  {
+    "id": "RPS_etapa9",
+    "name": "Ruta de Pedra en Sec - Mallorca",
+    "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
+    "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
+    "difficulty": "moderada",
+    "distanceKm": 185,
+    "durationHours": 72,
+    "sourceGeoJson": "RPS_etapa9.geojson",
+    "simplificationToleranceMeters": 35,
+    "pois": [
+      {
+        "id": "poi-mallorca-1",
+        "name": "Mirador de Valldemossa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
+        "image": "/images/mallorca-mirador.webp"
+      }
+    ],
+    "photos": [
+      "/images/mallorca-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#B7410E"
+  },
+  {
+    "id": "RPS_variant1",
+    "name": "Ruta de Pedra en Sec - Mallorca",
+    "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
+    "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
+    "difficulty": "moderada",
+    "distanceKm": 185,
+    "durationHours": 72,
+    "sourceGeoJson": "RPS_variant1.geojson",
+    "simplificationToleranceMeters": 35,
+    "pois": [
+      {
+        "id": "poi-mallorca-1",
+        "name": "Mirador de Valldemossa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
+        "image": "/images/mallorca-mirador.webp"
+      }
+    ],
+    "photos": [
+      "/images/mallorca-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#A7C7E7"
+  },
+  {
+    "id": "RPS_variant2a",
+    "name": "Ruta de Pedra en Sec - Mallorca",
+    "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
+    "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
+    "difficulty": "moderada",
+    "distanceKm": 185,
+    "durationHours": 72,
+    "sourceGeoJson": "RPS_variant2a.geojson",
+    "simplificationToleranceMeters": 35,
+    "pois": [
+      {
+        "id": "poi-mallorca-1",
+        "name": "Mirador de Valldemossa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
+        "image": "/images/mallorca-mirador.webp"
+      }
+    ],
+    "photos": [
+      "/images/mallorca-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#8E9294"
+  },
+  {
+    "id": "RPS_variant3",
+    "name": "Ruta de Pedra en Sec - Mallorca",
+    "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
+    "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
+    "difficulty": "moderada",
+    "distanceKm": 185,
+    "durationHours": 72,
+    "sourceGeoJson": "RPS_variant3.geojson",
+    "simplificationToleranceMeters": 35,
+    "pois": [
+      {
+        "id": "poi-mallorca-1",
+        "name": "Mirador de Valldemossa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
+        "image": "/images/mallorca-mirador.webp"
+      }
+    ],
+    "photos": [
+      "/images/mallorca-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#5D3E6B"
+  },
+  {
+    "id": "RPS_variant5a",
+    "name": "Ruta de Pedra en Sec - Mallorca",
+    "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
+    "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
+    "difficulty": "moderada",
+    "distanceKm": 185,
+    "durationHours": 72,
+    "sourceGeoJson": "RPS_variant5a.geojson",
+    "simplificationToleranceMeters": 35,
+    "pois": [
+      {
+        "id": "poi-mallorca-1",
+        "name": "Mirador de Valldemossa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
+        "image": "/images/mallorca-mirador.webp"
+      }
+    ],
+    "photos": [
+      "/images/mallorca-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#FF6700"
+  },
+  {
+    "id": "RPS_variant5b",
+    "name": "Ruta de Pedra en Sec - Mallorca",
+    "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
+    "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
+    "difficulty": "moderada",
+    "distanceKm": 185,
+    "durationHours": 72,
+    "sourceGeoJson": "RPS_variant5b.geojson",
+    "simplificationToleranceMeters": 35,
+    "pois": [
+      {
+        "id": "poi-mallorca-1",
+        "name": "Mirador de Valldemossa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
+        "image": "/images/mallorca-mirador.webp"
+      }
+    ],
+    "photos": [
+      "/images/mallorca-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#D473D4"
+  },
+  {
+    "id": "RPS_variant5c",
+    "name": "Ruta de Pedra en Sec - Mallorca",
+    "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
+    "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
+    "difficulty": "moderada",
+    "distanceKm": 185,
+    "durationHours": 72,
+    "sourceGeoJson": "RPS_variant5c.geojson",
+    "simplificationToleranceMeters": 35,
+    "pois": [
+      {
+        "id": "poi-mallorca-1",
+        "name": "Mirador de Valldemossa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
+        "image": "/images/mallorca-mirador.webp"
+      }
+    ],
+    "photos": [
+      "/images/mallorca-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#2E2E2E"
+  },
+  {
+    "id": "RPS_variant6",
+    "name": "Ruta de Pedra en Sec - Mallorca",
+    "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
+    "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
+    "difficulty": "moderada",
+    "distanceKm": 185,
+    "durationHours": 72,
+    "sourceGeoJson": "RPS_variant6.geojson",
+    "simplificationToleranceMeters": 35,
+    "pois": [
+      {
+        "id": "poi-mallorca-1",
+        "name": "Mirador de Valldemossa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
+        "image": "/images/mallorca-mirador.webp"
+      }
+    ],
+    "photos": [
+      "/images/mallorca-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#6A5ACD"
+  },
+  {
+    "id": "RPS_variant7",
+    "name": "Ruta de Pedra en Sec - Mallorca",
+    "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
+    "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
+    "difficulty": "moderada",
+    "distanceKm": 185,
+    "durationHours": 72,
+    "sourceGeoJson": "RPS_variant7.geojson",
+    "simplificationToleranceMeters": 35,
+    "pois": [
+      {
+        "id": "poi-mallorca-1",
+        "name": "Mirador de Valldemossa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
+        "image": "/images/mallorca-mirador.webp"
+      }
+    ],
+    "photos": [
+      "/images/mallorca-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#FF4500"
+  },
+  {
+    "id": "RPS_variant8",
+    "name": "Ruta de Pedra en Sec - Mallorca",
+    "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
+    "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
+    "difficulty": "moderada",
+    "distanceKm": 185,
+    "durationHours": 72,
+    "sourceGeoJson": "RPS_variant8.geojson",
+    "simplificationToleranceMeters": 35,
+    "pois": [
+      {
+        "id": "poi-mallorca-1",
+        "name": "Mirador de Valldemossa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
+        "image": "/images/mallorca-mirador.webp"
+      }
+    ],
+    "photos": [
+      "/images/mallorca-ruta-1.webp"
+    ],
+    "video": "",
+    "color": "#9E7BB5"
   },
   {
     "id": "ruta-cami-cavalls-menorca",
@@ -44,7 +591,10 @@
         "name": "Tramo histórico del Camí de Cavalls",
         "triggerArea": {
           "type": "circle",
-          "center": { "lat": 40.0293, "lng": 4.1652 },
+          "center": {
+            "lat": 40.0293,
+            "lng": 4.1652
+          },
           "radiusMeters": 60
         },
         "narration": "Aquí puedes observar un tramo representativo del Camí de Cavalls en Menorca.",
@@ -73,7 +623,10 @@
         "name": "Inicio de Camí de sa Pujada",
         "triggerArea": {
           "type": "circle",
-          "center": { "lat": 38.9850, "lng": 1.5334 },
+          "center": {
+            "lat": 38.9850,
+            "lng": 1.5334
+          },
           "radiusMeters": 50
         },
         "narration": "Estás comenzando un tramo destacado de Camí de sa Pujada en Ibiza.",
@@ -102,7 +655,10 @@
         "name": "Mirador de La Mola",
         "triggerArea": {
           "type": "circle",
-          "center": { "lat": 38.6729, "lng": 1.5200 },
+          "center": {
+            "lat": 38.6729,
+            "lng": 1.5200
+          },
           "radiusMeters": 50
         },
         "narration": "Desde este punto se aprecia la red de caminos tradicionales de Formentera.",
