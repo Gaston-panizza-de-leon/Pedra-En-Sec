@@ -130,10 +130,17 @@
   min-height: 280px;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background:
-    var(--card-bg, none) center / cover no-repeat,
-    linear-gradient(135deg, var(--color-stone-400), var(--color-green-900));
+  background: linear-gradient(135deg, var(--color-stone-400), var(--color-green-900));
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-section__card-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .info-section__card:hover {

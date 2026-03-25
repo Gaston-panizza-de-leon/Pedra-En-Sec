@@ -100,7 +100,13 @@ export function InfoSection() {
       <h3 className="info-section__cards-heading">¿Por qué es importante?</h3>
 
       <div className="info-section__grid">
-        <article className="info-section__card" style={{ '--card-bg': `url(${withBase('/images/patrimonio.webp')})` } as React.CSSProperties}>
+        <article className="info-section__card">
+          <img
+            className="info-section__card-bg"
+            src={withBase('/images/patrimonio.webp')}
+            alt="Paisaje de patrimonio cultural de pedra en sec"
+            loading="lazy"
+          />
           <div className="info-section__card-overlay">
             <h4 className="info-section__card-title">Patrimonio Cultural</h4>
             <p className="info-section__card-text">
@@ -111,7 +117,13 @@ export function InfoSection() {
           </div>
         </article>
 
-        <article className="info-section__card" style={{ '--card-bg': `url(${withBase('/images/sostenibilidad1.webp')})` } as React.CSSProperties}>
+        <article className="info-section__card">
+          <img
+            className="info-section__card-bg"
+            src={withBase('/images/sostenibilidad1.webp')}
+            alt="Entorno natural asociado a la sostenibilidad en pedra en sec"
+            loading="lazy"
+          />
           <div className="info-section__card-overlay">
             <h4 className="info-section__card-title">Sostenibilidad</h4>
             <p className="info-section__card-text">
@@ -122,7 +134,13 @@ export function InfoSection() {
           </div>
         </article>
 
-        <article className="info-section__card" style={{ '--card-bg': `url(${withBase('/images/riego1.webp')})` } as React.CSSProperties}>
+        <article className="info-section__card">
+          <img
+            className="info-section__card-bg"
+            src={withBase('/images/riego1.webp')}
+            alt="Sistema tradicional de gestión de agua en bancales"
+            loading="lazy"
+          />
           <div className="info-section__card-overlay">
             <h4 className="info-section__card-title">Gestión del Agua</h4>
             <p className="info-section__card-text">
@@ -133,7 +151,13 @@ export function InfoSection() {
           </div>
         </article>
 
-        <article className="info-section__card" style={{ '--card-bg': `url(${withBase('/images/turismo1.webp')})` } as React.CSSProperties}>
+        <article className="info-section__card">
+          <img
+            className="info-section__card-bg"
+            src={withBase('/images/turismo1.webp')}
+            alt="Ruta de senderismo vinculada al turismo responsable"
+            loading="lazy"
+          />
           <div className="info-section__card-overlay">
             <h4 className="info-section__card-title">Turismo Responsable</h4>
             <p className="info-section__card-text">
