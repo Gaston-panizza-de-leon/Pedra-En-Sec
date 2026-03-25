@@ -48,6 +48,16 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
   : `${import.meta.env.BASE_URL}/`;
 const DATA_BASE_URL = `${baseUrl}data`;
 
+function resolvePublicUrl(value: string | undefined): string | undefined {
+  if (!value) return value;
+  if (/^(https?:)?\/\//i.test(value) || value.startsWith('data:') || value.startsWith('blob:')) {
+    return value;
+  }
+
+  const normalizedPath = value.startsWith('/') ? value.slice(1) : value;
+  return `${baseUrl}${normalizedPath}`;
+}
+
 async function fetchJson<T>(url: string): Promise<T> {
   const response = await fetch(url);
   if (!response.ok) {
@@ -156,7 +166,7 @@ function normalizePoi(poi: CatalogPoi): PointOfInterest {
         coordinates: polygonCoordinates,
       },
       narration: poi.narration,
-      image: poi.image,
+      image: resolvePublicUrl(poi.image),
     };
   }
 
@@ -184,7 +194,7 @@ function normalizePoi(poi: CatalogPoi): PointOfInterest {
       radiusMeters: triggerRadius,
     },
     narration: poi.narration,
-    image: poi.image,
+    image: resolvePublicUrl(poi.image),
   };
 }
 
@@ -239,7 +249,9 @@ export async function loadRoutesFromGeoJson(): Promise<Route[]> {
         path: geometry.path,
         pathSegments: geometry.pathSegments,
         pois,
-        photos: Array.isArray(routeConfig.photos) ? routeConfig.photos : [],
+        photos: Array.isArray(routeConfig.photos)
+          ? routeConfig.photos.map((photo) => resolvePublicUrl(photo) || photo)
+          : [],
         video: routeConfig.video || '',
         color: routeConfig.color || '#4a7c59',
       } satisfies Route;

@@ -1,5 +1,13 @@
 import './InfoSection.css';
 
+const baseUrl = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+function withBase(path: string): string {
+  return `${baseUrl}${path.startsWith('/') ? path.slice(1) : path}`;
+}
+
 export function InfoSection() {
   return (
     <section
@@ -44,7 +52,7 @@ export function InfoSection() {
           <figure className="info-section__row-image">
             {/* Replace src with your own WebP image */}
             <img
-              src="/images/muro-pedra-en-sec.webp"
+              src={withBase('/images/muro-pedra-en-sec.webp')}
               alt="Detalle de un muro de piedra en seco mostrando el encaje preciso de las piedras"
               loading="lazy"
             />
@@ -79,7 +87,7 @@ export function InfoSection() {
           <figure className="info-section__row-image">
             {/* Replace src with your own WebP image */}
             <img
-              src="/images/cami-pedra-en-sec.webp"
+              src={withBase('/images/cami-pedra-en-sec.webp')}
               alt="Camino de piedra en seco en la Serra de Tramuntana"
               loading="lazy"
             />
@@ -92,7 +100,7 @@ export function InfoSection() {
       <h3 className="info-section__cards-heading">¿Por qué es importante?</h3>
 
       <div className="info-section__grid">
-        <article className="info-section__card" style={{ '--card-bg': 'url(/images/patrimonio.webp)' } as React.CSSProperties}>
+        <article className="info-section__card" style={{ '--card-bg': `url(${withBase('/images/patrimonio.webp')})` } as React.CSSProperties}>
           <div className="info-section__card-overlay">
             <h4 className="info-section__card-title">Patrimonio Cultural</h4>
             <p className="info-section__card-text">
@@ -103,7 +111,7 @@ export function InfoSection() {
           </div>
         </article>
 
-        <article className="info-section__card" style={{ '--card-bg': 'url(/images/sostenibilidad1.webp)' } as React.CSSProperties}>
+        <article className="info-section__card" style={{ '--card-bg': `url(${withBase('/images/sostenibilidad1.webp')})` } as React.CSSProperties}>
           <div className="info-section__card-overlay">
             <h4 className="info-section__card-title">Sostenibilidad</h4>
             <p className="info-section__card-text">
@@ -114,7 +122,7 @@ export function InfoSection() {
           </div>
         </article>
 
-        <article className="info-section__card" style={{ '--card-bg': 'url(/images/riego1.webp)' } as React.CSSProperties}>
+        <article className="info-section__card" style={{ '--card-bg': `url(${withBase('/images/riego1.webp')})` } as React.CSSProperties}>
           <div className="info-section__card-overlay">
             <h4 className="info-section__card-title">Gestión del Agua</h4>
             <p className="info-section__card-text">
@@ -125,7 +133,7 @@ export function InfoSection() {
           </div>
         </article>
 
-        <article className="info-section__card" style={{ '--card-bg': 'url(/images/turismo1.webp)' } as React.CSSProperties}>
+        <article className="info-section__card" style={{ '--card-bg': `url(${withBase('/images/turismo1.webp')})` } as React.CSSProperties}>
           <div className="info-section__card-overlay">
             <h4 className="info-section__card-title">Turismo Responsable</h4>
             <p className="info-section__card-text">
