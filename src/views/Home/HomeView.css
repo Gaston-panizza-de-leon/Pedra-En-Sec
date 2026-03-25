@@ -34,14 +34,6 @@
   margin: 0 auto;
 }
 
-.home-view__divider {
-  border: none;
-  border-top: 2px solid var(--color-stone-300);
-  margin: 0 1.5rem;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 @media (max-width: 600px) {
   .home-view__hero {

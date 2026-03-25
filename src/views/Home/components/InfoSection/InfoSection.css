@@ -1,5 +1,10 @@
+/* ════════════════════════════════════════════
+   InfoSection – Editorial / Magazine Layout
+   ════════════════════════════════════════════ */
+
 .info-section {
-  padding: 3rem 1.5rem;
+  width: 100%;
+  padding: 3rem 1.5rem 0;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -10,13 +15,6 @@
   color: var(--color-green-800);
   margin-bottom: 1.5rem;
   text-align: center;
-}
-
-.info-section__subtitle {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  color: var(--color-green-700);
-  margin: 2rem 0 0.75rem;
 }
 
 .info-section__text {
@@ -36,45 +34,180 @@
   color: var(--color-green-800);
 }
 
-.info-section__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+/* ── Editorial rows ────────────────────── */
+.info-section__editorial {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 
-.info-section__card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-stone-300);
-  border-radius: var(--radius-md);
-  padding: 1.5rem;
+.info-section__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.info-section__row--reversed {
+  direction: rtl;
+}
+
+.info-section__row--reversed > * {
+  direction: ltr;
+}
+
+.info-section__subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-green-800);
+  margin-bottom: 1rem;
+}
+
+.info-section__row-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.info-section__row-text p:last-child {
+  margin-bottom: 0;
+}
+
+.info-section__row-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.info-section__row-image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  /* Gradient placeholder while image loads / if missing */
+  background: linear-gradient(
+    135deg,
+    var(--color-stone-300),
+    var(--color-stone-200)
+  );
+}
+
+.info-section__row-image figcaption {
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  background: var(--color-stone-100);
   text-align: center;
 }
 
+/* ── Cards heading ─────────────────────── */
+.info-section__cards-heading {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: var(--color-green-800);
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+  padding: 0 1.5rem;
+}
+
+/* ── Visual cards grid ─────────────────── */
+.info-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.info-section__card {
+  position: relative;
+  min-height: 280px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background:
+    var(--card-bg, none) center / cover no-repeat,
+    linear-gradient(135deg, var(--color-stone-400), var(--color-green-900));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-section__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18);
+}
+
+.info-section__card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.75rem;
+  background: linear-gradient(
+    to top,
+    rgba(30, 58, 20, 0.88) 0%,
+    rgba(30, 58, 20, 0.4) 50%,
+    rgba(30, 58, 20, 0.1) 100%
+  );
+  color: var(--color-white);
+}
+
 .info-section__card-icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
 .info-section__card-title {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
-  color: var(--color-green-800);
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
 .info-section__card-text {
   font-size: 0.9rem;
-  color: var(--color-text-secondary);
   line-height: 1.5;
+  opacity: 0.92;
 }
 
-@media (max-width: 600px) {
+/* ── Responsive ────────────────────────── */
+@media (max-width: 768px) {
   .info-section {
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 0;
   }
 
   .info-section__title {
     font-size: 1.5rem;
+  }
+
+  .info-section__row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .info-section__row--reversed {
+    direction: ltr;
+  }
+
+  .info-section__editorial {
+    padding: 2rem 1rem;
+    gap: 3rem;
+  }
+
+  .info-section__grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem 3rem;
+  }
+
+  .info-section__card {
+    min-height: 220px;
+  }
+
+  .info-section__cards-heading {
+    font-size: 1.35rem;
   }
 }

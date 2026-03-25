@@ -1,7 +1,8 @@
 import { MapContainer, TileLayer, Polyline, Marker, Tooltip } from 'react-leaflet';
 import { useAppStore } from '../../store/useAppStore';
+import { getPoiPosition } from '../../hooks/useGuidedMode';
 import { TTSButton } from '../../components/TTSButton/TTSButton';
-import type { Route } from '../../types';
+import type { Route, LatLng } from '../../types';
 import './RouteDetailView.css';
 
 function difficultyLabel(d: Route['difficulty']) {
@@ -29,13 +30,22 @@ export function RouteDetailView() {
     return null;
   }
 
-  const positions: [number, number][] = route.path.map(
-    (p) => [p.lat, p.lng] as [number, number],
+  const segments: LatLng[][] =
+    Array.isArray(route.pathSegments) && route.pathSegments.length > 0
+      ? route.pathSegments.filter((segment) => segment.length > 1)
+      : route.path.length > 1
+        ? [route.path]
+        : [];
+
+  const positions: [number, number][][] = segments.map((segment) =>
+    segment.map((p) => [p.lat, p.lng] as [number, number]),
   );
 
+  const allPoints = segments.flat();
+
   const center: [number, number] = [
-    route.path.reduce((sum, p) => sum + p.lat, 0) / route.path.length,
-    route.path.reduce((sum, p) => sum + p.lng, 0) / route.path.length,
+    allPoints.reduce((sum, p) => sum + p.lat, 0) / allPoints.length,
+    allPoints.reduce((sum, p) => sum + p.lng, 0) / allPoints.length,
   ];
 
   const goBack = () => {
@@ -95,16 +105,19 @@ export function RouteDetailView() {
                 positions={positions}
                 pathOptions={{ color: route.color, weight: 4, opacity: 0.9 }}
               />
-              {route.pois.map((poi) => (
+              {route.pois.map((poi) => {
+                const pos = getPoiPosition(poi);
+                return (
                 <Marker
                   key={poi.id}
-                  position={[poi.position.lat, poi.position.lng]}
+                  position={[pos.lat, pos.lng]}
                 >
                   <Tooltip direction="top" offset={[0, -20]}>
                     {poi.name}
                   </Tooltip>
                 </Marker>
-              ))}
+                );
+              })}
             </MapContainer>
           </div>
         </section>

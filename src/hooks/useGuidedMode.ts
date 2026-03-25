@@ -21,6 +21,49 @@ function haversineDistance(a: LatLng, b: LatLng): number {
 }
 
 /**
+ * Point-in-polygon test using ray casting algorithm.
+ */
+function isPointInPolygon(point: LatLng, polygon: LatLng[]): boolean {
+  let inside = false;
+  for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
+    const xi = polygon[i].lat, yi = polygon[i].lng;
+    const xj = polygon[j].lat, yj = polygon[j].lng;
+
+    const intersect =
+      yi > point.lng !== yj > point.lng &&
+      point.lat < ((xj - xi) * (point.lng - yi)) / (yj - yi) + xi;
+    if (intersect) inside = !inside;
+  }
+  return inside;
+}
+
+/**
+ * Check if user position is inside a POI's trigger area.
+ */
+function isInsideTriggerArea(position: LatLng, poi: PointOfInterest): boolean {
+  const area = poi.triggerArea;
+  if (area.type === 'circle') {
+    return haversineDistance(position, area.center) <= area.radiusMeters;
+  }
+  return isPointInPolygon(position, area.coordinates);
+}
+
+/**
+ * Get the representative position of a POI (for map markers, etc.).
+ */
+export function getPoiPosition(poi: PointOfInterest): LatLng {
+  const area = poi.triggerArea;
+  if (area.type === 'circle') {
+    return area.center;
+  }
+  // Centroid of the polygon
+  const coords = area.coordinates;
+  const lat = coords.reduce((sum, c) => sum + c.lat, 0) / coords.length;
+  const lng = coords.reduce((sum, c) => sum + c.lng, 0) / coords.length;
+  return { lat, lng };
+}
+
+/**
  * When guided mode is active, watches the user's position
  * and auto-narrates when they enter a POI trigger zone.
  */
@@ -53,8 +96,7 @@ export function useGuidedMode() {
     for (const poi of pois) {
       if (narratedIds.current.has(poi.id)) continue;
 
-      const distance = haversineDistance(userPosition, poi.position);
-      if (distance <= poi.triggerRadius) {
+      if (isInsideTriggerArea(userPosition, poi)) {
         narratedIds.current.add(poi.id);
         speak(poi.narration);
         break; // narrate one at a time
