@@ -11,15 +11,158 @@
     "simplificationToleranceMeters": 35,
     "pois": [
       {
-        "id": "poi-mallorca-1",
-        "name": "Mirador de Valldemossa",
+        "id": "poi-gr221-valldemossa-center",
+        "name": "Cartuja de Valldemossa",
         "triggerArea": {
           "type": "circle",
-          "center": { "lat": 39.7106, "lng": 2.6230 },
+          "center": {
+            "lat": 39.7121,
+            "lng": 2.6225
+          },
+          "radiusMeters": 50
+        },
+        "narration": "Bienvenido al corazón de Valldemossa. Aquí la ruta se adentra en el bosque mediterráneo hacia el Camí de s'Arxiduc.",
+        "image": "/images/valldemossa-cartuja.webp"
+      },
+      {
+        "id": "poi-gr221-cami-arxiduc",
+        "name": "Camí de s'Arxiduc",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7285,
+            "lng": 2.6358
+          },
+          "radiusMeters": 80
+        },
+        "narration": "Estás caminando sobre el sendero construido por el Archiduque Luis Salvador a finales del siglo XIX. Disfruta de las vistas sobre el mar.",
+        "image": "/images/cami-arxiduc.webp"
+      },
+      {
+        "id": "poi-gr221-deia",
+        "name": "Deià - Es Clot",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7478,
+            "lng": 2.6482
+          },
+          "radiusMeters": 100
+        },
+        "narration": "Has llegado a Deià, el pueblo de los artistas. Desde aquí la ruta desciende hacia Cala Deià para continuar por la costa.",
+        "image": "/images/deia-clot.webp"
+      },
+      {
+        "id": "poi-gr221-muleta",
+        "name": "Refugi de Muleta",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7958,
+            "lng": 2.6828
+          },
+          "radiusMeters": 150
+        },
+        "narration": "Situado junto al faro de Cap Gros, este refugio ofrece una de las mejores puestas de sol de toda la Sierra de Tramuntana.",
+        "image": "/images/refugi-muleta.webp"
+      },
+      {
+        "id": "poi-gr221-soller",
+        "name": "Port de Sóller",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7935,
+            "lng": 2.6934
+          },
+          "radiusMeters": 200
+        },
+        "narration": "Final del tramo costero. Desde aquí el GR-221 se dirige hacia el Barranc de Biniaraix, una obra maestra de la piedra en seco.",
+        "image": "/images/port-soller.webp"
+      },
+      {
+        "id": "poi-gr221-sant-elm",
+        "name": "Sant Elm - La Trapa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.5952,
+            "lng": 2.3615
+          },
+          "radiusMeters": 100
+        },
+        "narration": "Inicio sur de la Tramuntana. Aquí comienza el ascenso hacia las ruinas del monasterio de La Trapa con vistas a Sa Dragonera.",
+        "image": "/images/la-trapa.webp"
+      },
+      {
+        "id": "poi-gr221-estellencs",
+        "name": "Estellencs",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.6535,
+            "lng": 2.4815
+          },
+          "radiusMeters": 80
+        },
+        "narration": "Estellencs es uno de los pueblos más auténticos. El camino aquí transcurre entre bancales de piedra en seco y olivos milenarios.",
+        "image": "/images/estellencs.webp"
+      },
+      {
+        "id": "poi-gr221-banyalbufar",
+        "name": "Banyalbufar - Ses Animes",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.6872,
+            "lng": 2.5115
+          },
           "radiusMeters": 60
         },
-        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
-        "image": "/images/mallorca-mirador.webp"
+        "narration": "Famoso por su torre de vigilancia y sus viñedos en terrazas que bajan hasta el mar. Un punto clave de la arquitectura de piedra en seco.",
+        "image": "/images/banyalbufar.webp"
+      },
+      {
+        "id": "poi-gr221-galilea",
+        "name": "Galilea",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.6105,
+            "lng": 2.5032
+          },
+          "radiusMeters": 100
+        },
+        "narration": "Estás en Galilea, el pueblo más alto de Mallorca. Desde aquí, la ruta de piedra en seco ofrece vistas espectaculares hacia la costa de Calvià antes de subir hacia el Puig de Galatzó.",
+        "image": "/images/galilea-vistas.webp"
+      },
+      {
+        "id": "poi-gr221-lluc",
+        "name": "Santuari de Lluc",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.8232,
+            "lng": 2.8842
+          },
+          "radiusMeters": 200
+        },
+        "narration": "Centro espiritual de Mallorca. Aquí convergen varios caminos de montaña y comienza el descenso final hacia Pollença.",
+        "image": "/images/lluc.webp"
+      },
+      {
+        "id": "poi-gr221-pollenca",
+        "name": "Pollença - Pont Romà",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.8812,
+            "lng": 3.0125
+          },
+          "radiusMeters": 100
+        },
+        "narration": "Punto final (o inicial) de la Ruta de Pedra en Sec. El Pont Romà marca la entrada al histórico pueblo de Pollença.",
+        "image": "/images/pollenca-pont.webp"
       }
     ],
     "photos": [
@@ -44,7 +187,10 @@
         "name": "Tramo histórico del Camí de Cavalls",
         "triggerArea": {
           "type": "circle",
-          "center": { "lat": 40.0293, "lng": 4.1652 },
+          "center": {
+            "lat": 40.0293,
+            "lng": 4.1652
+          },
           "radiusMeters": 60
         },
         "narration": "Aquí puedes observar un tramo representativo del Camí de Cavalls en Menorca.",
@@ -73,7 +219,10 @@
         "name": "Inicio de Camí de sa Pujada",
         "triggerArea": {
           "type": "circle",
-          "center": { "lat": 38.9850, "lng": 1.5334 },
+          "center": {
+            "lat": 38.9850,
+            "lng": 1.5334
+          },
           "radiusMeters": 50
         },
         "narration": "Estás comenzando un tramo destacado de Camí de sa Pujada en Ibiza.",
@@ -102,7 +251,10 @@
         "name": "Mirador de La Mola",
         "triggerArea": {
           "type": "circle",
-          "center": { "lat": 38.6729, "lng": 1.5200 },
+          "center": {
+            "lat": 38.6729,
+            "lng": 1.5200
+          },
           "radiusMeters": 50
         },
         "narration": "Desde este punto se aprecia la red de caminos tradicionales de Formentera.",
