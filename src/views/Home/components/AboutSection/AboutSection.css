@@ -1,0 +1,143 @@
+/* ════════════════════════════════════════════
+   AboutSection – Team Members
+   ════════════════════════════════════════════ */
+
+.about-section {
+  width: 100%;
+  padding: 4rem 1.5rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-green-50),
+    var(--color-stone-100)
+  );
+  border-top: 2px solid var(--color-stone-300);
+}
+
+.about-section__container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-section__title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-green-800);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.about-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.about-section__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-section__card-photo {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 3 / 4;
+  margin: 0;
+  margin-bottom: 1.5rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(
+    135deg,
+    var(--color-stone-300),
+    var(--color-stone-200)
+  );
+}
+
+.about-section__card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-section__card-info {
+  flex: 1;
+}
+
+.about-section__card-name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-green-800);
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+
+.about-section__card-role {
+  font-size: 0.95rem;
+  color: var(--color-stone-700);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-section__title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-section__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .about-section__card-photo {
+    max-width: 200px;
+    margin-bottom: 1rem;
+  }
+
+  .about-section__card-name {
+    font-size: 1.1rem;
+  }
+
+  .about-section__card-role {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 2rem 1rem;
+  }
+
+  .about-section__title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-section__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-section__card-photo {
+    max-width: 250px;
+    margin-bottom: 1rem;
+  }
+
+  .about-section__card-name {
+    font-size: 1rem;
+  }
+
+  .about-section__card-role {
+    font-size: 0.85rem;
+  }
+}
