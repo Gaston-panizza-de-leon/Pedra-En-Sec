@@ -1,4 +1,6 @@
 import type { LatLng, PointOfInterest, Route } from '../types';
+import type { Church } from '../types';
+import { filterChurchesByRoute } from './filterChurchesByRoute';
 
 type Difficulty = Route['difficulty'];
 
@@ -226,7 +228,7 @@ async function loadRouteGeometry(route: CatalogRoute): Promise<{ path: LatLng[];
   };
 }
 
-export async function loadRoutesFromGeoJson(): Promise<Route[]> {
+export async function loadRoutesFromGeoJson(churches?: Church[]): Promise<Route[]> {
   const catalog = await fetchJson<CatalogRoute[]>(`${DATA_BASE_URL}/routes.json`);
 
   const routes = await Promise.all(
@@ -248,7 +250,7 @@ export async function loadRoutesFromGeoJson(): Promise<Route[]> {
         durationHours: isFiniteNumber(routeConfig.durationHours) ? routeConfig.durationHours : 0,
         path: geometry.path,
         pathSegments: geometry.pathSegments,
-        pois,
+        pois: [...pois, ...(churches ? filterChurchesByRoute({ pathSegments: geometry.pathSegments } as Route, churches) : [])],
         photos: Array.isArray(routeConfig.photos)
           ? routeConfig.photos.map((photo) => resolvePublicUrl(photo) || photo)
           : [],

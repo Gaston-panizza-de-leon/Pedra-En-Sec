@@ -212,13 +212,17 @@ export function RouteDetailView() {
                     <div className="route-detail-view__poi-name">
                       {poi.name}
                     </div>
-                    <p className="route-detail-view__poi-narration">
-                      {poi.narration}
-                    </p>
-                    <TTSButton
-                      text={poi.narration}
-                      label={`Escuchar narración de ${poi.name}`}
-                    />
+                    {poi.narration && (
+                      <>
+                        <p className="route-detail-view__poi-narration">
+                          {poi.narration}
+                        </p>
+                        <TTSButton
+                          text={poi.narration}
+                          label={`Escuchar narración de ${poi.name}`}
+                        />
+                      </>
+                    )}
                   </div>
                 </li>
               ))}

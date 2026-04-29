@@ -42,8 +42,9 @@ function isPointInPolygon(point: LatLng, polygon: LatLng[]): boolean {
  */
 function isInsideTriggerArea(position: LatLng, poi: PointOfInterest): boolean {
   const area = poi.triggerArea;
+  if (!area) return false; // No trigger area (e.g., church)
   if (area.type === 'circle') {
-    return haversineDistance(position, area.center) <= area.radiusMeters;
+    return haversineDistance(position, area.center) <= area.radiusMeters / 1000; // Convert meters to km
   }
   return isPointInPolygon(position, area.coordinates);
 }
@@ -53,13 +54,21 @@ function isInsideTriggerArea(position: LatLng, poi: PointOfInterest): boolean {
  */
 export function getPoiPosition(poi: PointOfInterest): LatLng {
   const area = poi.triggerArea;
+  if (!area) {
+    // For churches without trigger area, use church geo if available
+    if (poi.church?.geo) {
+      return { lat: poi.church.geo.latitude, lng: poi.church.geo.longitude };
+    }
+    // Fallback to default position
+    return { lat: 0, lng: 0 };
+  }
   if (area.type === 'circle') {
     return area.center;
   }
   // Centroid of the polygon
   const coords = area.coordinates;
-  const lat = coords.reduce((sum, c) => sum + c.lat, 0) / coords.length;
-  const lng = coords.reduce((sum, c) => sum + c.lng, 0) / coords.length;
+  const lat = coords.reduce((sum: number, c) => sum + c.lat, 0) / coords.length;
+  const lng = coords.reduce((sum: number, c) => sum + c.lng, 0) / coords.length;
   return { lat, lng };
 }
 
@@ -96,9 +105,10 @@ export function useGuidedMode() {
     for (const poi of pois) {
       if (narratedIds.current.has(poi.id)) continue;
 
-      if (isInsideTriggerArea(userPosition, poi)) {
+      // Only process POIs with narration (skip churches which don't have audio)
+      if (poi.narration && isInsideTriggerArea(userPosition, poi)) {
         narratedIds.current.add(poi.id);
-        speak(poi.narration);
+        speak(poi.narration || '');
         break; // narrate one at a time
       }
     }

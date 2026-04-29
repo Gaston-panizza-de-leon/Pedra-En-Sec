@@ -1,4 +1,4 @@
-/* ───────────────────────────────────────────
+﻿/* ───────────────────────────────────────────
    Domain types – Pedra en Sec
    ─────────────────────────────────────────── */
 
@@ -24,16 +24,20 @@ interface TriggerAreaPolygon {
 /** Trigger zone that activates TTS narration */
 export type TriggerArea = TriggerAreaCircle | TriggerAreaPolygon;
 
-/** A point of interest along a route */
+/** A point of interest along a route (supports both regular POIs and churches) */
 export interface PointOfInterest {
   id: string;
   name: string;
-  /** Zone that triggers TTS narration when the user enters it */
-  triggerArea: TriggerArea;
-  /** Short narration text read aloud by Web Speech API */
-  narration: string;
+  /** Zone that triggers TTS narration when the user enters it (optional for churches) */
+  triggerArea?: TriggerArea;
+  /** Short narration text read aloud by Web Speech API (optional for churches) */
+  narration?: string;
   /** Optional thumbnail */
   image?: string;
+  /** POI type: 'poi' (default) or 'church' */
+  type?: 'poi' | 'church';
+  /** Associated church (only for type='church') */
+  church?: Church;
 }
 
 /** A hiking / cultural route */
@@ -61,3 +65,53 @@ export interface Route {
 
 /** Views the SPA can render (no router) */
 export type ViewName = 'home' | 'routeDetail';
+
+/** PostalAddress from Schema.org */
+export interface PostalAddress {
+  addressLocality?: string;
+  addressRegion?: string;
+  streetAddress?: string;
+}
+
+/** AggregateRating from Schema.org */
+export interface AggregateRating {
+  ratingValue?: string;
+  reviewCount?: string;
+}
+
+/** PropertyValue from Schema.org */
+export interface PropertyValue {
+  name?: string;
+  value?: string;
+}
+
+/** Church / TouristAttraction from iglesias.json (Schema.org format) */
+export interface Church {
+  identifier: string;
+  '@id'?: string;
+  url?: string;
+  name: string;
+  alternateName?: string;
+  description?: string;
+  address?: PostalAddress;
+  geo?: {
+    latitude: number;
+    longitude: number;
+  };
+  telephone?: string;
+  openingHours?: string;
+  isAccessibleForFree?: boolean;
+  maximumAttendeeCapacity?: number;
+  aggregateRating?: AggregateRating;
+  image?: string[];
+  email?: string;
+  additionalProperty?: PropertyValue[];
+}
+
+/** Church POI - Church converted to PointOfInterest format for routes */
+export interface ChurchPOI extends Omit<PointOfInterest, 'triggerArea' | 'narration'> {
+  type: 'church';
+  church: Church;
+  triggerArea?: never;
+  narration?: never;
+}

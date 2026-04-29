@@ -1,0 +1,354 @@
+{
+    "@context" : "https://schema.org",
+    "@graph" : [
+        {
+            "@type" : ["Church", "TouristAttraction"],
+            "@id": "https://tudominio.com/iglesias/parroquia-nuestra-senora-salud#church",
+            "identifier": "I001",
+            "url": "https://tudominio.com/iglesias/parroquia-nuestra-senora-salud",
+            
+            "name" : "Parroquia Nuestra Señora de la Salud",
+            "alternateName" : "Iglesia del Terreno",
+            "description" : "La Parroquia de Nuestra Señora de la Salud, situada en el pintoresco Barrio de El Terreno en Palma, Islas Baleares, es una joya arquitectónica que acoge a fieles y visitantes con su ambiente tranquilo y acogedor. Este templo destaca por su excelente estado de conservación y las detalladas restauraciones que resaltan su belleza intrínseca. La iglesia cuenta con impresionantes esculturas y un diseño que refleja la devoción y el arte religioso local.",
+            "address" : {
+                "@type": "PostalAddress",
+                "addressLocality": "Palma de Mallorca",
+                "addressRegion": "Islas Baleares",
+                "streetAddress": "Carrer Salut, 63"
+            },
+            "containedInPlace": {
+                "@type": "City",
+                "name": "Palma"
+              },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.560218277285365,
+                "longitude": 2.623301710550583
+              },
+            "hasMap": "https://www.google.com/maps?q=39.560218277285365,2.623301710550583",
+            
+            "telephone" : "+34 971 733 732",
+            "sameAs": [],
+
+            "openingHours": "Sa 19:00-19:30",
+            "isAccessibleForFree": true,
+            "maximumAttendeeCapacity" : 200,
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.5",
+                "reviewCount": "26"
+              },
+
+            "image": [],
+            "video_url": null,
+            
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "santoTitular",
+                "value": "Virgen María"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "archictecturalStyle",
+                "value": "Gothic"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "foundingDate",
+                "value": "1870"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Dimensiones",
+                "value": "1300 m2"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "email",
+                "value": "parroquiaterreno@gmail.com"
+              }
+            ]
+        },
+        {
+            "@type" : ["Church", "TouristAttraction"],
+            "@id": "https://tudominio.com/iglesias/esglesia-santa-margalida-mallorca#church",
+            "identifier": "I002",
+            "url": "https://tudominio.com/iglesias/esglesia-santa-margalida-mallorca",
+            
+            "name" : "Església de Santa Margalida de Mallorca",
+            "alternateName" : "Iglesia de Santa Margalida",
+            "description" : "La iglesia de Santa Margalida es un punto de referencia histórico y religioso en la zona. Se encuentra en el punto más alto del pueblo, ofreciendo hermosas vistas panorámicas de la zona. Originalmente se construyó sobre una alquería islámica llamada Hiachat. La tradición local vincula su nombre con el hallazgo de una imagen de Santa Margarita en una cueva cercana, aunque también se relaciona con la llegada de los primeros clérigos que tuvo la parroquia, provenientes de Santa Margarida d’Empúries",
+
+            "address" : {
+                "@type": "PostalAddress",
+                "addressLocality": "Santa Margalida",
+                "addressRegion": "Islas Baleares",
+                "streetAddress": "Carrer de la Constitució, 2"
+            },
+            "containedInPlace": {
+                "@type": "City",
+                "name": "Santa Margalida"
+              },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.70319487145846,
+                "longitude": 3.1015387150877554
+              },
+            "hasMap": "https://www.google.com/maps?q=39.70319487145846,3.1015387150877554",
+            
+            "telephone" : "+34 971 52 31 19",
+            "sameAs": [],
+
+            "openingHours": "Mo-Su 09:00-18:00",
+            "isAccessibleForFree": true,
+            "maximumAttendeeCapacity" : 800,
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.5",
+                "reviewCount": "85"
+              },
+
+            "image": [],
+            "video_url": null,
+            
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "santoTitular",
+                "value": "Santa Margalida"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "archictecturalStyle",
+                "value": "Baroque"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "foundingDate",
+                "value": "1232"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Dimensiones",
+                "value": "1247 m2"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "email",
+                "value": "parroquialavila@gmail.com"
+              }
+            ]
+        },
+        {
+            "@type" : ["Church", "TouristAttraction"],
+            "@id": "https://tudominio.com/iglesias/iglesia-inmaculada-concepcion#church",
+            "identifier": "I003",
+            "url": "https://tudominio.com/iglesias/iglesia-inmaculada-concepcion",
+            
+            "name" : "Iglesia de la Inmaculada Concepción",
+            "alternateName" : "Iglesia de Sant Magí",
+            "description" : "La iglesia de la Inmaculada Concepción, más conocida con el nombre de Sant Magí, se sitúa en el barrio de Santa Catalina. Es un templo historicista renacentista, con elementos neogóticos y neorrománicos, construido entre 1867 y 1920 por parte de Bartomeu y Miquel Ferrà.",
+            
+            "address" : {
+                "@type": "PostalAddress",
+                "addressLocality": "Palma de Mallorca",
+                "addressRegion": "Islas Baleares",
+                "streetAddress": " Carrer d'Espartero, 9, Ponent,"
+            },
+            "containedInPlace": {
+                "@type": "City",
+                "name": "Palma"
+              },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.570838338703005,
+                "longitude": 2.634847738364531
+              },
+            "hasMap": "https://www.google.com/maps?q=39.570838338703005,2.634847738364531",
+            
+            "telephone" : "+34 971 73 07 08",
+            "sameAs": [],
+
+            "openingHours": "Mo-Thu 19:00-21:00; Sat 19:00-21:00; Sun 10:00-12:00, 19:00-21:00",
+            "isAccessibleForFree": true,
+            "maximumAttendeeCapacity" : 500,
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.6",
+                "reviewCount": "287"
+              },
+
+            "image": [],
+            "video_url": null,
+            
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "santoTitular",
+                "value": "San Magín de Tarragona"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "archictecturalStyle",
+                "value": "Eclecticismo"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "foundingDate",
+                "value": "1867"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Dimensiones",
+                "value": "1179 m2"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "email",
+                "value": "p.sanmaginpalma@teatino.es"
+              }
+            ]
+        },
+        {
+            "@type" : ["Church", "TouristAttraction"],
+            "@id": "https://tudominio.com/iglesias/iglesia-San-Jaime#church",
+            "identifier": "I004",
+            "url": "https://tudominio.com/iglesias/iglesia-San-Jaime",
+            
+            "name" : "Iglesia de San Jaime",
+            "alternateName" : "Iglesia de Alcudia",
+            "description" : "La Parroquia de San Jaime de Palma se encuentra situada en medio del centro histórico de Ciudad, en la calle que toma su nombre. Es una de las iglesias más antiguas de Palma, empezada a construirse a principios del siglo XIV. Según la tradición, el templo fue construido por los reyes de Mallorca, debido a la titularidad del santo de su nombre.",
+            
+            "address" : {
+                "@type": "PostalAddress",
+                "addressLocality": "Alcudia",
+                "addressRegion": "Islas Baleares",
+                "streetAddress": " Plaça de Jaume Ques"
+            },
+            "containedInPlace": {
+                "@type": "City",
+                "name": "Alcudia"
+              },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.85385949234112,
+                "longitude": 3.12066112499515
+              },
+            "hasMap": "https://www.google.com/maps?q=39.85385949234112,3.12066112499515",
+            
+            "telephone" : "+34 971 54 86 65",
+            "sameAs": [],
+
+            "openingHours": "Mo-Sat 10:00-13:00",
+            "isAccessibleForFree": true,
+            "maximumAttendeeCapacity" : 800,
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.6",
+                "reviewCount": "1282"
+              },
+
+            "image": [],
+            "video_url": null,
+            
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "santoTitular",
+                "value": "Sant Jaume"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "archictecturalStyle",
+                "value": "neogotica"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "foundingDate",
+                "value": "1845"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Dimensiones",
+                "value": "1200 m2"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "email",
+                "value": "oficines@unitatbadiaalcudia.com"
+              }
+            ]
+        },
+        {
+            "@type" : ["Church", "TouristAttraction"],
+            "@id": "https://tudominio.com/iglesias/parroquia-Sant-Bartomeu#church",
+            "identifier": "I005",
+            "url": "https://tudominio.com/iglesias/parroquia-Sant-Bartomeu",
+            
+            "name" : "Parròquia de Sant Bartomeu",
+            "alternateName" : "Iglesia de Son Rapinya",
+            "description" : "El templo es de estilo ojival, muy proporcionando en sus dimensiones . Consta de tres naves y parece una Catedral en miniatura. . En el altar mayor se halla colocado un retablo que perteneció al antiguo Gremio de Carniceros de Palma, dedicado al Apóstol San Bartolomé, que fué declarado Patrono Celestial del Caserío.",
+            
+            "address" : {
+                "@type": "PostalAddress",
+                "addressLocality": "Palma de Mallorca",
+                "addressRegion": "Islas Baleares",
+                "streetAddress": " Plaça Vicari Llinàs, 2"
+            },
+            "containedInPlace": {
+                "@type": "City",
+                "name": "Palma"
+              },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.58674991912201,
+                "longitude": 2.6163670640702463
+              },
+            "hasMap": "https://www.google.com/maps?q=39.58674991912201,2.6163670640702463",
+            
+            "telephone" : "+34 971 79 24 45",
+            "sameAs": [],
+
+            "openingHours": "Mo-Fri 19:00-21:00; Sun 10:00-12:00, 19:00-21:00",
+            "isAccessibleForFree": true,
+            "maximumAttendeeCapacity" : 100,
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.7",
+                "reviewCount": "11"
+              },
+
+            "image": [],
+            "video_url": null,
+            
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "santoTitular",
+                "value": "Apóstol San Bartolomé"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "archictecturalStyle",
+                "value": "neomedieval"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "foundingDate",
+                "value": "1880"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Dimensiones",
+                "value": "420 m2"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "email",
+                "value": null
+              }
+            ]
+        }
+    ]
+}

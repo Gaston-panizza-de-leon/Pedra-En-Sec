@@ -1,37 +1,46 @@
-import { create } from 'zustand';
-import type { Route, ViewName, LatLng } from '../types';
+﻿import { create } from 'zustand';
+import type { Route, ViewName, LatLng, Church } from '../types';
 
 interface AppState {
-  /* ── Navigation ──────────────────────── */
+  /* ──────────────────────────────────────────── Navigation ──────────────────────────────────────────── */
   currentView: ViewName;
   setView: (view: ViewName) => void;
 
-  /* ── Selected Route ──────────────────── */
+  /* ──────────────────────────────────────────── Selected Route ──────────────────────────────────────────── */
   selectedRoute: Route | null;
   selectRoute: (route: Route) => void;
   clearRoute: () => void;
 
-  /* ── Detail panel (swipe-up / modal) ── */
+  /* ──────────────────────────────────────────── Detail panel ──────────────────────────────────────────── */
   isDetailOpen: boolean;
   openDetail: (route: Route) => void;
   closeDetail: () => void;
 
-  /* ── Guided mode ─────────────────────── */
+  /* ──────────────────────────────────────────── Guided mode ──────────────────────────────────────────── */
   guidedMode: boolean;
   toggleGuidedMode: () => void;
   stopGuidedMode: () => void;
 
-  /* ── Geolocation ─────────────────────── */
+  /* ──────────────────────────────────────────── Geolocation ──────────────────────────────────────────── */
   userPosition: LatLng | null;
   setUserPosition: (pos: LatLng | null) => void;
 
-  /* ── Hovered route (for map highlight) ─ */
+  /* ──────────────────────────────────────────── Hovered route ──────────────────────────────────────────── */
   hoveredRouteId: string | null;
   setHoveredRouteId: (id: string | null) => void;
-  /* ── Quiz modal ──────────────────────── */
+
+  /* ──────────────────────────────────────────── Quiz modal ──────────────────────────────────────────── */
   isQuizOpen: boolean;
   openQuiz: () => void;
-  closeQuiz: () => void;}
+  closeQuiz: () => void;
+
+  /* ──────────────────────────────────────────── Churches ──────────────────────────────────────────── */
+  churches: Church[];
+  setChurches: (churches: Church[]) => void;
+  selectedChurch: Church | null;
+  selectChurch: (church: Church) => void;
+  clearSelectedChurch: () => void;
+}
 
 export const useAppStore = create<AppState>((set) => ({
   /* Navigation */
@@ -45,8 +54,7 @@ export const useAppStore = create<AppState>((set) => ({
 
   /* Detail panel */
   isDetailOpen: false,
-  openDetail: (route) =>
-    set({ selectedRoute: route, isDetailOpen: true }),
+  openDetail: (route) => set({ selectedRoute: route, isDetailOpen: true }),
   closeDetail: () => set({ isDetailOpen: false }),
 
   /* Guided mode */
@@ -66,4 +74,11 @@ export const useAppStore = create<AppState>((set) => ({
   isQuizOpen: false,
   openQuiz: () => set({ isQuizOpen: true }),
   closeQuiz: () => set({ isQuizOpen: false }),
+
+  /* Churches */
+  churches: [],
+  setChurches: (churches) => set({ churches }),
+  selectedChurch: null,
+  selectChurch: (church) => set({ selectedChurch: church }),
+  clearSelectedChurch: () => set({ selectedChurch: null }),
 }));
