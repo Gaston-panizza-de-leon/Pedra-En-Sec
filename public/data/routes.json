@@ -2,8 +2,8 @@
   {
     "id": "ruta-pedra-sec-mallorca",
     "name": "Ruta de Pedra en Sec - Mallorca",
-    "shortDescription": "Recorrido principal por la Serra de Tramuntana sobre trazados historicos de pedra en sec.",
-    "longDescription": "Ruta basada en el trazado senderista de Mallorca para visualizar la tecnica constructiva de pedra en sec y su paisaje cultural en la Tramuntana.",
+    "shortDescription": "La mítica ruta GR 221 de 185 km a través de la Serra de Tramuntana, sumergiéndose en la arquitectura de piedra seca milenaria de Mallorca.",
+    "longDescription": "Descubre el trazado épico del GR 221, una travesía de casi dos meses que atraviesa la Serra de Tramuntana desde Sant Elm hasta Pollença. Este legendario sendero catalán es un viaje a través de la historia de Mallorca, donde cada kilómetro revela la maestría constructiva de la piedra en seco. Pasarás por pueblos como Valldemossa, Deià y Sóller, cruzarás bosques mediterráneos ancestrales y disfrutarás de vistas panorámicas del mar Mediterráneo. La ruta es una ventana abierta a la técnica constructiva más característica de las Islas Baleares: muros de piedra sin mortero que han resistido siglos de erosión e intemperie. Una experiencia transformadora para todo amante del senderismo, la naturaleza y la arquitectura vernácula.",
     "difficulty": "moderada",
     "distanceKm": 185,
     "durationHours": 72,
@@ -22,7 +22,7 @@
           "radiusMeters": 50
         },
         "narration": "Bienvenido al corazón de Valldemossa. Aquí la ruta se adentra en el bosque mediterráneo hacia el Camí de s'Arxiduc.",
-        "image": "/images/valldemossa-cartuja.webp"
+        "image": "/images/cartuja.webp"
       },
       {
         "id": "poi-gr221-cami-arxiduc",
@@ -36,7 +36,7 @@
           "radiusMeters": 80
         },
         "narration": "Estás caminando sobre el sendero construido por el Archiduque Luis Salvador a finales del siglo XIX. Disfruta de las vistas sobre el mar.",
-        "image": "/images/cami-arxiduc.webp"
+        "image": "/images/camiarxiduc.webp"
       },
       {
         "id": "poi-gr221-deia",
@@ -50,7 +50,7 @@
           "radiusMeters": 100
         },
         "narration": "Has llegado a Deià, el pueblo de los artistas. Desde aquí la ruta desciende hacia Cala Deià para continuar por la costa.",
-        "image": "/images/deia-clot.webp"
+        "image": "/images/esclot.webp"
       },
       {
         "id": "poi-gr221-muleta",
@@ -64,7 +64,7 @@
           "radiusMeters": 150
         },
         "narration": "Situado junto al faro de Cap Gros, este refugio ofrece una de las mejores puestas de sol de toda la Sierra de Tramuntana.",
-        "image": "/images/refugi-muleta.webp"
+        "image": "/images/refugidemuleta.webp"
       },
       {
         "id": "poi-gr221-soller",
@@ -78,7 +78,7 @@
           "radiusMeters": 200
         },
         "narration": "Final del tramo costero. Desde aquí el GR-221 se dirige hacia el Barranc de Biniaraix, una obra maestra de la piedra en seco.",
-        "image": "/images/port-soller.webp"
+        "image": "/images/portdesoller.webp"
       },
       {
         "id": "poi-gr221-sant-elm",
@@ -92,7 +92,7 @@
           "radiusMeters": 100
         },
         "narration": "Inicio sur de la Tramuntana. Aquí comienza el ascenso hacia las ruinas del monasterio de La Trapa con vistas a Sa Dragonera.",
-        "image": "/images/la-trapa.webp"
+        "image": "/images/santelm.webp"
       },
       {
         "id": "poi-gr221-estellencs",
@@ -120,7 +120,7 @@
           "radiusMeters": 60
         },
         "narration": "Famoso por su torre de vigilancia y sus viñedos en terrazas que bajan hasta el mar. Un punto clave de la arquitectura de piedra en seco.",
-        "image": "/images/banyalbufar.webp"
+        "image": "/images/sesanimes.webp"
       },
       {
         "id": "poi-gr221-galilea",
@@ -134,7 +134,7 @@
           "radiusMeters": 100
         },
         "narration": "Estás en Galilea, el pueblo más alto de Mallorca. Desde aquí, la ruta de piedra en seco ofrece vistas espectaculares hacia la costa de Calvià antes de subir hacia el Puig de Galatzó.",
-        "image": "/images/galilea-vistas.webp"
+        "image": "/images/galilea.webp"
       },
       {
         "id": "poi-gr221-lluc",
@@ -148,7 +148,7 @@
           "radiusMeters": 200
         },
         "narration": "Centro espiritual de Mallorca. Aquí convergen varios caminos de montaña y comienza el descenso final hacia Pollença.",
-        "image": "/images/lluc.webp"
+        "image": "/images/santuaridelluc.webp"
       },
       {
         "id": "poi-gr221-pollenca",
@@ -162,20 +162,32 @@
           "radiusMeters": 100
         },
         "narration": "Punto final (o inicial) de la Ruta de Pedra en Sec. El Pont Romà marca la entrada al histórico pueblo de Pollença.",
-        "image": "/images/pollenca-pont.webp"
+        "image": "/images/pontroma.webp"
       }
     ],
     "photos": [
-      "/images/mallorca-ruta-1.webp"
+      "/images/cartuja.webp",
+      "/images/camiarxiduc.webp",
+      "/images/esclot.webp",
+      "/images/refugidemuleta.webp",
+      "/images/portdesoller.webp",
+      "/images/santelm.webp",
+      "/images/estellencs.webp",
+      "/images/sesanimes.webp",
+      "/images/galilea.webp",
+      "/images/santuaridelluc.webp",
+      "/images/pontroma.webp",
+      "/images/cami-pedra-en-sec.webp",
+      "/images/muro-pedra-en-sec.webp"
     ],
-    "video": "",
+    "video": "https://www.youtube.com/embed/44IcjCBG_fQ",
     "color": "#4a7c59"
   },
   {
     "id": "ruta-cami-cavalls-menorca",
     "name": "Camí de Cavalls - Menorca",
-    "shortDescription": "Itinerario circular costero de Menorca, historicamente usado para vigilancia y conexion entre calas.",
-    "longDescription": "La ruta de Menorca recorre tramos del Cami de Cavalls y permite interpretar muros, bancales y caminos tradicionales de piedra seca en un contexto litoral.",
+    "shortDescription": "Recorrido circular costero de 185 km alrededor de Menorca, el histórico camino de caballos que une calas paradisíacas con patrimonio de piedra seca.",
+    "longDescription": "El Camí de Cavalls es el sendero costero más emblemático de Menorca, un viaje de dos semanas que rodea completamente la isla tocando playas vírgenes y acantilados espectaculares. Originalmente utilizado para vigilancia contra piratas y conexión entre poblaciones costeras, hoy ofrece una perspectiva única sobre cómo la arquitectura tradicional de piedra seca se adapta al entorno litoral menorquín. Descubrirás bancales ancestrales que descienden hacia el mar, torres defensivas, y una red de muros de piedra que testimonian siglos de ocupación humana sostenible. Ideal para senderistas expertos en busca de soledad, naturaleza virgen y profunda conexión con el patrimonio cultural balear.",
     "difficulty": "moderada",
     "distanceKm": 185,
     "durationHours": 70,
@@ -206,8 +218,8 @@
   {
     "id": "ruta-sa-pujada-ibiza",
     "name": "Camí de sa Pujada - Ibiza",
-    "shortDescription": "Ruta senderista de Ibiza con segmentos tradicionales y vistas costeras.",
-    "longDescription": "Recorrido por Ibiza basado en geometria GeoJSON de caminos historicos, adaptado para visualizacion web manteniendo la forma del trazado original.",
+    "shortDescription": "Una ruta de 22 km que cubre los trazados históricos de Ibiza, combinando senderos rurales auténticos con impresionantes perspectivas del Mediterráneo.",
+    "longDescription": "El Camí de sa Pujada es una introducción perfecta a la arquitectura vernácula de las Islas Baleares. Este recorrido de ocho horas explora los caminos históricos de Ibiza, preservando la experiencia auténtica de cómo se desplazaban los ibicencos antes de las carreteras modernas. A través de terreno variado, pasarás por segmentos de piedra en seco perfectamente conservados, campos de cultivo tradicional abandonados, y puntos elevados con vistas panorámicas del mar cristalino. Es una ruta ideal para quienes buscan una experiencia cultural concentrada y accesible, perfecta para un fin de semana de senderismo contemplativo en una de las islas más emblemáticas de España.",
     "difficulty": "facil",
     "distanceKm": 22,
     "durationHours": 8,
@@ -238,8 +250,8 @@
   {
     "id": "ruta-cami-pujada-formentera",
     "name": "Camí de sa Pujada - Formentera",
-    "shortDescription": "Trazado historico de Formentera con segmentos de piedra seca y entorno mediterraneo.",
-    "longDescription": "Ruta de Formentera extraida de GeoJSON y preparada para uso interactivo, preservando los segmentos reales de camino sin uniones artificiales.",
+    "shortDescription": "Una joya de 12 km en la isla más pequeña y meridional, explorando caminos tradicionales entre acantilados y paisajes de una belleza virgen.",
+    "longDescription": "Formentera es la joya oculta de las Islas Baleares, y este Camí de sa Pujada es la puerta a su alma rural. En apenas cuatro horas de caminata, accederás a paisajes mediterráneos de rara belleza, donde la piedra en seco dibuja límites ancestrales sobre un territorio que ha permanecido casi intacto. La ruta conecta puntos históricos como el Mirador de La Mola, desde donde se contempla una perspectiva única del archipiélago balear. Perfecta para exploradores que buscan escapar del turismo masivo y sumergirse en la tranquilidad de caminos que cuentan historias de comunidades rurales sostenibles. Un respiro espiritual en una isla donde el tiempo se mueve al ritmo del mar.",
     "difficulty": "facil",
     "distanceKm": 12,
     "durationHours": 4,
