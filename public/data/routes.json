@@ -15,11 +15,224 @@
         "name": "Mirador de Valldemossa",
         "triggerArea": {
           "type": "circle",
-          "center": { "lat": 39.7106, "lng": 2.6230 },
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
           "radiusMeters": 60
         },
         "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca.",
         "image": "/images/mallorca-mirador.webp"
+      },
+      {
+        "id": "poi-mallorca-1",
+        "name": "Port d'Andratx",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.5414,
+            "lng": 2.3976
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Aquí comienza la magia. El inicio oficial de la ruta GR 221 con olor a mar y barcos pesqueros.",
+        "image": "/images/mallorca-andratx.webp"
+      },
+      {
+        "id": "poi-mallorca-2",
+        "name": "Sant Elm",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.5772,
+            "lng": 2.3524
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Desde aquí tienes unas vistas inmejorables de la isla de Sa Dragonera. Un lugar perfecto para un respiro.",
+        "image": "/images/mallorca-santelm.webp"
+      },
+      {
+        "id": "poi-mallorca-3",
+        "name": "La Trapa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.6056,
+            "lng": 2.3611
+          },
+          "radiusMeters": 80
+        },
+        "narration": "Antiguo monasterio trapense. Fíjate en la arquitectura de piedra en seco de sus bancales, es historia viva.",
+        "image": "/images/mallorca-latrapa.webp"
+      },
+      {
+        "id": "poi-mallorca-4",
+        "name": "Estellencs",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.6534,
+            "lng": 2.4816
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Un pueblo colgado entre la montaña y el mar, marcando la esencia de la Serra de Tramuntana.",
+        "image": "/images/mallorca-estellencs.webp"
+      },
+      {
+        "id": "poi-mallorca-5",
+        "name": "Banyalbufar",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.6872,
+            "lng": 2.5135
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Famoso por sus impresionantes terrazas de cultivo que caen en picado hacia el Mediterráneo.",
+        "image": "/images/mallorca-banyalbufar.webp"
+      },
+      {
+        "id": "poi-mallorca-6",
+        "name": "Esporles",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.6675,
+            "lng": 2.5794
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Un valle frondoso que contrasta con la dureza de la costa. Ideal para recargar agua y energías.",
+        "image": "/images/mallorca-esporles.webp"
+      },
+      {
+        "id": "poi-mallorca-7",
+        "name": "Mirador de Valldemossa",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7106,
+            "lng": 2.6230
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Estás en un tramo emblemático de la Ruta de Pedra en Sec en Mallorca. Disfruta de la panorámica.",
+        "image": "/images/mallorca-mirador.webp"
+      },
+      {
+        "id": "poi-mallorca-8",
+        "name": "Deià",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7478,
+            "lng": 2.6450
+          },
+          "radiusMeters": 60
+        },
+        "narration": "El refugio de artistas y escritores. Su encanto bohemio se mantiene intacto entre las montañas.",
+        "image": "/images/mallorca-deia.webp"
+      },
+      {
+        "id": "poi-mallorca-9",
+        "name": "Faro des Cap Gros",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.8052,
+            "lng": 2.6738
+          },
+          "radiusMeters": 50
+        },
+        "narration": "Vistas espectaculares del Port de Sóller. El viento aquí te recuerda la fuerza de la Tramuntana.",
+        "image": "/images/mallorca-capgros.webp"
+      },
+      {
+        "id": "poi-mallorca-10",
+        "name": "Sóller",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7667,
+            "lng": 2.7167
+          },
+          "radiusMeters": 60
+        },
+        "narration": "El valle de los naranjos. El contraste de sus cítricos con la piedra caliza es una maravilla visual.",
+        "image": "/images/mallorca-soller.webp"
+      },
+      {
+        "id": "poi-mallorca-11",
+        "name": "Barranc de Biniaraix",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7686,
+            "lng": 2.7303
+          },
+          "radiusMeters": 80
+        },
+        "narration": "Una de las obras maestras de la ingeniería popular en piedra en seco. Sube con calma.",
+        "image": "/images/mallorca-biniaraix.webp"
+      },
+      {
+        "id": "poi-mallorca-12",
+        "name": "Embalse de Cúber",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7919,
+            "lng": 2.7958
+          },
+          "radiusMeters": 100
+        },
+        "narration": "Un oasis artificial a los pies del Puig Major. El reflejo de la montaña en el agua es espectacular.",
+        "image": "/images/mallorca-cuber.webp"
+      },
+      {
+        "id": "poi-mallorca-13",
+        "name": "Refugi de Tossals Verds",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.7850,
+            "lng": 2.8183
+          },
+          "radiusMeters": 50
+        },
+        "narration": "Uno de los refugios más aislados y auténticos de toda la ruta. Desconexión total garantizada.",
+        "image": "/images/mallorca-tossals.webp"
+      },
+      {
+        "id": "poi-mallorca-14",
+        "name": "Monestir de Lluc",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.8228,
+            "lng": 2.8847
+          },
+          "radiusMeters": 80
+        },
+        "narration": "El centro espiritual de la isla. Tómate un momento para disfrutar del silencio en este valle sagrado.",
+        "image": "/images/mallorca-lluc.webp"
+      },
+      {
+        "id": "poi-mallorca-15",
+        "name": "Pollença",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.8778,
+            "lng": 3.0167
+          },
+          "radiusMeters": 60
+        },
+        "narration": "El final (o el principio) oficial del GR 221.",
+        "image": "/images/mallorca-pollenca.webp"
       }
     ],
     "photos": [
@@ -44,11 +257,154 @@
         "name": "Tramo histórico del Camí de Cavalls",
         "triggerArea": {
           "type": "circle",
-          "center": { "lat": 40.0293, "lng": 4.1652 },
+          "center": {
+            "lat": 40.0293,
+            "lng": 4.1652
+          },
           "radiusMeters": 60
         },
         "narration": "Aquí puedes observar un tramo representativo del Camí de Cavalls en Menorca.",
         "image": "/images/menorca-cami-cavalls.webp"
+      },
+      {
+        "id": "poi-menorca-1",
+        "name": "Maó (Inicio Norte)",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.8890,
+            "lng": 4.2650
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Arranca el Camí de Cavalls desde el puerto natural más impresionante del Mediterráneo.",
+        "image": "/images/menorca-mao.webp"
+      },
+      {
+        "id": "poi-menorca-2",
+        "name": "Far de Favàritx",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.9972,
+            "lng": 4.2661
+          },
+          "radiusMeters": 80
+        },
+        "narration": "El paisaje lunar de Favàritx. Pizarra negra y una atmósfera que parece de otro planeta.",
+        "image": "/images/menorca-favaritx.webp"
+      },
+      {
+        "id": "poi-menorca-3",
+        "name": "Fornells",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 40.0544,
+            "lng": 4.1311
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Pueblo de pescadores. La bahía de Fornells es un santuario de la navegación a vela.",
+        "image": "/images/menorca-fornells.webp"
+      },
+      {
+        "id": "poi-menorca-4",
+        "name": "Far de Cavalleria",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 40.0897,
+            "lng": 4.0903
+          },
+          "radiusMeters": 60
+        },
+        "narration": "El punto más septentrional de Menorca. Los acantilados aquí no perdonan vértigo.",
+        "image": "/images/menorca-cavalleria.webp"
+      },
+      {
+        "id": "poi-menorca-5",
+        "name": "Platja de Pregonda",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 40.0564,
+            "lng": 4.0411
+          },
+          "radiusMeters": 80
+        },
+        "narration": "Arena rojiza y aguas cristalinas. Una de las calas más salvajes y fotogénicas de la ruta.",
+        "image": "/images/menorca-pregonda.webp"
+      },
+      {
+        "id": "poi-menorca-6",
+        "name": "Ciutadella",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.9997,
+            "lng": 3.8344
+          },
+          "radiusMeters": 60
+        },
+        "narration": "La antigua capital. Toca cambiar la costa salvaje por calles señoriales por un momento.",
+        "image": "/images/menorca-ciutadella.webp"
+      },
+      {
+        "id": "poi-menorca-7",
+        "name": "Far de Cap d'Artrutx",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.9231,
+            "lng": 3.8242
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Giramos hacia el sur. Aquí el faro vigila el estrecho que nos separa de Mallorca.",
+        "image": "/images/menorca-artrutx.webp"
+      },
+      {
+        "id": "poi-menorca-8",
+        "name": "Cala Macarella",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.9378,
+            "lng": 3.9372
+          },
+          "radiusMeters": 80
+        },
+        "narration": "El paraíso azul de Menorca. La densidad de los pinos contrasta con el turquesa del agua.",
+        "image": "/images/menorca-macarella.webp"
+      },
+      {
+        "id": "poi-menorca-9",
+        "name": "Cala Mitjana",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.9353,
+            "lng": 3.9719
+          },
+          "radiusMeters": 70
+        },
+        "narration": "Rodeada de altos acantilados calcáreos, es una parada obligatoria en la costa sur.",
+        "image": "/images/menorca-mitjana.webp"
+      },
+      {
+        "id": "poi-menorca-10",
+        "name": "Punta Prima",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.8144,
+            "lng": 4.2800
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Vistas a la Illa de l'Aire. El tramo final (o inicial) del sur te despide con su icónico faro a lo lejos.",
+        "image": "/images/menorca-puntaprima.webp"
       }
     ],
     "photos": [
@@ -73,11 +429,70 @@
         "name": "Inicio de Camí de sa Pujada",
         "triggerArea": {
           "type": "circle",
-          "center": { "lat": 38.9850, "lng": 1.5334 },
+          "center": {
+            "lat": 38.9850,
+            "lng": 1.5334
+          },
           "radiusMeters": 50
         },
         "narration": "Estás comenzando un tramo destacado de Camí de sa Pujada en Ibiza.",
         "image": "/images/ibiza-sa-pujada.webp"
+      },
+      {
+        "id": "poi-ibiza-1",
+        "name": "Torre des Savinar",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 38.8739,
+            "lng": 1.2289
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Una antigua torre pirata con la mejor vista de Es Vedrà. La energía magnética de este lugar es innegable.",
+        "image": "/images/ibiza-savinar.webp"
+      },
+      {
+        "id": "poi-ibiza-2",
+        "name": "Mirador de Cala d'Hort",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 38.8900,
+            "lng": 1.2231
+          },
+          "radiusMeters": 50
+        },
+        "narration": "Aguas transparentes y el islote de Es Vedrà dominando el horizonte. Pura magia pitiusa.",
+        "image": "/images/ibiza-caladhort.webp"
+      },
+      {
+        "id": "poi-ibiza-3",
+        "name": "Sa Pedrera (Atlantis)",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 38.8719,
+            "lng": 1.2217
+          },
+          "radiusMeters": 80
+        },
+        "narration": "Una antigua cantera de donde salió la piedra para las murallas de Dalt Vila. Piscinas naturales y rocas talladas.",
+        "image": "/images/ibiza-atlantis.webp"
+      },
+      {
+        "id": "poi-ibiza-4",
+        "name": "Cima de Sa Talaia",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 38.9150,
+            "lng": 1.2725
+          },
+          "radiusMeters": 100
+        },
+        "narration": "El techo de Ibiza a 475 metros. En días claros, puedes ver la costa de la península y toda Formentera.",
+        "image": "/images/ibiza-satalaia.webp"
       }
     ],
     "photos": [
@@ -102,11 +517,56 @@
         "name": "Mirador de La Mola",
         "triggerArea": {
           "type": "circle",
-          "center": { "lat": 38.6729, "lng": 1.5200 },
+          "center": {
+            "lat": 38.6729,
+            "lng": 1.5200
+          },
           "radiusMeters": 50
         },
         "narration": "Desde este punto se aprecia la red de caminos tradicionales de Formentera.",
         "image": "/images/formentera-mola.webp"
+      },
+      {
+        "id": "poi-formentera-1",
+        "name": "Es Caló de Sant Agustí",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 38.6756,
+            "lng": 1.5161
+          },
+          "radiusMeters": 50
+        },
+        "narration": "Aquí comienza el histórico Camí de Sa Pujada. Prepárate para ascender por este sendero adoquinado del siglo XIII.",
+        "image": "/images/formentera-escalo.webp"
+      },
+      {
+        "id": "poi-formentera-2",
+        "name": "Mirador de Sa Pujada",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 38.6653,
+            "lng": 1.5283
+          },
+          "radiusMeters": 60
+        },
+        "narration": "Detente y respira. Tienes ante ti la costa norte de Formentera y la infinita paleta de azules del mar.",
+        "image": "/images/formentera-mirador.webp"
+      },
+      {
+        "id": "poi-formentera-3",
+        "name": "El Pilar de la Mola",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 38.6669,
+            "lng": 1.5517
+          },
+          "radiusMeters": 80
+        },
+        "narration": "Has alcanzado el altiplano de La Mola. La brisa fresca y el ambiente tranquilo te dan la bienvenida tras la subida.",
+        "image": "/images/formentera-lamola.webp"
       }
     ],
     "photos": [
