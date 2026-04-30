@@ -10,6 +10,7 @@ export function Header() {
   const clearRoute = useAppStore((s) => s.clearRoute);
   const closeDetail = useAppStore((s) => s.closeDetail);
   const stopGuidedMode = useAppStore((s) => s.stopGuidedMode);
+  const openQuiz = useAppStore((s) => s.openQuiz);
 
   // --- Hiker Logic Start ---
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -48,6 +49,24 @@ export function Header() {
     setView('home');
   };
 
+  const handleMapButtonClick = () => {
+    if (currentView === 'home') {
+      // Si ya estamos en home, hacer scroll suave al mapa
+      const mapSection = document.getElementById('map-section');
+      if (mapSection) {
+        const headerHeight = 80; // Aproximadamente la altura del header
+        const elementPosition = mapSection.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: elementPosition - headerHeight,
+          behavior: 'smooth',
+        });
+      }
+    } else {
+      // Si estamos en otra vista, ir a home
+      goHome();
+    }
+  };
+
   return (
     <header className="header" role="banner">
       <button
@@ -78,10 +97,17 @@ export function Header() {
       <nav className="header__nav" aria-label="Navegación principal">
         <button
           className={`header__btn ${currentView === 'home' ? 'header__btn--active' : ''}`}
-          onClick={goHome}
+          onClick={handleMapButtonClick}
           aria-current={currentView === 'home' ? 'page' : undefined}
         >
           Mapa
+        </button>
+        <button
+          className="header__btn"
+          onClick={openQuiz}
+          aria-label="Abrir quiz sobre Pedra en Sec"
+        >
+          Quiz
         </button>
       </nav>
 
