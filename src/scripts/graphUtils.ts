@@ -1,5 +1,6 @@
 import * as turf from '@turf/turf';
-import { FeatureCollection, LineString } from 'geojson';
+import type { FeatureCollection, LineString } from 'geojson';
+import type { TrailGraph } from '../types/routing';
 
 export const buildTrailGraph = (geoJson: FeatureCollection<LineString>): TrailGraph => {
   const adjList = new Map<string, Map<string, number>>();
@@ -10,7 +11,7 @@ export const buildTrailGraph = (geoJson: FeatureCollection<LineString>): TrailGr
     for (let i = 0; i < coords.length - 1; i++) {
       const u = coords[i].join(',');
       const v = coords[i + 1].join(',');
-      const dist = turf.distance(coords[i], coords[i + 1]);
+      const dist = turf.distance(coords[i] as [number, number], coords[i + 1] as [number, number]);
 
       // Add bidirectional edges
       if (!adjList.has(u)) adjList.set(u, new Map());
