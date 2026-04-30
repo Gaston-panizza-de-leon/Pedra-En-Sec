@@ -28,7 +28,10 @@ interface AppState {
   /* ── Hovered route (for map highlight) ─ */
   hoveredRouteId: string | null;
   setHoveredRouteId: (id: string | null) => void;
-}
+  /* ── Quiz modal ──────────────────────── */
+  isQuizOpen: boolean;
+  openQuiz: () => void;
+  closeQuiz: () => void;}
 
 export const useAppStore = create<AppState>((set) => ({
   /* Navigation */
@@ -58,4 +61,9 @@ export const useAppStore = create<AppState>((set) => ({
   /* Hovered route */
   hoveredRouteId: null,
   setHoveredRouteId: (id) => set({ hoveredRouteId: id }),
+
+  /* Quiz modal */
+  isQuizOpen: false,
+  openQuiz: () => set({ isQuizOpen: true }),
+  closeQuiz: () => set({ isQuizOpen: false }),
 }));

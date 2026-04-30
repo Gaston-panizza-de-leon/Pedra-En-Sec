@@ -1,9 +1,11 @@
+import { useState, useMemo } from 'react';
 import { MapContainer, TileLayer, Polyline, Marker, Tooltip } from 'react-leaflet';
 import { useAppStore } from '../../store/useAppStore';
 import { getPoiPosition } from '../../hooks/useGuidedMode';
 import { TTSButton } from '../../components/TTSButton/TTSButton';
 import type { Route, LatLng } from '../../types';
 import './RouteDetailView.css';
+import { solveHikingTSP } from '../../scripts/routingEngine';
 
 function difficultyLabel(d: Route['difficulty']) {
   switch (d) {
@@ -24,25 +26,51 @@ export function RouteDetailView() {
   const toggleGuidedMode = useAppStore((s) => s.toggleGuidedMode);
   const stopGuidedMode = useAppStore((s) => s.stopGuidedMode);
 
+  const [selectedPoiIds, setSelectedPoiIds] = useState<Set<string>>(new Set());
+  const [optimizedPath, setOptimizedPath] = useState<[number, number][]>([]);
+
   if (!route) {
-    // Fallback: go home if no route selected
     setView('home');
     return null;
   }
 
-  const segments: LatLng[][] =
-    Array.isArray(route.pathSegments) && route.pathSegments.length > 0
-      ? route.pathSegments.filter((segment) => segment.length > 1)
-      : route.path.length > 1
-        ? [route.path]
-        : [];
+  // Logic for segments
+  const segments: LatLng[][] = useMemo(() => {
+    return Array.isArray(route.pathSegments) && route.pathSegments.length > 0
+      ? route.pathSegments.filter((s) => s.length > 1)
+      : route.path.length > 1 ? [route.path] : [];
+  }, [route]);
+
+  // MISSING FUNCTION 1: handleCalculate
+  const handleCalculate = () => {
+    const selectedPois = route.pois.filter(p => selectedPoiIds.has(p.id));
+    if (selectedPois.length < 2) {
+      alert("Selecciona al menos 2 puntos en el mapa");
+      return;
+    }
+
+    const start = getPoiPosition(selectedPois[0]);
+    const others = selectedPois.slice(1).map(p => getPoiPosition(p));
+    
+    const result = solveHikingTSP(segments, start, others);
+    setOptimizedPath(result);
+  };
+
+  // MISSING FUNCTION 2: togglePoi
+  const togglePoi = (id: string) => {
+    setSelectedPoiIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
 
   const positions: [number, number][][] = segments.map((segment) =>
     segment.map((p) => [p.lat, p.lng] as [number, number]),
   );
 
   const allPoints = segments.flat();
-
   const center: [number, number] = [
     allPoints.reduce((sum, p) => sum + p.lat, 0) / allPoints.length,
     allPoints.reduce((sum, p) => sum + p.lng, 0) / allPoints.length,
@@ -56,66 +84,71 @@ export function RouteDetailView() {
 
   return (
     <main className="route-detail-view" id="main-content">
-      {/* Back button */}
-      <button
-        className="route-detail-view__back"
-        onClick={goBack}
-        aria-label="Volver al mapa de rutas"
-      >
+      <button className="route-detail-view__back" onClick={goBack}>
         ← Volver al mapa
       </button>
 
-      {/* Header */}
       <header className="route-detail-view__header">
         <h1 className="route-detail-view__title">{route.name}</h1>
         <div className="route-detail-view__meta">
           <span>{difficultyLabel(route.difficulty)}</span>
           <span>📏 {route.distanceKm} km</span>
           <span>⏱️ {route.durationHours} h</span>
-          <span>📍 {route.pois.length} puntos de interés</span>
         </div>
       </header>
 
-      {/* Content */}
-      <div className="route-detail-view__content">
-        {/* Description */}
-        <section>
-          <p className="route-detail-view__desc">{route.longDescription}</p>
-          <TTSButton
-            text={route.longDescription}
-            label={`Escuchar descripción de ${route.name}`}
-          />
-        </section>
+      {/* Optimizer UI */}
+      <section className="route-optimizer-controls" style={{ padding: '1rem', background: '#f0f0f0', borderRadius: '8px', margin: '1rem 0' }}>
+        <h3>Optimizador de Ruta</h3>
+        <p>Haz clic en los marcadores del mapa para seleccionarlos.</p>
+        <div style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
+          <button 
+            onClick={handleCalculate} 
+            disabled={selectedPoiIds.size < 2}
+            className="optimize-btn"
+          >
+            ✨ Calcular Ruta ({selectedPoiIds.size})
+          </button>
+          {optimizedPath.length > 0 && (
+            <button onClick={() => setOptimizedPath([])}>Limpiar</button>
+          )}
+        </div>
+      </section>
 
-        {/* Mini-map */}
+      <div className="route-detail-view__content">
         <section>
-          <h2 className="route-detail-view__section-title">Recorrido</h2>
-          <div className="route-detail-view__minimap">
-            <MapContainer
-              center={center}
-              zoom={13}
-              scrollWheelZoom={false}
-              style={{ width: '100%', height: '100%' }}
-            >
-              <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
+          <div className="route-detail-view__minimap" style={{ height: '400px' }}>
+            <MapContainer center={center} zoom={13} style={{ width: '100%', height: '100%' }}>
+              <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+              
+              {/* Original Route */}
               <Polyline
                 positions={positions}
-                pathOptions={{ color: route.color, weight: 4, opacity: 0.9 }}
+                pathOptions={{ color: route.color, weight: 4, opacity: 0.4 }}
               />
+
+              {/* FIXED: Optimized path conditional rendering */}
+              {optimizedPath.length > 0 && (
+                <Polyline
+                  positions={optimizedPath}
+                  pathOptions={{ color: '#ffea00', weight: 6, opacity: 1, dashArray: '10, 10' }}
+                />
+              )}
+
+              {/* Markers (Outside the conditional so they always show) */}
               {route.pois.map((poi) => {
                 const pos = getPoiPosition(poi);
+                const isSelected = selectedPoiIds.has(poi.id);
                 return (
-                <Marker
-                  key={poi.id}
-                  position={[pos.lat, pos.lng]}
-                >
-                  <Tooltip direction="top" offset={[0, -20]}>
-                    {poi.name}
-                  </Tooltip>
-                </Marker>
+                  <Marker
+                    key={poi.id}
+                    position={[pos.lat, pos.lng]}
+                    eventHandlers={{ click: () => togglePoi(poi.id) }}
+                  >
+                    <Tooltip permanent={isSelected}>
+                      {isSelected ? `✅ ${poi.name}` : poi.name}
+                    </Tooltip>
+                  </Marker>
                 );
               })}
             </MapContainer>

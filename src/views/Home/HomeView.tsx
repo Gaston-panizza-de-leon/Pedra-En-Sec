@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useAppStore } from '../../store/useAppStore';
 import { InteractiveMap } from './components/InteractiveMap/InteractiveMap';
 import { InfoSection } from './components/InfoSection/InfoSection';
+import { AboutSection } from './components/AboutSection/AboutSection';
 import { RouteModal } from '../../components/RouteModal/RouteModal';
 import { RouteDetailPanel } from './components/RouteDetailPanel/RouteDetailPanel';
 import { Loader } from '../../components/Loader/Loader';
@@ -74,12 +75,15 @@ export function HomeView() {
       </section>
 
       {/* Interactive Map */}
-      <section className="home-view__map-wrapper" aria-label="Mapa de rutas">
+      <section className="home-view__map-wrapper" id="map-section" aria-label="Mapa de rutas">
         <InteractiveMap routes={routes} />
       </section>
 
       {/* Cultural info */}
       <InfoSection />
+
+      {/* About section */}
+      <AboutSection />
 
       {/* Route detail modal (opens on map click) */}
       <RouteModal
