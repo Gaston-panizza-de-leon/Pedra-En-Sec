@@ -1,13 +1,14 @@
 import createGraph from 'ngraph.graph';
 import { aStar } from 'ngraph.path';
 import * as turf from '@turf/turf';
+import type { Feature, Point } from 'geojson';
 import type { LatLng } from '../types';
 
 export function solveHikingTSP(segments: LatLng[][], startPoi: LatLng, otherPois: LatLng[]) {
   const graph = createGraph();
   
   // 1. We'll store all unique trail points to find the "nearest" later
-  const allTrailPoints: turf.Feature<turf.Point>[] = [];
+  const allTrailPoints: Feature<Point>[] = [];
   const processedPoints = new Set<string>();
 
   // 2. Build the Graph
@@ -41,7 +42,7 @@ export function solveHikingTSP(segments: LatLng[][], startPoi: LatLng, otherPois
   };
 
   const pathFinder = aStar(graph, {
-    distance(from, to, link) { return link.data.weight; }
+    distance(_from, _to, link) { return link.data.weight; }
   });
 
   // 3. Snap our input points to the nearest GRAPH nodes
