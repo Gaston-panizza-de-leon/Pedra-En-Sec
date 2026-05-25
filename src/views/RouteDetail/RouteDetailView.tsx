@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Polyline, Marker, Tooltip } from 'react-leafle
 import { useAppStore } from '../../store/useAppStore';
 import { getPoiPosition } from '../../hooks/useGuidedMode';
 import { TTSButton } from '../../components/TTSButton/TTSButton';
+import { PoiFavButton } from '../../components/PoiFavButton/PoiFavButton';
 import type { Route, LatLng } from '../../types';
 import './RouteDetailView.css';
 import { solveHikingTSP } from '../../scripts/routingEngine';
@@ -280,6 +281,7 @@ export function RouteDetailView() {
                     <div className="route-detail-view__poi-name">{poi.name}</div>
                     <p className="route-detail-view__poi-narration">{poi.narration}</p>
                     <TTSButton text={poi.narration} label={`Escuchar narración de ${poi.name}`} />
+                    <PoiFavButton poiId={poi.id} poiName={poi.name} />
                   </div>
                 </li>
               ))}

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import type { Route } from '../../../../types';
 import { useAppStore } from '../../../../store/useAppStore';
 import { TTSButton } from '../../../../components/TTSButton/TTSButton';
+import { PoiFavButton } from '../../../../components/PoiFavButton/PoiFavButton';
 import { AudioButton } from '../../../../components/AudioButton/AudioButton';
 import { PhotoLightbox } from '../../../../components/PhotoLightbox/PhotoLightbox';
 import './RouteDetailPanel.css';
@@ -168,6 +169,7 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
                   <p className="route-detail-panel__poi-narration">
                     {poi.narration}
                   </p>
+                  <PoiFavButton poiId={poi.id} poiName={poi.name} />
                 </div>
               </li>
             ))}

@@ -4,8 +4,7 @@ Disallow: /src/
 Disallow: /node_modules/
 Disallow: /dist/
 
-# ⚠️ Cambia el dominio por el real de DonDominio (https)
-Sitemap: https://pedraensec.es/sitemap.xml
+Sitemap: https://pedraensec.online/sitemap.xml
 
 # Delay for aggressive crawlers
 User-agent: MJ12bot
