@@ -393,13 +393,43 @@
           "radiusMeters": 50
         },
         "narration": "Desde este punto se aprecia la red de caminos tradicionales de Formentera.",
-        "image": "/images/patrimonio.webp"
+        "image": "/images/mirador-la-mola.webp"
+      },
+      {
+        "id": "poi-formentera-2",
+        "name": "El Pilar de la Mola",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 38.67304,
+            "lng": 1.53719
+          },
+          "radiusMeters": 90
+        },
+        "narration": "El Pilar de la Mola, el pueblo más alto de Formentera. En torno a su iglesia fortificada y su mercado artesanal perviven los caminos empedrados y las paredes de piedra seca de la isla.",
+        "image": "/images/pilar-la-mola.webp"
+      },
+      {
+        "id": "poi-formentera-3",
+        "name": "Far de la Mola",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 38.66921,
+            "lng": 1.55204
+          },
+          "radiusMeters": 80
+        },
+        "narration": "Extremo oriental de Formentera, camino del Far de la Mola sobre los acantilados. Aquí los muros de piedra seca delimitan los últimos campos antes del mar abierto.",
+        "image": "/images/far-la-mola.webp"
       }
     ],
     "photos": [
-      "/images/turismo1.webp"
+      "/images/mirador-la-mola.webp",
+      "/images/pilar-la-mola.webp",
+      "/images/far-la-mola.webp"
     ],
-    "video": "",
+    "video": "https://www.youtube.com/embed/R5Gp3v0ZY4Q",
     "color": "#7b9e3b"
   }
 ]
