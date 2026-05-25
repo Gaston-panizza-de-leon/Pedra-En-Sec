@@ -226,6 +226,19 @@ export function RouteDetailView() {
           </section>
         )}
 
+        {/* Vídeo propio (self-hosted), debajo del vídeo embebido */}
+        {route.id === 'ruta-pedra-sec-mallorca' && (
+          <section>
+            
+            <video className="route-detail-view__video" controls preload="metadata" playsInline>
+              <source src={`${import.meta.env.BASE_URL}videos/video-ownc.mp4`} type="video/mp4" />
+              {/* Subtítulos (accesibilidad): crea public/videos/video-ownc.es.vtt y descomenta el track:
+              <track kind="captions" src={`${import.meta.env.BASE_URL}videos/video-ownc.es.vtt`} srcLang="es" label="Español" default /> */}
+              Tu navegador no soporta el vídeo HTML5.
+            </video>
+          </section>
+        )}
+
         {/* Puntos de interés */}
         {route.pois.length > 0 && (
           <section>

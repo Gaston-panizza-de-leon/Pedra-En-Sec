@@ -1,18 +1,11 @@
-import type { CSSProperties } from 'react';
 import './InfoSection.css';
-
-const baseUrl = import.meta.env.BASE_URL.endsWith('/')
-  ? import.meta.env.BASE_URL
-  : `${import.meta.env.BASE_URL}/`;
-
-/** Resuelve rutas de /public respetando el `base` de Vite (portátil en subcarpetas). */
-function withBase(path: string): string {
-  return `${baseUrl}${path.startsWith('/') ? path.slice(1) : path}`;
-}
 
 export function InfoSection() {
   return (
-    <section className="info-section" aria-labelledby="info-heading">
+    <section
+      className="info-section"
+      aria-labelledby="info-heading"
+    >
       <h2 id="info-heading" className="info-section__title">
         La Cultura de la Pedra en Sec
       </h2>
@@ -36,7 +29,9 @@ export function InfoSection() {
         {/* Row 1: text left, image right */}
         <div className="info-section__row">
           <div className="info-section__row-text">
-            <h3 className="info-section__subtitle">Una técnica milenaria</h3>
+            <h3 className="info-section__subtitle">
+              Una técnica milenaria
+            </h3>
             <p>
               La <strong>pedra en sec</strong> (piedra en seco) es una técnica
               constructiva milenaria que consiste en levantar muros y estructuras
@@ -47,8 +42,9 @@ export function InfoSection() {
             </p>
           </div>
           <figure className="info-section__row-image">
+            {/* Replace src with your own WebP image */}
             <img
-              src={withBase('/images/muro-pedra-en-sec.webp')}
+              src="/images/muro-pedra-en-sec.webp"
               alt="Detalle de un muro de piedra en seco mostrando el encaje preciso de las piedras"
               loading="lazy"
             />
@@ -59,7 +55,9 @@ export function InfoSection() {
         {/* Row 2: image left, text right */}
         <div className="info-section__row info-section__row--reversed">
           <div className="info-section__row-text">
-            <h3 className="info-section__subtitle">La Pedra en Sec en las Islas Baleares</h3>
+            <h3 className="info-section__subtitle">
+              La Pedra en Sec en las Islas Baleares
+            </h3>
             <p>
               Las Islas Baleares, y en particular la Serra de Tramuntana de
               Mallorca (Patrimonio de la Humanidad desde 2011), albergan uno de
@@ -79,8 +77,9 @@ export function InfoSection() {
             </p>
           </div>
           <figure className="info-section__row-image">
+            {/* Replace src with your own WebP image */}
             <img
-              src={withBase('/images/cami-pedra-en-sec.webp')}
+              src="/images/cami-pedra-en-sec.webp"
               alt="Camino de piedra en seco en la Serra de Tramuntana"
               loading="lazy"
             />
@@ -93,10 +92,7 @@ export function InfoSection() {
       <h3 className="info-section__cards-heading">¿Por qué es importante?</h3>
 
       <div className="info-section__grid">
-        <article
-          className="info-section__card"
-          style={{ '--card-bg': `url(${withBase('/images/patrimonio.webp')})` } as CSSProperties}
-        >
+        <article className="info-section__card" style={{ '--card-bg': 'url(/images/patrimonio.webp)' } as React.CSSProperties}>
           <div className="info-section__card-overlay">
             <h4 className="info-section__card-title">Patrimonio Cultural</h4>
             <p className="info-section__card-text">
@@ -107,10 +103,7 @@ export function InfoSection() {
           </div>
         </article>
 
-        <article
-          className="info-section__card"
-          style={{ '--card-bg': `url(${withBase('/images/sostenibilidad1.webp')})` } as CSSProperties}
-        >
+        <article className="info-section__card" style={{ '--card-bg': 'url(/images/sostenibilidad1.webp)' } as React.CSSProperties}>
           <div className="info-section__card-overlay">
             <h4 className="info-section__card-title">Sostenibilidad</h4>
             <p className="info-section__card-text">
@@ -121,10 +114,7 @@ export function InfoSection() {
           </div>
         </article>
 
-        <article
-          className="info-section__card"
-          style={{ '--card-bg': `url(${withBase('/images/riego1.webp')})` } as CSSProperties}
-        >
+        <article className="info-section__card" style={{ '--card-bg': 'url(/images/riego1.webp)' } as React.CSSProperties}>
           <div className="info-section__card-overlay">
             <h4 className="info-section__card-title">Gestión del Agua</h4>
             <p className="info-section__card-text">
@@ -135,10 +125,7 @@ export function InfoSection() {
           </div>
         </article>
 
-        <article
-          className="info-section__card"
-          style={{ '--card-bg': `url(${withBase('/images/turismo1.webp')})` } as CSSProperties}
-        >
+        <article className="info-section__card" style={{ '--card-bg': 'url(/images/turismo1.webp)' } as React.CSSProperties}>
           <div className="info-section__card-overlay">
             <h4 className="info-section__card-title">Turismo Responsable</h4>
             <p className="info-section__card-text">
