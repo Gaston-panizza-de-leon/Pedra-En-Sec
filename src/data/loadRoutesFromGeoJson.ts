@@ -1,3 +1,4 @@
+import * as turf from '@turf/turf';
 import type { LatLng, PointOfInterest, Route } from '../types';
 
 type Difficulty = Route['difficulty'];
@@ -27,6 +28,8 @@ interface CatalogRoute {
   durationHours?: number;
   path?: LatLng[];
   sourceGeoJson?: string;
+  /** Tolerancia de simplificación de la geometría, en metros (Douglas-Peucker vía turf). */
+  simplificationToleranceMeters?: number;
   pois?: CatalogPoi[];
   photos?: string[];
   video?: string;
@@ -47,6 +50,9 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
 const DATA_BASE_URL = `${baseUrl}data`;
+
+// Metros -> grados aproximados (WGS84). Suficiente para simplificar trazas a esta escala.
+const METERS_PER_DEGREE = 111_320;
 
 function resolvePublicUrl(value: string | undefined): string | undefined {
   if (!value) return value;
@@ -134,6 +140,28 @@ function extractSegmentsFromGeoJson(geojson: GeoJsonFeatureCollection): LatLng[]
   return segments;
 }
 
+/**
+ * Simplifica cada segmento con Douglas-Peucker (turf) según la tolerancia en metros.
+ * Reduce drásticamente los puntos a dibujar (mejor rendimiento de render en Leaflet).
+ */
+function simplifySegments(segments: LatLng[][], toleranceMeters: number): LatLng[][] {
+  if (!isFiniteNumber(toleranceMeters) || toleranceMeters <= 0) return segments;
+  const toleranceDeg = toleranceMeters / METERS_PER_DEGREE;
+
+  return segments.map((segment) => {
+    if (segment.length < 3) return segment;
+    try {
+      const line = turf.lineString(segment.map((p) => [p.lng, p.lat]));
+      const simplified = turf.simplify(line, { tolerance: toleranceDeg, highQuality: false });
+      const coords = simplified.geometry.coordinates as [number, number][];
+      const mapped = coords.map(([lng, lat]) => ({ lat, lng })).filter(isLatLng);
+      return mapped.length >= 2 ? dedupePath(mapped) : segment;
+    } catch {
+      return segment;
+    }
+  });
+}
+
 function centroid(points: LatLng[]): LatLng | null {
   if (points.length === 0) return null;
   let latSum = 0;
@@ -205,7 +233,9 @@ function normalizeDifficulty(value: string | undefined): Difficulty {
   return 'moderada';
 }
 
-async function loadRouteGeometry(route: CatalogRoute): Promise<{ path: LatLng[]; pathSegments: LatLng[][] }> {
+async function loadRouteGeometry(
+  route: CatalogRoute,
+): Promise<{ path: LatLng[]; pathSegments: LatLng[][] }> {
   if (Array.isArray(route.path) && route.path.length > 1) {
     const directPath = dedupePath(route.path.filter(isLatLng));
     return { path: directPath, pathSegments: [directPath] };
@@ -215,10 +245,13 @@ async function loadRouteGeometry(route: CatalogRoute): Promise<{ path: LatLng[];
     throw new Error(`Ruta ${route.id}: falta sourceGeoJson`);
   }
 
-  const geojson = await fetchJson<GeoJsonFeatureCollection>(
-    `${DATA_BASE_URL}/${route.sourceGeoJson}`,
-  );
-  const segments = extractSegmentsFromGeoJson(geojson);
+  const geojson = await fetchJson<GeoJsonFeatureCollection>(`${DATA_BASE_URL}/${route.sourceGeoJson}`);
+  const rawSegments = extractSegmentsFromGeoJson(geojson);
+
+  // Aplica simplificación si la ruta define una tolerancia.
+  const segments = isFiniteNumber(route.simplificationToleranceMeters)
+    ? simplifySegments(rawSegments, route.simplificationToleranceMeters)
+    : rawSegments;
 
   return {
     path: segments.flat(),

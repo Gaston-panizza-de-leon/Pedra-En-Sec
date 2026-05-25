@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { useFocusTrap } from '../../hooks/useFocusTrap';
 import './PhotoLightbox.css';
 
 interface PhotoLightboxProps {
@@ -21,6 +22,9 @@ export function PhotoLightbox({
   onPrev,
 }: PhotoLightboxProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Atrapa el foco dentro de la galería y lo restaura al cerrar.
+  useFocusTrap(isOpen, containerRef);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -53,8 +57,9 @@ export function PhotoLightbox({
         role="dialog"
         aria-modal="true"
         aria-label="Galería de fotos expandida"
+        tabIndex={-1}
       >
-        {/* Close button */}
+        {/* Cerrar */}
         <button
           className="photo-lightbox__close"
           onClick={onClose}
@@ -64,7 +69,7 @@ export function PhotoLightbox({
           ✕
         </button>
 
-        {/* Main photo */}
+        {/* Foto principal */}
         <div className="photo-lightbox__container">
           <img
             src={currentPhoto}
@@ -75,7 +80,7 @@ export function PhotoLightbox({
           />
         </div>
 
-        {/* Navigation buttons */}
+        {/* Navegación */}
         {photos.length > 1 && (
           <>
             <button
@@ -98,12 +103,12 @@ export function PhotoLightbox({
           </>
         )}
 
-        {/* Photo counter */}
+        {/* Contador */}
         <div className="photo-lightbox__counter">
           {currentIndex + 1} / {photos.length}
         </div>
 
-        {/* Thumbnails */}
+        {/* Miniaturas */}
         {photos.length > 1 && (
           <div className="photo-lightbox__thumbnails">
             {photos.map((photo, index) => (
@@ -113,7 +118,6 @@ export function PhotoLightbox({
                   index === currentIndex ? 'photo-lightbox__thumbnail--active' : ''
                 }`}
                 onClick={() => {
-                  // Navigate to this photo
                   const diff = index - currentIndex;
                   if (diff > 0) {
                     for (let i = 0; i < diff; i++) onNext();

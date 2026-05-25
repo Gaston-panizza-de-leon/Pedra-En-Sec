@@ -1,4 +1,5 @@
 import { useEffect, useRef, type ReactNode } from 'react';
+import { useFocusTrap } from '../../hooks/useFocusTrap';
 import './RouteModal.css';
 
 interface RouteModalProps {
@@ -16,6 +17,9 @@ export function RouteModal({
 }: RouteModalProps) {
   const modalRef = useRef<HTMLDivElement>(null);
 
+  // Atrapa el foco dentro del modal y lo restaura al cerrar.
+  useFocusTrap(isOpen, modalRef);
+
   useEffect(() => {
     if (!isOpen) return;
 
@@ -24,7 +28,6 @@ export function RouteModal({
     };
 
     document.addEventListener('keydown', handleKey);
-    modalRef.current?.focus();
     document.body.style.overflow = 'hidden';
 
     return () => {

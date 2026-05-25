@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { MapContainer, TileLayer, Polyline, Marker, Tooltip } from 'react-leaflet';
 import { useAppStore } from '../../store/useAppStore';
 import { getPoiPosition } from '../../hooks/useGuidedMode';
@@ -28,35 +28,75 @@ export function RouteDetailView() {
 
   const [selectedPoiIds, setSelectedPoiIds] = useState<Set<string>>(new Set());
   const [optimizedPath, setOptimizedPath] = useState<[number, number][]>([]);
+  const [optimizerMsg, setOptimizerMsg] = useState<string>('');
 
-  if (!route) {
-    setView('home');
-    return null;
-  }
+  // Redirección si no hay ruta: como EFECTO, nunca durante el render.
+  useEffect(() => {
+    if (!route) setView('home');
+  }, [route, setView]);
 
-  // Logic for segments
+  // Los hooks se ejecutan SIEMPRE (toleran route === null) y van ANTES del return.
   const segments: LatLng[][] = useMemo(() => {
+    if (!route) return [];
     return Array.isArray(route.pathSegments) && route.pathSegments.length > 0
       ? route.pathSegments.filter((s) => s.length > 1)
-      : route.path.length > 1 ? [route.path] : [];
+      : route.path.length > 1
+        ? [route.path]
+        : [];
   }, [route]);
 
-  // MISSING FUNCTION 1: handleCalculate
+  // Centro con guarda anti-NaN (si no hay puntos -> centro de Baleares).
+  const center: [number, number] = useMemo(() => {
+    const pts = segments.flat();
+    if (pts.length === 0) return [39.6, 2.95];
+    return [
+      pts.reduce((sum, p) => sum + p.lat, 0) / pts.length,
+      pts.reduce((sum, p) => sum + p.lng, 0) / pts.length,
+    ];
+  }, [segments]);
+
+  // Datos estructurados por ruta (Schema.org / JSON-LD), inyectados en <head>.
+  useEffect(() => {
+    if (!route) return;
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': 'TouristAttraction',
+      name: route.name,
+      description: route.longDescription || route.shortDescription,
+      touristType: 'Senderismo',
+      isAccessibleForFree: true,
+    };
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(ld);
+    document.head.appendChild(script);
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, [route]);
+
+  // Return condicional DESPUÉS de todos los hooks.
+  if (!route) return null;
+
   const handleCalculate = () => {
-    const selectedPois = route.pois.filter(p => selectedPoiIds.has(p.id));
+    const selectedPois = route.pois.filter((p) => selectedPoiIds.has(p.id));
     if (selectedPois.length < 2) {
-      alert("Selecciona al menos 2 puntos en el mapa");
+      setOptimizerMsg('Selecciona al menos 2 puntos en el mapa.');
       return;
     }
-
     const start = getPoiPosition(selectedPois[0]);
-    const others = selectedPois.slice(1).map(p => getPoiPosition(p));
-    
+    const others = selectedPois.slice(1).map((p) => getPoiPosition(p));
     const result = solveHikingTSP(segments, start, others);
+    if (result.length === 0) {
+      setOptimizerMsg(
+        'No se pudo trazar una ruta entre esos puntos (pueden estar en tramos desconectados).',
+      );
+    } else {
+      setOptimizerMsg('');
+    }
     setOptimizedPath(result);
   };
 
-  // MISSING FUNCTION 2: togglePoi
   const togglePoi = (id: string) => {
     setSelectedPoiIds((prev) => {
       const next = new Set(prev);
@@ -69,12 +109,6 @@ export function RouteDetailView() {
   const positions: [number, number][][] = segments.map((segment) =>
     segment.map((p) => [p.lat, p.lng] as [number, number]),
   );
-
-  const allPoints = segments.flat();
-  const center: [number, number] = [
-    allPoints.reduce((sum, p) => sum + p.lat, 0) / allPoints.length,
-    allPoints.reduce((sum, p) => sum + p.lng, 0) / allPoints.length,
-  ];
 
   const goBack = () => {
     stopGuidedMode();
@@ -97,37 +131,48 @@ export function RouteDetailView() {
         </div>
       </header>
 
-      {/* Optimizer UI */}
-      <section className="route-optimizer-controls" style={{ padding: '1rem', background: '#f0f0f0', borderRadius: '8px', margin: '1rem 0' }}>
+      {/* Optimizador de ruta */}
+      <section
+        className="route-optimizer-controls"
+        style={{ padding: '1rem', background: '#f0f0f0', borderRadius: '8px', margin: '1rem 0' }}
+      >
         <h3>Optimizador de Ruta</h3>
         <p>Haz clic en los marcadores del mapa para seleccionarlos.</p>
         <div style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
-          <button 
-            onClick={handleCalculate} 
-            disabled={selectedPoiIds.size < 2}
-            className="optimize-btn"
-          >
+          <button onClick={handleCalculate} disabled={selectedPoiIds.size < 2} className="optimize-btn">
             ✨ Calcular Ruta ({selectedPoiIds.size})
           </button>
           {optimizedPath.length > 0 && (
-            <button onClick={() => setOptimizedPath([])}>Limpiar</button>
+            <button
+              onClick={() => {
+                setOptimizedPath([]);
+                setOptimizerMsg('');
+              }}
+            >
+              Limpiar
+            </button>
           )}
         </div>
+        {optimizerMsg && (
+          <p role="status" aria-live="polite" style={{ marginTop: '10px', color: '#8a4b00' }}>
+            {optimizerMsg}
+          </p>
+        )}
       </section>
 
       <div className="route-detail-view__content">
         <section>
           <div className="route-detail-view__minimap" style={{ height: '400px' }}>
             <MapContainer center={center} zoom={13} style={{ width: '100%', height: '100%' }}>
-              <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-              
-              {/* Original Route */}
-              <Polyline
-                positions={positions}
-                pathOptions={{ color: route.color, weight: 4, opacity: 0.4 }}
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
 
-              {/* FIXED: Optimized path conditional rendering */}
+              {/* Ruta original */}
+              <Polyline positions={positions} pathOptions={{ color: route.color, weight: 4, opacity: 0.4 }} />
+
+              {/* Ruta optimizada */}
               {optimizedPath.length > 0 && (
                 <Polyline
                   positions={optimizedPath}
@@ -135,19 +180,13 @@ export function RouteDetailView() {
                 />
               )}
 
-              {/* Markers (Outside the conditional so they always show) */}
+              {/* Marcadores (siempre visibles) */}
               {route.pois.map((poi) => {
                 const pos = getPoiPosition(poi);
                 const isSelected = selectedPoiIds.has(poi.id);
                 return (
-                  <Marker
-                    key={poi.id}
-                    position={[pos.lat, pos.lng]}
-                    eventHandlers={{ click: () => togglePoi(poi.id) }}
-                  >
-                    <Tooltip permanent={isSelected}>
-                      {isSelected ? `✅ ${poi.name}` : poi.name}
-                    </Tooltip>
+                  <Marker key={poi.id} position={[pos.lat, pos.lng]} eventHandlers={{ click: () => togglePoi(poi.id) }}>
+                    <Tooltip permanent={isSelected}>{isSelected ? `✅ ${poi.name}` : poi.name}</Tooltip>
                   </Marker>
                 );
               })}
@@ -155,15 +194,11 @@ export function RouteDetailView() {
           </div>
         </section>
 
-        {/* Photos */}
+        {/* Galería */}
         {route.photos.length > 0 && (
           <section>
             <h2 className="route-detail-view__section-title">Galería</h2>
-            <div
-              className="route-detail-view__gallery"
-              role="group"
-              aria-label="Galería de fotos de la ruta"
-            >
+            <div className="route-detail-view__gallery" role="group" aria-label="Galería de fotos de la ruta">
               {route.photos.map((src, i) => (
                 <img
                   key={i}
@@ -177,7 +212,7 @@ export function RouteDetailView() {
           </section>
         )}
 
-        {/* Video */}
+        {/* Vídeo */}
         {route.video && (
           <section>
             <h2 className="route-detail-view__section-title">Vídeo</h2>
@@ -191,34 +226,20 @@ export function RouteDetailView() {
           </section>
         )}
 
-        {/* Points of interest */}
+        {/* Puntos de interés */}
         {route.pois.length > 0 && (
           <section>
-            <h2 className="route-detail-view__section-title">
-              Puntos de Interés
-            </h2>
+            <h2 className="route-detail-view__section-title">Puntos de Interés</h2>
             <ul className="route-detail-view__pois">
               {route.pois.map((poi) => (
                 <li key={poi.id} className="route-detail-view__poi">
                   {poi.image && (
-                    <img
-                      className="route-detail-view__poi-img"
-                      src={poi.image}
-                      alt={poi.name}
-                      loading="lazy"
-                    />
+                    <img className="route-detail-view__poi-img" src={poi.image} alt={poi.name} loading="lazy" />
                   )}
                   <div>
-                    <div className="route-detail-view__poi-name">
-                      {poi.name}
-                    </div>
-                    <p className="route-detail-view__poi-narration">
-                      {poi.narration}
-                    </p>
-                    <TTSButton
-                      text={poi.narration}
-                      label={`Escuchar narración de ${poi.name}`}
-                    />
+                    <div className="route-detail-view__poi-name">{poi.name}</div>
+                    <p className="route-detail-view__poi-narration">{poi.narration}</p>
+                    <TTSButton text={poi.narration} label={`Escuchar narración de ${poi.name}`} />
                   </div>
                 </li>
               ))}
@@ -226,15 +247,13 @@ export function RouteDetailView() {
           </section>
         )}
 
-        {/* Guided mode */}
+        {/* Modo guiado */}
         <div className="route-detail-view__actions">
           <button
             className={`route-detail-view__guided-btn ${guidedMode ? 'route-detail-view__guided-btn--active' : ''}`}
             onClick={toggleGuidedMode}
             aria-pressed={guidedMode}
-            aria-label={
-              guidedMode ? 'Desactivar modo guiado' : 'Activar modo guiado'
-            }
+            aria-label={guidedMode ? 'Desactivar modo guiado' : 'Activar modo guiado'}
           >
             {guidedMode ? '⏹ Detener Guía' : '🎧 Iniciar Modo Guiado'}
           </button>

@@ -206,11 +206,11 @@
           "radiusMeters": 60
         },
         "narration": "Aquí puedes observar un tramo representativo del Camí de Cavalls en Menorca.",
-        "image": "/images/menorca-cami-cavalls.webp"
+        "image": "/images/muro-pedra-en-sec.webp"
       }
     ],
     "photos": [
-      "/images/menorca-ruta-1.webp"
+      "/images/sesanimes.webp"
     ],
     "video": "",
     "color": "#3f7c85"
@@ -238,11 +238,11 @@
           "radiusMeters": 50
         },
         "narration": "Estás comenzando un tramo destacado de Camí de sa Pujada en Ibiza.",
-        "image": "/images/ibiza-sa-pujada.webp"
+        "image": "/images/cami-pedra-en-sec.webp"
       }
     ],
     "photos": [
-      "/images/ibiza-ruta-1.webp"
+      "/images/sostenibilidad1.webp"
     ],
     "video": "",
     "color": "#d17a22"
@@ -270,11 +270,11 @@
           "radiusMeters": 50
         },
         "narration": "Desde este punto se aprecia la red de caminos tradicionales de Formentera.",
-        "image": "/images/formentera-mola.webp"
+        "image": "/images/patrimonio.webp"
       }
     ],
     "photos": [
-      "/images/formentera-ruta-1.webp"
+      "/images/turismo1.webp"
     ],
     "video": "",
     "color": "#7b9e3b"

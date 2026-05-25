@@ -4,7 +4,8 @@ Disallow: /src/
 Disallow: /node_modules/
 Disallow: /dist/
 
-Sitemap: http://localhost:5173/sitemap.xml
+# ⚠️ Cambia el dominio por el real de DonDominio (https)
+Sitemap: https://pedraensec.es/sitemap.xml
 
 # Delay for aggressive crawlers
 User-agent: MJ12bot
