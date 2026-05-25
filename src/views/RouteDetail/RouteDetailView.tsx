@@ -132,29 +132,56 @@ export function RouteDetailView() {
       </header>
 
       {/* Optimizador de ruta */}
-      <section
-        className="route-optimizer-controls"
-        style={{ padding: '1rem', background: '#f0f0f0', borderRadius: '8px', margin: '1rem 0' }}
-      >
-        <h3>Optimizador de Ruta</h3>
-        <p>Haz clic en los marcadores del mapa para seleccionarlos.</p>
-        <div style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
-          <button onClick={handleCalculate} disabled={selectedPoiIds.size < 2} className="optimize-btn">
-            ✨ Calcular Ruta ({selectedPoiIds.size})
+      <section className="route-optimizer" aria-labelledby="optimizer-title">
+        <div className="route-optimizer__head">
+          <h3 id="optimizer-title" className="route-optimizer__title">
+            Optimizador de Ruta
+          </h3>
+          <span className="route-optimizer__counter">
+            {selectedPoiIds.size} / {route.pois.length} seleccionados
+          </span>
+        </div>
+
+        <p className="route-optimizer__help">
+          Pulsa los marcadores del mapa para elegir los puntos que quieres visitar.
+          Con 2 o más, calcula el orden más corto entre ellos.
+        </p>
+
+        <ul className="route-optimizer__legend">
+          <li className="route-optimizer__legend-item">
+            <span className="route-optimizer__swatch" style={{ background: route.color }} />
+            Ruta original
+          </li>
+          <li className="route-optimizer__legend-item">
+            <span className="route-optimizer__swatch route-optimizer__swatch--opt" />
+            Ruta optimizada
+          </li>
+        </ul>
+
+        <div className="route-optimizer__actions">
+          <button
+            onClick={handleCalculate}
+            disabled={selectedPoiIds.size < 2}
+            className="route-optimizer__btn route-optimizer__btn--primary"
+          >
+            Calcular ruta{selectedPoiIds.size >= 2 ? ` (${selectedPoiIds.size})` : ''}
           </button>
           {optimizedPath.length > 0 && (
             <button
               onClick={() => {
                 setOptimizedPath([]);
                 setOptimizerMsg('');
+                setSelectedPoiIds(new Set());
               }}
+              className="route-optimizer__btn route-optimizer__btn--ghost"
             >
               Limpiar
             </button>
           )}
         </div>
+
         {optimizerMsg && (
-          <p role="status" aria-live="polite" style={{ marginTop: '10px', color: '#8a4b00' }}>
+          <p role="status" aria-live="polite" className="route-optimizer__msg">
             {optimizerMsg}
           </p>
         )}
