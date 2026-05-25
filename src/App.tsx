@@ -2,6 +2,7 @@ import { Header } from './components/Header/Header';
 import { HomeView } from './views/Home/HomeView';
 import { RouteDetailView } from './views/RouteDetail/RouteDetailView';
 import { QuizModal } from './components/QuizModal/QuizModal';
+import { AuthModal } from './components/AuthModal/AuthModal';
 import { useAppStore } from './store/useAppStore';
 import { useGuidedMode } from './hooks/useGuidedMode';
 import './App.css';
@@ -10,6 +11,8 @@ export default function App() {
   const currentView = useAppStore((s) => s.currentView);
   const isQuizOpen = useAppStore((s) => s.isQuizOpen);
   const closeQuiz = useAppStore((s) => s.closeQuiz);
+  const isAuthOpen = useAppStore((s) => s.isAuthOpen);
+  const closeAuth = useAppStore((s) => s.closeAuth);
 
   // Activate guided mode hook at the app level
   useGuidedMode();
@@ -42,6 +45,7 @@ export default function App() {
       </footer>
 
       <QuizModal isOpen={isQuizOpen} onClose={closeQuiz} />
+      <AuthModal isOpen={isAuthOpen} onClose={closeAuth} />
     </div>
   );
 }

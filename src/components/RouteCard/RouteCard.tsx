@@ -1,4 +1,6 @@
 import type { Route } from '../../types';
+import { useAuthStore } from '../../store/useAuthStore';
+import { useAppStore } from '../../store/useAppStore';
 import './RouteCard.css';
 
 interface RouteCardProps {
@@ -18,6 +20,20 @@ function difficultyClass(d: Route['difficulty']) {
 }
 
 export function RouteCard({ route, onClick }: RouteCardProps) {
+  const currentUser = useAuthStore((s) => s.currentUser);
+  const isFav = useAuthStore((s) => s.favorites.includes(route.id));
+  const toggleFavorite = useAuthStore((s) => s.toggleFavorite);
+  const openAuth = useAppStore((s) => s.openAuth);
+
+  const handleFav = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!currentUser) {
+      openAuth();
+      return;
+    }
+    toggleFavorite(route.id);
+  };
+
   return (
     <article
       className="route-card"
@@ -32,6 +48,26 @@ export function RouteCard({ route, onClick }: RouteCardProps) {
         }
       }}
     >
+      <button
+        type="button"
+        className={`route-card__fav ${isFav ? 'route-card__fav--active' : ''}`}
+        onClick={handleFav}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') e.stopPropagation();
+        }}
+        aria-pressed={isFav}
+        aria-label={
+          !currentUser
+            ? `Inicia sesión para guardar ${route.name} en favoritas`
+            : isFav
+              ? `Quitar ${route.name} de favoritas`
+              : `Añadir ${route.name} a favoritas`
+        }
+        title={currentUser ? 'Favorita' : 'Inicia sesión para guardar favoritas'}
+      >
+        {isFav ? '★' : '☆'}
+      </button>
+
       <h3 className="route-card__name">{route.name}</h3>
       <p className="route-card__desc">{route.shortDescription}</p>
 

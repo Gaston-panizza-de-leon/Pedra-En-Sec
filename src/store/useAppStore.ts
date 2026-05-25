@@ -31,7 +31,12 @@ interface AppState {
   /* ── Quiz modal ──────────────────────── */
   isQuizOpen: boolean;
   openQuiz: () => void;
-  closeQuiz: () => void;}
+  closeQuiz: () => void;
+
+  /* ── Auth modal ──────────────────────── */
+  isAuthOpen: boolean;
+  openAuth: () => void;
+  closeAuth: () => void;}
 
 export const useAppStore = create<AppState>((set) => ({
   /* Navigation */
@@ -66,4 +71,9 @@ export const useAppStore = create<AppState>((set) => ({
   isQuizOpen: false,
   openQuiz: () => set({ isQuizOpen: true }),
   closeQuiz: () => set({ isQuizOpen: false }),
+
+  /* Auth modal */
+  isAuthOpen: false,
+  openAuth: () => set({ isAuthOpen: true }),
+  closeAuth: () => set({ isAuthOpen: false }),
 }));
