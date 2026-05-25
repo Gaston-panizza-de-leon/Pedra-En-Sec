@@ -70,6 +70,8 @@ export function PhotoLightbox({
             src={currentPhoto}
             alt={`Foto ${currentIndex + 1} de la ruta ${routeName}`}
             className="photo-lightbox__image"
+            loading="eager"
+            decoding="async"
           />
         </div>
 

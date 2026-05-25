@@ -1,0 +1,36 @@
+{
+  "name": "Pedra en Sec",
+  "short_name": "Pedra en Sec",
+  "description": "Descobreix les rutes de Pedra en Sec a les Illes Balears. Patrimoni de la Humanitat UNESCO.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3a6b27",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/hiker.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/hiker.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/placeholder-1.svg",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/images/placeholder-2.svg",
+      "sizes": "1280x720",
+      "form_factor": "wide"
+    }
+  ]
+}
