@@ -178,7 +178,10 @@
       "/images/santuaridelluc.webp",
       "/images/pontroma.webp",
       "/images/cami-pedra-en-sec.webp",
-      "/images/muro-pedra-en-sec.webp"
+      "/images/muro-pedra-en-sec.webp",
+      "/images/pedra-en-sec-ownc.webp",
+      "/images/cartuja-ownc.webp",
+      "/images/iglesia-ownc.webp"
     ],
     "video": "https://www.youtube.com/embed/44IcjCBG_fQ",
     "color": "#4a7c59"
@@ -206,153 +209,73 @@
           "radiusMeters": 60
         },
         "narration": "Aquí puedes observar un tramo representativo del Camí de Cavalls en Menorca.",
-        "image": "/images/menorca-cami-cavalls.webp"
-      },
-      {
-        "id": "poi-menorca-1",
-        "name": "Maó (Inicio Norte)",
-        "triggerArea": {
-          "type": "circle",
-          "center": {
-            "lat": 39.8890,
-            "lng": 4.2650
-          },
-          "radiusMeters": 60
-        },
-        "narration": "Arranca el Camí de Cavalls desde el puerto natural más impresionante del Mediterráneo.",
-        "image": "/images/menorca-mao.webp"
+        "image": "/images/cami-cavalls.webp"
       },
       {
         "id": "poi-menorca-2",
-        "name": "Far de Favàritx",
-        "triggerArea": {
-          "type": "circle",
-          "center": {
-            "lat": 39.9972,
-            "lng": 4.2661
-          },
-          "radiusMeters": 80
-        },
-        "narration": "El paisaje lunar de Favàritx. Pizarra negra y una atmósfera que parece de otro planeta.",
-        "image": "/images/menorca-favaritx.webp"
-      },
-      {
-        "id": "poi-menorca-3",
-        "name": "Fornells",
-        "triggerArea": {
-          "type": "circle",
-          "center": {
-            "lat": 40.0544,
-            "lng": 4.1311
-          },
-          "radiusMeters": 60
-        },
-        "narration": "Pueblo de pescadores. La bahía de Fornells es un santuario de la navegación a vela.",
-        "image": "/images/menorca-fornells.webp"
-      },
-      {
-        "id": "poi-menorca-4",
-        "name": "Far de Cavalleria",
-        "triggerArea": {
-          "type": "circle",
-          "center": {
-            "lat": 40.0897,
-            "lng": 4.0903
-          },
-          "radiusMeters": 60
-        },
-        "narration": "El punto más septentrional de Menorca. Los acantilados aquí no perdonan vértigo.",
-        "image": "/images/menorca-cavalleria.webp"
-      },
-      {
-        "id": "poi-menorca-5",
-        "name": "Platja de Pregonda",
-        "triggerArea": {
-          "type": "circle",
-          "center": {
-            "lat": 40.0564,
-            "lng": 4.0411
-          },
-          "radiusMeters": 80
-        },
-        "narration": "Arena rojiza y aguas cristalinas. Una de las calas más salvajes y fotogénicas de la ruta.",
-        "image": "/images/menorca-pregonda.webp"
-      },
-      {
-        "id": "poi-menorca-6",
         "name": "Ciutadella",
         "triggerArea": {
           "type": "circle",
           "center": {
-            "lat": 39.9997,
-            "lng": 3.8344
+            "lat": 39.95404,
+            "lng": 3.82735
           },
-          "radiusMeters": 60
+          "radiusMeters": 150
         },
-        "narration": "La antigua capital. Toca cambiar la costa salvaje por calles señoriales por un momento.",
-        "image": "/images/menorca-ciutadella.webp"
+        "narration": "Extremo oeste del Camí de Cavalls, a las puertas de Ciutadella. Aquí los muros de piedra seca enmarcan los campos y descienden hacia las calas de poniente.",
+        "image": "/images/ciutadella.webp"
       },
       {
-        "id": "poi-menorca-7",
-        "name": "Far de Cap d'Artrutx",
+        "id": "poi-menorca-3",
+        "name": "Son Bou",
         "triggerArea": {
           "type": "circle",
           "center": {
-            "lat": 39.9231,
-            "lng": 3.8242
+            "lat": 39.90735,
+            "lng": 4.06694
           },
-          "radiusMeters": 60
+          "radiusMeters": 150
         },
-        "narration": "Giramos hacia el sur. Aquí el faro vigila el estrecho que nos separa de Mallorca.",
-        "image": "/images/menorca-artrutx.webp"
+        "narration": "Estás en Son Bou, la playa más larga de Menorca. El sendero bordea el humedal y los bancales de piedra seca que protegen el litoral sur.",
+        "image": "/images/son-bou.webp"
       },
       {
-        "id": "poi-menorca-8",
-        "name": "Cala Macarella",
-        "triggerArea": {
-          "type": "circle",
-          "center": {
-            "lat": 39.9378,
-            "lng": 3.9372
-          },
-          "radiusMeters": 80
-        },
-        "narration": "El paraíso azul de Menorca. La densidad de los pinos contrasta con el turquesa del agua.",
-        "image": "/images/menorca-macarella.webp"
-      },
-      {
-        "id": "poi-menorca-9",
-        "name": "Cala Mitjana",
-        "triggerArea": {
-          "type": "circle",
-          "center": {
-            "lat": 39.9353,
-            "lng": 3.9719
-          },
-          "radiusMeters": 70
-        },
-        "narration": "Rodeada de altos acantilados calcáreos, es una parada obligatoria en la costa sur.",
-        "image": "/images/menorca-mitjana.webp"
-      },
-      {
-        "id": "poi-menorca-10",
+        "id": "poi-menorca-4",
         "name": "Punta Prima",
         "triggerArea": {
           "type": "circle",
           "center": {
-            "lat": 39.8144,
-            "lng": 4.2800
+            "lat": 39.82577,
+            "lng": 4.29386
           },
-          "radiusMeters": 60
+          "radiusMeters": 100
         },
-        "narration": "Vistas a la Illa de l'Aire. El tramo final (o inicial) del sur te despide con su icónico faro a lo lejos.",
-        "image": "/images/menorca-puntaprima.webp"
+        "narration": "Punta Prima, el rincón sureste de la isla. Enfrente, el faro de l'Illa de l'Aire; detrás, paredes de piedra seca que resistieron siglos de tramontana.",
+        "image": "/images/punta-prima.webp"
+      },
+      {
+        "id": "poi-menorca-5",
+        "name": "Arenal d'en Castell",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.99461,
+            "lng": 4.23304
+          },
+          "radiusMeters": 120
+        },
+        "narration": "Bahía de Arenal d'en Castell, en la costa noreste. El Camí de Cavalls serpentea entre pinares y muros de piedra seca con vistas a una cala resguardada.",
+        "image": "/images/arenal-den-castell.webp"
       }
     ],
     "photos": [
-      "/images/menorca-ruta-1.webp"
+      "/images/cami-cavalls.webp",
+      "/images/ciutadella.webp",
+      "/images/son-bou.webp",
+      "/images/punta-prima.webp",
+      "/images/arenal-den-castell.webp"
     ],
-    "video": "",
+    "video": "https://www.youtube.com/embed/cIsfJ0tiiv4",
     "color": "#3f7c85"
   },
   {
@@ -372,75 +295,79 @@
         "triggerArea": {
           "type": "circle",
           "center": {
-            "lat": 38.9850,
+            "lat": 38.985,
             "lng": 1.5334
           },
           "radiusMeters": 50
         },
         "narration": "Estás comenzando un tramo destacado de Camí de sa Pujada en Ibiza.",
-        "image": "/images/ibiza-sa-pujada.webp"
-      },
-      {
-        "id": "poi-ibiza-1",
-        "name": "Torre des Savinar",
-        "triggerArea": {
-          "type": "circle",
-          "center": {
-            "lat": 38.8739,
-            "lng": 1.2289
-          },
-          "radiusMeters": 60
-        },
-        "narration": "Una antigua torre pirata con la mejor vista de Es Vedrà. La energía magnética de este lugar es innegable.",
-        "image": "/images/ibiza-savinar.webp"
+        "image": "/images/cami-sa-pujada.webp"
       },
       {
         "id": "poi-ibiza-2",
-        "name": "Mirador de Cala d'Hort",
+        "name": "Riu de Santa Eulària",
         "triggerArea": {
           "type": "circle",
           "center": {
-            "lat": 38.8900,
-            "lng": 1.2231
-          },
-          "radiusMeters": 50
-        },
-        "narration": "Aguas transparentes y el islote de Es Vedrà dominando el horizonte. Pura magia pitiusa.",
-        "image": "/images/ibiza-caladhort.webp"
-      },
-      {
-        "id": "poi-ibiza-3",
-        "name": "Sa Pedrera (Atlantis)",
-        "triggerArea": {
-          "type": "circle",
-          "center": {
-            "lat": 38.8719,
-            "lng": 1.2217
-          },
-          "radiusMeters": 80
-        },
-        "narration": "Una antigua cantera de donde salió la piedra para las murallas de Dalt Vila. Piscinas naturales y rocas talladas.",
-        "image": "/images/ibiza-atlantis.webp"
-      },
-      {
-        "id": "poi-ibiza-4",
-        "name": "Cima de Sa Talaia",
-        "triggerArea": {
-          "type": "circle",
-          "center": {
-            "lat": 38.9150,
-            "lng": 1.2725
+            "lat": 38.97502,
+            "lng": 1.4276
           },
           "radiusMeters": 100
         },
-        "narration": "El techo de Ibiza a 475 metros. En días claros, puedes ver la costa de la península y toda Formentera.",
-        "image": "/images/ibiza-satalaia.webp"
+        "narration": "Tramo interior junto al Riu de Santa Eulària, el único río de las Pitiusas. Los caminos de piedra seca acompañan las terrazas de cultivo del valle.",
+        "image": "/images/riu-santa-eularia.webp"
+      },
+      {
+        "id": "poi-ibiza-3",
+        "name": "Mirador de sa Pujada",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 38.9332,
+            "lng": 1.48989
+          },
+          "radiusMeters": 90
+        },
+        "narration": "Punto elevado del Camí de sa Pujada, con perspectivas del valle y el mar. Aquí el empedrado tradicional asciende entre paredes secas centenarias.",
+        "image": "/images/mirador-sa-pujada.webp"
+      },
+      {
+        "id": "poi-ibiza-4",
+        "name": "Es Canar",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 38.99245,
+            "lng": 1.55957
+          },
+          "radiusMeters": 110
+        },
+        "narration": "Cerca de Es Canar, en la costa noreste. El sendero combina pinares litorales con muros de piedra seca que delimitan los antiguos campos.",
+        "image": "/images/es-canar.webp"
+      },
+      {
+        "id": "poi-ibiza-5",
+        "name": "Sant Carles de Peralta",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.02332,
+            "lng": 1.52362
+          },
+          "radiusMeters": 120
+        },
+        "narration": "Sant Carles de Peralta, final histórico del Camí de sa Pujada. Su entorno rural conserva pozos, norias y paredes de piedra seca de la Ibiza payesa.",
+        "image": "/images/sant-carles.webp"
       }
     ],
     "photos": [
-      "/images/ibiza-ruta-1.webp"
+      "/images/cami-sa-pujada.webp",
+      "/images/riu-santa-eularia.webp",
+      "/images/mirador-sa-pujada.webp",
+      "/images/es-canar.webp",
+      "/images/sant-carles.webp"
     ],
-    "video": "",
+    "video": "https://www.youtube.com/embed/EixcetrNJ_I",
     "color": "#d17a22"
   },
   {
@@ -461,60 +388,48 @@
           "type": "circle",
           "center": {
             "lat": 38.6729,
-            "lng": 1.5200
+            "lng": 1.52
           },
           "radiusMeters": 50
         },
         "narration": "Desde este punto se aprecia la red de caminos tradicionales de Formentera.",
-        "image": "/images/formentera-mola.webp"
-      },
-      {
-        "id": "poi-formentera-1",
-        "name": "Es Caló de Sant Agustí",
-        "triggerArea": {
-          "type": "circle",
-          "center": {
-            "lat": 38.6756,
-            "lng": 1.5161
-          },
-          "radiusMeters": 50
-        },
-        "narration": "Aquí comienza el histórico Camí de Sa Pujada. Prepárate para ascender por este sendero adoquinado del siglo XIII.",
-        "image": "/images/formentera-escalo.webp"
+        "image": "/images/mirador-la-mola.webp"
       },
       {
         "id": "poi-formentera-2",
-        "name": "Mirador de Sa Pujada",
-        "triggerArea": {
-          "type": "circle",
-          "center": {
-            "lat": 38.6653,
-            "lng": 1.5283
-          },
-          "radiusMeters": 60
-        },
-        "narration": "Detente y respira. Tienes ante ti la costa norte de Formentera y la infinita paleta de azules del mar.",
-        "image": "/images/formentera-mirador.webp"
-      },
-      {
-        "id": "poi-formentera-3",
         "name": "El Pilar de la Mola",
         "triggerArea": {
           "type": "circle",
           "center": {
-            "lat": 38.6669,
-            "lng": 1.5517
+            "lat": 38.67304,
+            "lng": 1.53719
+          },
+          "radiusMeters": 90
+        },
+        "narration": "El Pilar de la Mola, el pueblo más alto de Formentera. En torno a su iglesia fortificada y su mercado artesanal perviven los caminos empedrados y las paredes de piedra seca de la isla.",
+        "image": "/images/pilar-la-mola.webp"
+      },
+      {
+        "id": "poi-formentera-3",
+        "name": "Far de la Mola",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 38.66921,
+            "lng": 1.55204
           },
           "radiusMeters": 80
         },
-        "narration": "Has alcanzado el altiplano de La Mola. La brisa fresca y el ambiente tranquilo te dan la bienvenida tras la subida.",
-        "image": "/images/formentera-lamola.webp"
+        "narration": "Extremo oriental de Formentera, camino del Far de la Mola sobre los acantilados. Aquí los muros de piedra seca delimitan los últimos campos antes del mar abierto.",
+        "image": "/images/far-la-mola.webp"
       }
     ],
     "photos": [
-      "/images/formentera-ruta-1.webp"
+      "/images/mirador-la-mola.webp",
+      "/images/pilar-la-mola.webp",
+      "/images/far-la-mola.webp"
     ],
-    "video": "",
+    "video": "https://www.youtube.com/embed/R5Gp3v0ZY4Q",
     "color": "#7b9e3b"
   }
 ]

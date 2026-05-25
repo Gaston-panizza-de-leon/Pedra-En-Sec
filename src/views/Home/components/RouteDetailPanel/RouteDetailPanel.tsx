@@ -122,6 +122,16 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
         </>
       )}
 
+      {/* Vídeo propio (self-hosted), debajo del de YouTube */}
+      {route.id === 'ruta-pedra-sec-mallorca' && (
+        <>
+          <video className="route-detail-panel__video" controls preload="metadata" playsInline>
+            <source src={`${import.meta.env.BASE_URL}videos/video-ownc.mp4`} type="video/mp4" />
+            Tu navegador no soporta el vídeo HTML5.
+          </video>
+        </>
+      )}
+
       {/* Points of Interest */}
       {route.pois.length > 0 && (
         <>
