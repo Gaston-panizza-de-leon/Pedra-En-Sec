@@ -2,7 +2,6 @@ import { useState } from 'react';
 import type { Route } from '../../../../types';
 import { useAppStore } from '../../../../store/useAppStore';
 import { useNearbyChurches } from '../../../../hooks/useNearbyChurches';
-import { DistanceSlider } from '../../../../components/DistanceSlider/DistanceSlider';
 import { TTSButton } from '../../../../components/TTSButton/TTSButton';
 import { PoiFavButton } from '../../../../components/PoiFavButton/PoiFavButton';
 import { AudioButton } from '../../../../components/AudioButton/AudioButton';
@@ -41,8 +40,6 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
   const setView = useAppStore((s) => s.setView);
   const closeDetail = useAppStore((s) => s.closeDetail);
   const selectChurch = useAppStore((s) => s.selectChurch);
-  const churchDistanceKm = useAppStore((s) => s.churchDistanceKm);
-  const setChurchDistance = useAppStore((s) => s.setChurchDistance);
 
   const nearbyChurches = useNearbyChurches(route);
 
@@ -187,11 +184,6 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
       {/* Churches (distancia dinámica) */}
       {nearbyChurches.length > 0 && (
         <>
-          <DistanceSlider
-            value={churchDistanceKm}
-            onChange={setChurchDistance}
-            churchCount={nearbyChurches.length}
-          />
           <h3 className="route-detail-panel__section-title">
             Iglesias Cercanas
           </h3>

@@ -201,9 +201,10 @@ export function RouteDetailView() {
         )}
       </section>
 
-      <div className="route-detail-view__content">
-        <section>
-          <div className="route-detail-view__minimap" style={{ height: '400px' }}>
+      {/* Full-width minimap outside content constraints */}
+      <section>
+        <div className="route-detail-view__minimap-wrapper">
+          <div className="route-detail-view__minimap">
             <MapContainer center={center} zoom={13} style={{ width: '100%', height: '100%' }}>
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -242,8 +243,19 @@ export function RouteDetailView() {
               })}
             </MapContainer>
           </div>
-        </section>
+          {nearbyChurches.length > 0 && (
+            <div className="route-detail-view__sidebar">
+              <DistanceSlider
+                value={churchDistanceKm}
+                onChange={setChurchDistance}
+                churchCount={nearbyChurches.length}
+              />
+            </div>
+          )}
+        </div>
+      </section>
 
+      <div className="route-detail-view__content">
         {/* Galería */}
         {route.photos.length > 0 && (
           <section>
@@ -316,11 +328,6 @@ export function RouteDetailView() {
         {/* Churches (distancia dinámica) */}
         {nearbyChurches.length > 0 && (
           <section>
-            <DistanceSlider
-              value={churchDistanceKm}
-              onChange={setChurchDistance}
-              churchCount={nearbyChurches.length}
-            />
             <h2 className="route-detail-view__section-title">
               Iglesias Cercanas
             </h2>

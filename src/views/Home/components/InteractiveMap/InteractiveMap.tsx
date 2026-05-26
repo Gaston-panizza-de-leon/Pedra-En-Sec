@@ -85,115 +85,119 @@ export function InteractiveMap({ routes }: InteractiveMapProps) {
   const nearbyChurches = useNearbyChurches(selectedRoute);
 
   return (
-    <div className="interactive-map" role="region" aria-label="Mapa interactivo de rutas de Pedra en Sec">
-      <MapContainer
-        center={BALEARES_CENTER}
-        zoom={DEFAULT_ZOOM}
-        scrollWheelZoom={true}
-        className="interactive-map__container"
-        attributionControl={true}
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
+    <div className="interactive-map-wrapper">
+      <div className="interactive-map" role="region" aria-label="Mapa interactivo de rutas de Pedra en Sec">
+        <MapContainer
+          center={BALEARES_CENTER}
+          zoom={DEFAULT_ZOOM}
+          scrollWheelZoom={true}
+          className="interactive-map__container"
+          attributionControl={true}
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
 
-        <FlyToRoute route={selectedRoute} />
+          <FlyToRoute route={selectedRoute} />
 
-        {/* Route polylines */}
-        {routes.map((route) => {
-          const isHovered = hoveredRouteId === route.id;
-          const isSelected = selectedRoute?.id === route.id;
-          const isActive = isHovered || isSelected;
+          {/* Route polylines */}
+          {routes.map((route) => {
+            const isHovered = hoveredRouteId === route.id;
+            const isSelected = selectedRoute?.id === route.id;
+            const isActive = isHovered || isSelected;
 
-          const positions: [number, number][][] = getRouteSegments(route).map((segment) =>
-            segment.map((p: LatLng) => [p.lat, p.lng] as [number, number]),
-          );
-          if (positions.length === 0) return null;
+            const positions: [number, number][][] = getRouteSegments(route).map((segment) =>
+              segment.map((p: LatLng) => [p.lat, p.lng] as [number, number]),
+            );
+            if (positions.length === 0) return null;
 
-          return (
-            <Fragment key={route.id}>
-              {/* Invisible hit area: larger hover/click target while keeping visual stroke thin */}
-              <Polyline
-                positions={positions}
-                pathOptions={{
-                  color: route.color,
-                  weight: isActive ? 18 : 14,
-                  opacity: 0.01,
-                }}
-                eventHandlers={{
-                  mouseover: () => setHoveredRouteId(route.id),
-                  mouseout: () => setHoveredRouteId(null),
-                  click: () => openDetail(route),
-                }}
-              >
-                <Tooltip sticky direction="top" offset={[0, -10]}>
-                  <strong>{route.name}</strong>
-                  <br />
-                  {route.shortDescription}
-                </Tooltip>
-              </Polyline>
+            return (
+              <Fragment key={route.id}>
+                {/* Invisible hit area: larger hover/click target while keeping visual stroke thin */}
+                <Polyline
+                  positions={positions}
+                  pathOptions={{
+                    color: route.color,
+                    weight: isActive ? 18 : 14,
+                    opacity: 0.01,
+                  }}
+                  eventHandlers={{
+                    mouseover: () => setHoveredRouteId(route.id),
+                    mouseout: () => setHoveredRouteId(null),
+                    click: () => openDetail(route),
+                  }}
+                >
+                  <Tooltip sticky direction="top" offset={[0, -10]}>
+                    <strong>{route.name}</strong>
+                    <br />
+                    {route.shortDescription}
+                  </Tooltip>
+                </Polyline>
 
-              <Polyline
-                positions={positions}
-                pathOptions={{
-                  color: route.color,
-                  weight: isActive ? 5 : 3,
-                  opacity: isActive ? 1 : 0.68,
-                  dashArray: isActive ? undefined : '7 5',
-                  lineCap: 'round',
-                  lineJoin: 'round',
-                }}
-                interactive={false}
-              />
-            </Fragment>
-          );
-        })}
+                <Polyline
+                  positions={positions}
+                  pathOptions={{
+                    color: route.color,
+                    weight: isActive ? 5 : 3,
+                    opacity: isActive ? 1 : 0.68,
+                    dashArray: isActive ? undefined : '7 5',
+                    lineCap: 'round',
+                    lineJoin: 'round',
+                  }}
+                  interactive={false}
+                />
+              </Fragment>
+            );
+          })}
 
-        {/* POI markers for selected route (excluding churches) */}
-        {selectedRoute?.pois.map((poi) => {
-          if (poi.type === 'church') return null;
-          const pos = getPoiPosition(poi);
-          return (
-          <Marker
-            key={poi.id}
-            position={[pos.lat, pos.lng]}
-            icon={defaultPoiIcon}
-          >
-            <Tooltip direction="top" offset={[0, -20]}>
-              {poi.name}
-            </Tooltip>
-          </Marker>
-          );
-        })}
-
-        {/* Church markers for selected route (dynamic distance) */}
-        {selectedRoute && nearbyChurches.map((churchPoi) => {
-          const pos = getPoiPosition(churchPoi);
-          return (
+          {/* POI markers for selected route (excluding churches) */}
+          {selectedRoute?.pois.map((poi) => {
+            if (poi.type === 'church') return null;
+            const pos = getPoiPosition(poi);
+            return (
             <Marker
-              key={churchPoi.id}
+              key={poi.id}
               position={[pos.lat, pos.lng]}
-              icon={churchIcon}
+              icon={defaultPoiIcon}
             >
               <Tooltip direction="top" offset={[0, -20]}>
-                {churchPoi.name}
+                {poi.name}
               </Tooltip>
             </Marker>
-          );
-        })}
+            );
+          })}
 
-        {/* User position when in guided mode */}
-        {guidedMode && <UserPositionMarker />}
-      </MapContainer>
+          {/* Church markers for selected route (dynamic distance) */}
+          {selectedRoute && nearbyChurches.map((churchPoi) => {
+            const pos = getPoiPosition(churchPoi);
+            return (
+              <Marker
+                key={churchPoi.id}
+                position={[pos.lat, pos.lng]}
+                icon={churchIcon}
+              >
+                <Tooltip direction="top" offset={[0, -20]}>
+                  {churchPoi.name}
+                </Tooltip>
+              </Marker>
+            );
+          })}
 
-      {/* Distance slider for churches */}
+          {/* User position when in guided mode */}
+          {guidedMode && <UserPositionMarker />}
+        </MapContainer>
+      </div>
+
+      {/* Distance slider sidebar outside map, on the right */}
       {selectedRoute && (
-        <DistanceSlider
-          value={churchDistanceKm}
-          onChange={setChurchDistance}
-          churchCount={nearbyChurches.length}
-        />
+        <div className="interactive-map__sidebar">
+          <DistanceSlider
+            value={churchDistanceKm}
+            onChange={setChurchDistance}
+            churchCount={nearbyChurches.length}
+          />
+        </div>
       )}
     </div>
   );

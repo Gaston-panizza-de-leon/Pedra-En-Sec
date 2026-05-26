@@ -200,11 +200,41 @@
 }
 
 /* ── Mini-map ────────────────────────── */
+.route-detail-view__minimap-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0.75rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
 .route-detail-view__minimap {
-  height: 300px;
+  flex: 1;
+  height: 60vh;
+  min-height: 400px;
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 2px solid var(--color-stone-300);
+}
+
+.route-detail-view__sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 200px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .route-detail-view__minimap-wrapper {
+    flex-direction: column;
+  }
+
+  .route-detail-view__sidebar {
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -226,6 +256,14 @@
 
   .route-detail-view__photo {
     height: 140px;
+  }
+
+  .route-detail-view__minimap {
+    height: 50vh;
+    min-height: 300px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
   }
 }
 

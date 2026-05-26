@@ -1,6 +1,13 @@
+.interactive-map-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0.75rem;
+}
+
 .interactive-map {
   position: relative;
-  width: 100%;
+  flex: 1;
   height: 60vh;
   min-height: 400px;
   border-radius: var(--radius-md);
@@ -73,6 +80,26 @@
 @keyframes userPulse {
   0%, 100% { box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3); }
   50% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0.1); }
+}
+
+/* Sidebar outside the map, on the right */
+.interactive-map__sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 200px;
+  flex-shrink: 0;
+  padding-top: 0;
+}
+
+@media (max-width: 768px) {
+  .interactive-map-wrapper {
+    flex-direction: column;
+  }
+
+  .interactive-map__sidebar {
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
