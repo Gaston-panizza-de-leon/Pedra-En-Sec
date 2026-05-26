@@ -1,354 +1,4110 @@
 {
-    "@context" : "https://schema.org",
-    "@graph" : [
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Church",
+        "TouristAttraction"
+      ],
+      "@id": "https://tudominio.com/iglesias/parroquia-nuestra-senora-salud#church",
+      "identifier": "I001",
+      "url": "https://tudominio.com/iglesias/parroquia-nuestra-senora-salud",
+      "name": "Parroquia Nuestra Señora de la Salud",
+      "alternateName": "Iglesia del Terreno",
+      "description": "La Parroquia de Nuestra Señora de la Salud, situada en el pintoresco Barrio de El Terreno en Palma, Islas Baleares, es una joya arquitectónica que acoge a fieles y visitantes con su ambiente tranquilo y acogedor. Este templo destaca por su excelente estado de conservación y las detalladas restauraciones que resaltan su belleza intrínseca. La iglesia cuenta con impresionantes esculturas y un diseño que refleja la devoción y el arte religioso local.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Palma de Mallorca",
+        "addressRegion": "Islas Baleares",
+        "streetAddress": "Carrer Salut, 63"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Palma"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.560218277285365,
+        "longitude": 2.623301710550583
+      },
+      "hasMap": "https://www.google.com/maps?q=39.560218277285365,2.623301710550583",
+      "telephone": "+34 971 733 732",
+      "sameAs": [],
+      "openingHours": "Sa 19:00-19:30",
+      "isAccessibleForFree": true,
+      "maximumAttendeeCapacity": 200,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "reviewCount": "26"
+      },
+      "image": [
         {
-            "@type" : ["Church", "TouristAttraction"],
-            "@id": "https://tudominio.com/iglesias/parroquia-nuestra-senora-salud#church",
-            "identifier": "I001",
-            "url": "https://tudominio.com/iglesias/parroquia-nuestra-senora-salud",
-            
-            "name" : "Parroquia Nuestra Señora de la Salud",
-            "alternateName" : "Iglesia del Terreno",
-            "description" : "La Parroquia de Nuestra Señora de la Salud, situada en el pintoresco Barrio de El Terreno en Palma, Islas Baleares, es una joya arquitectónica que acoge a fieles y visitantes con su ambiente tranquilo y acogedor. Este templo destaca por su excelente estado de conservación y las detalladas restauraciones que resaltan su belleza intrínseca. La iglesia cuenta con impresionantes esculturas y un diseño que refleja la devoción y el arte religioso local.",
-            "address" : {
-                "@type": "PostalAddress",
-                "addressLocality": "Palma de Mallorca",
-                "addressRegion": "Islas Baleares",
-                "streetAddress": "Carrer Salut, 63"
-            },
-            "containedInPlace": {
-                "@type": "City",
-                "name": "Palma"
-              },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 39.560218277285365,
-                "longitude": 2.623301710550583
-              },
-            "hasMap": "https://www.google.com/maps?q=39.560218277285365,2.623301710550583",
-            
-            "telephone" : "+34 971 733 732",
-            "sameAs": [],
-
-            "openingHours": "Sa 19:00-19:30",
-            "isAccessibleForFree": true,
-            "maximumAttendeeCapacity" : 200,
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.5",
-                "reviewCount": "26"
-              },
-
-            "image": [],
-            "video_url": null,
-            
-            "additionalProperty": [
-              {
-                "@type": "PropertyValue",
-                "name": "santoTitular",
-                "value": "Virgen María"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "archictecturalStyle",
-                "value": "Gothic"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "foundingDate",
-                "value": "1870"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "Dimensiones",
-                "value": "1300 m2"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "email",
-                "value": "parroquiaterreno@gmail.com"
-              }
-            ]
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia001.jpg",
+          "encodingFormat": "image/jpeg"
         },
         {
-            "@type" : ["Church", "TouristAttraction"],
-            "@id": "https://tudominio.com/iglesias/esglesia-santa-margalida-mallorca#church",
-            "identifier": "I002",
-            "url": "https://tudominio.com/iglesias/esglesia-santa-margalida-mallorca",
-            
-            "name" : "Església de Santa Margalida de Mallorca",
-            "alternateName" : "Iglesia de Santa Margalida",
-            "description" : "La iglesia de Santa Margalida es un punto de referencia histórico y religioso en la zona. Se encuentra en el punto más alto del pueblo, ofreciendo hermosas vistas panorámicas de la zona. Originalmente se construyó sobre una alquería islámica llamada Hiachat. La tradición local vincula su nombre con el hallazgo de una imagen de Santa Margarita en una cueva cercana, aunque también se relaciona con la llegada de los primeros clérigos que tuvo la parroquia, provenientes de Santa Margarida d’Empúries",
-
-            "address" : {
-                "@type": "PostalAddress",
-                "addressLocality": "Santa Margalida",
-                "addressRegion": "Islas Baleares",
-                "streetAddress": "Carrer de la Constitució, 2"
-            },
-            "containedInPlace": {
-                "@type": "City",
-                "name": "Santa Margalida"
-              },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 39.70319487145846,
-                "longitude": 3.1015387150877554
-              },
-            "hasMap": "https://www.google.com/maps?q=39.70319487145846,3.1015387150877554",
-            
-            "telephone" : "+34 971 52 31 19",
-            "sameAs": [],
-
-            "openingHours": "Mo-Su 09:00-18:00",
-            "isAccessibleForFree": true,
-            "maximumAttendeeCapacity" : 800,
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.5",
-                "reviewCount": "85"
-              },
-
-            "image": [],
-            "video_url": null,
-            
-            "additionalProperty": [
-              {
-                "@type": "PropertyValue",
-                "name": "santoTitular",
-                "value": "Santa Margalida"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "archictecturalStyle",
-                "value": "Baroque"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "foundingDate",
-                "value": "1232"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "Dimensiones",
-                "value": "1247 m2"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "email",
-                "value": "parroquialavila@gmail.com"
-              }
-            ]
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia001.webp",
+          "encodingFormat": "image/webp"
         },
         {
-            "@type" : ["Church", "TouristAttraction"],
-            "@id": "https://tudominio.com/iglesias/iglesia-inmaculada-concepcion#church",
-            "identifier": "I003",
-            "url": "https://tudominio.com/iglesias/iglesia-inmaculada-concepcion",
-            
-            "name" : "Iglesia de la Inmaculada Concepción",
-            "alternateName" : "Iglesia de Sant Magí",
-            "description" : "La iglesia de la Inmaculada Concepción, más conocida con el nombre de Sant Magí, se sitúa en el barrio de Santa Catalina. Es un templo historicista renacentista, con elementos neogóticos y neorrománicos, construido entre 1867 y 1920 por parte de Bartomeu y Miquel Ferrà.",
-            
-            "address" : {
-                "@type": "PostalAddress",
-                "addressLocality": "Palma de Mallorca",
-                "addressRegion": "Islas Baleares",
-                "streetAddress": " Carrer d'Espartero, 9, Ponent,"
-            },
-            "containedInPlace": {
-                "@type": "City",
-                "name": "Palma"
-              },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 39.570838338703005,
-                "longitude": 2.634847738364531
-              },
-            "hasMap": "https://www.google.com/maps?q=39.570838338703005,2.634847738364531",
-            
-            "telephone" : "+34 971 73 07 08",
-            "sameAs": [],
-
-            "openingHours": "Mo-Thu 19:00-21:00; Sat 19:00-21:00; Sun 10:00-12:00, 19:00-21:00",
-            "isAccessibleForFree": true,
-            "maximumAttendeeCapacity" : 500,
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.6",
-                "reviewCount": "287"
-              },
-
-            "image": [],
-            "video_url": null,
-            
-            "additionalProperty": [
-              {
-                "@type": "PropertyValue",
-                "name": "santoTitular",
-                "value": "San Magín de Tarragona"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "archictecturalStyle",
-                "value": "Eclecticismo"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "foundingDate",
-                "value": "1867"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "Dimensiones",
-                "value": "1179 m2"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "email",
-                "value": "p.sanmaginpalma@teatino.es"
-              }
-            ]
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia001.avif",
+          "encodingFormat": "image/avif"
         },
         {
-            "@type" : ["Church", "TouristAttraction"],
-            "@id": "https://tudominio.com/iglesias/iglesia-San-Jaime#church",
-            "identifier": "I004",
-            "url": "https://tudominio.com/iglesias/iglesia-San-Jaime",
-            
-            "name" : "Iglesia de San Jaime",
-            "alternateName" : "Iglesia de Alcudia",
-            "description" : "La Parroquia de San Jaime de Palma se encuentra situada en medio del centro histórico de Ciudad, en la calle que toma su nombre. Es una de las iglesias más antiguas de Palma, empezada a construirse a principios del siglo XIV. Según la tradición, el templo fue construido por los reyes de Mallorca, debido a la titularidad del santo de su nombre.",
-            
-            "address" : {
-                "@type": "PostalAddress",
-                "addressLocality": "Alcudia",
-                "addressRegion": "Islas Baleares",
-                "streetAddress": " Plaça de Jaume Ques"
-            },
-            "containedInPlace": {
-                "@type": "City",
-                "name": "Alcudia"
-              },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 39.85385949234112,
-                "longitude": 3.12066112499515
-              },
-            "hasMap": "https://www.google.com/maps?q=39.85385949234112,3.12066112499515",
-            
-            "telephone" : "+34 971 54 86 65",
-            "sameAs": [],
-
-            "openingHours": "Mo-Sat 10:00-13:00",
-            "isAccessibleForFree": true,
-            "maximumAttendeeCapacity" : 800,
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.6",
-                "reviewCount": "1282"
-              },
-
-            "image": [],
-            "video_url": null,
-            
-            "additionalProperty": [
-              {
-                "@type": "PropertyValue",
-                "name": "santoTitular",
-                "value": "Sant Jaume"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "archictecturalStyle",
-                "value": "neogotica"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "foundingDate",
-                "value": "1845"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "Dimensiones",
-                "value": "1200 m2"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "email",
-                "value": "oficines@unitatbadiaalcudia.com"
-              }
-            ]
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia001.jpg",
+          "encodingFormat": "image/jpeg"
         },
         {
-            "@type" : ["Church", "TouristAttraction"],
-            "@id": "https://tudominio.com/iglesias/parroquia-Sant-Bartomeu#church",
-            "identifier": "I005",
-            "url": "https://tudominio.com/iglesias/parroquia-Sant-Bartomeu",
-            
-            "name" : "Parròquia de Sant Bartomeu",
-            "alternateName" : "Iglesia de Son Rapinya",
-            "description" : "El templo es de estilo ojival, muy proporcionando en sus dimensiones . Consta de tres naves y parece una Catedral en miniatura. . En el altar mayor se halla colocado un retablo que perteneció al antiguo Gremio de Carniceros de Palma, dedicado al Apóstol San Bartolomé, que fué declarado Patrono Celestial del Caserío.",
-            
-            "address" : {
-                "@type": "PostalAddress",
-                "addressLocality": "Palma de Mallorca",
-                "addressRegion": "Islas Baleares",
-                "streetAddress": " Plaça Vicari Llinàs, 2"
-            },
-            "containedInPlace": {
-                "@type": "City",
-                "name": "Palma"
-              },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 39.58674991912201,
-                "longitude": 2.6163670640702463
-              },
-            "hasMap": "https://www.google.com/maps?q=39.58674991912201,2.6163670640702463",
-            
-            "telephone" : "+34 971 79 24 45",
-            "sameAs": [],
-
-            "openingHours": "Mo-Fri 19:00-21:00; Sun 10:00-12:00, 19:00-21:00",
-            "isAccessibleForFree": true,
-            "maximumAttendeeCapacity" : 100,
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.7",
-                "reviewCount": "11"
-              },
-
-            "image": [],
-            "video_url": null,
-            
-            "additionalProperty": [
-              {
-                "@type": "PropertyValue",
-                "name": "santoTitular",
-                "value": "Apóstol San Bartolomé"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "archictecturalStyle",
-                "value": "neomedieval"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "foundingDate",
-                "value": "1880"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "Dimensiones",
-                "value": "420 m2"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "email",
-                "value": null
-              }
-            ]
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia001.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia001.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia001.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia001.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia001.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia001-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia001-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia001-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia001-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia001-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia001-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia001-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia001-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia001-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia001-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia001-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia001-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia001-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia001-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia001-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia001-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia001-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia001-3.avif",
+          "encodingFormat": "image/avif"
         }
-    ]
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "santoTitular",
+          "value": "Virgen María"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "architecturalStyle",
+          "value": "Gótico"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "foundingDate",
+          "value": "1870"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Dimensiones",
+          "value": "1300 m2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "email",
+          "value": "parroquiaterreno@gmail.com"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "video_url",
+          "value": "./assets/video/pruebaVideo.mp4"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Church",
+        "TouristAttraction"
+      ],
+      "@id": "https://tudominio.com/iglesias/esglesia-santa-margalida-mallorca#church",
+      "identifier": "I002",
+      "url": "https://tudominio.com/iglesias/esglesia-santa-margalida-mallorca",
+      "name": "Església de Santa Margalida de Mallorca",
+      "alternateName": "Iglesia de Santa Margalida",
+      "description": "La iglesia de Santa Margalida es un punto de referencia histórico y religioso en la zona. Se encuentra en el punto más alto del pueblo, ofreciendo hermosas vistas panorámicas de la zona. Originalmente se construyó sobre una alquería islámica llamada Hiachat. La tradición local vincula su nombre con el hallazgo de una imagen de Santa Margarita en una cueva cercana, aunque también se relaciona con la llegada de los primeros clérigos que tuvo la parroquia, provenientes de Santa Margarida d'Empúries",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Santa Margalida",
+        "addressRegion": "Islas Baleares",
+        "streetAddress": "Carrer de la Constitució, 2"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Santa Margalida"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.70319487145846,
+        "longitude": 3.1015387150877554
+      },
+      "hasMap": "https://www.google.com/maps?q=39.70319487145846,3.1015387150877554",
+      "telephone": "+34 971 52 31 19",
+      "sameAs": [],
+      "openingHours": "Mo-Su 09:00-18:00",
+      "isAccessibleForFree": true,
+      "maximumAttendeeCapacity": 800,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "reviewCount": "85"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002-4.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002-4.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002-4.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002-4.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002-4.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002-4.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002-4.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002-4.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002-4.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002-5.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002-5.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002-5.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002-5.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002-5.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002-5.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002-5.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002-5.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002-5.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002-6.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002-6.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002-6.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002-6.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002-6.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002-6.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002-6.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002-6.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002-6.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002-7.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002-7.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia002-7.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002-7.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002-7.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia002-7.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002-7.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002-7.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia002-7.avif",
+          "encodingFormat": "image/avif"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "santoTitular",
+          "value": "Santa Margalida"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "architecturalStyle",
+          "value": "Barroco"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "foundingDate",
+          "value": "1232"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Dimensiones",
+          "value": "1247 m2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "email",
+          "value": "parroquialavila@gmail.com"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "video_url",
+          "value": "./assets/video/iglesia002.mp4"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Church",
+        "TouristAttraction"
+      ],
+      "@id": "https://tudominio.com/iglesias/iglesia-inmaculada-concepcion#church",
+      "identifier": "I003",
+      "url": "https://tudominio.com/iglesias/iglesia-inmaculada-concepcion",
+      "name": "Iglesia de la Inmaculada Concepción",
+      "alternateName": "Iglesia de Sant Magí",
+      "description": "La iglesia de la Inmaculada Concepción, más conocida con el nombre de Sant Magí, se sitúa en el barrio de Santa Catalina. Es un templo historicista renacentista, con elementos neogóticos y neorrománicos, construido entre 1867 y 1920 por parte de Bartomeu y Miquel Ferrà.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Palma de Mallorca",
+        "addressRegion": "Islas Baleares",
+        "streetAddress": " Carrer d'Espartero, 9, Ponent,"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Palma"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.570838338703005,
+        "longitude": 2.634847738364531
+      },
+      "hasMap": "https://www.google.com/maps?q=39.570838338703005,2.634847738364531",
+      "telephone": "+34 971 73 07 08",
+      "sameAs": [],
+      "openingHours": "Mo-Thu 19:00-21:00; Sat 19:00-21:00; Sun 10:00-12:00, 19:00-21:00",
+      "isAccessibleForFree": true,
+      "maximumAttendeeCapacity": 500,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "287"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia003.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia003.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia003.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia003.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia003.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia003.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia003.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia003.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia003.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia003-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia003-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia003-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia003-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia003-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia003-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia003-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia003-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia003-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia003-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia003-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia003-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia003-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia003-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia003-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia003-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia003-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia003-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia003-4.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia003-4.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia003-4.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia003-4.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia003-4.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia003-4.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia003-4.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia003-4.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia003-4.avif",
+          "encodingFormat": "image/avif"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "santoTitular",
+          "value": "San Magín de Tarragona"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "architecturalStyle",
+          "value": "Barroco"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "foundingDate",
+          "value": "1867"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Dimensiones",
+          "value": "1179 m2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "email",
+          "value": "p.sanmaginpalma@teatino.es"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "video_url",
+          "value": "./assets/video/pruebaVideo.mp4"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Church",
+        "TouristAttraction"
+      ],
+      "@id": "https://tudominio.com/iglesias/iglesia-San-Jaime#church",
+      "identifier": "I004",
+      "url": "https://tudominio.com/iglesias/iglesia-San-Jaime",
+      "name": "Iglesia de San Jaime",
+      "alternateName": "Iglesia de Alcúdia",
+      "description": "La Parroquia de San Jaime de Palma se encuentra situada en medio del centro histórico de Ciudad, en la calle que toma su nombre. Es una de las iglesias más antiguas de Palma, empezada a construirse a principios del siglo XIV. Según la tradición, el templo fue construido por los reyes de Mallorca, debido a la titularidad del santo de su nombre.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Alcúdia",
+        "addressRegion": "Islas Baleares",
+        "streetAddress": " Plaça de Jaume Ques"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Alcúdia"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.85385949234112,
+        "longitude": 3.12066112499515
+      },
+      "hasMap": "https://www.google.com/maps?q=39.85385949234112,3.12066112499515",
+      "telephone": "+34 971 54 86 65",
+      "sameAs": [],
+      "openingHours": "Mo-Sat 10:00-13:00",
+      "isAccessibleForFree": true,
+      "maximumAttendeeCapacity": 800,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "1282"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia004.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia004.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia004.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia004.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia004.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia004.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia004.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia004.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia004.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia004-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia004-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia004-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia004-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia004-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia004-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia004-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia004-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia004-2.avif",
+          "encodingFormat": "image/avif"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "santoTitular",
+          "value": "Sant Jaume"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "architecturalStyle",
+          "value": "Neogótico"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "foundingDate",
+          "value": "1845"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Dimensiones",
+          "value": "1200 m2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "email",
+          "value": "oficines@unitatbadiaAlcúdia.com"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "video_url",
+          "value": "./assets/video/pruebaVideo.mp4"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Church",
+        "TouristAttraction"
+      ],
+      "@id": "https://tudominio.com/iglesias/parroquia-Sant-Bartomeu#church",
+      "identifier": "I005",
+      "url": "https://tudominio.com/iglesias/parroquia-Sant-Bartomeu",
+      "name": "Parròquia de Sant Bartomeu",
+      "alternateName": "Iglesia de Son Rapinya",
+      "description": "El templo es de estilo ojival, muy proporcionando en sus dimensiones . Consta de tres naves y parece una Catedral en miniatura. . En el altar mayor se halla colocado un retablo que perteneció al antiguo Gremio de Carniceros de Palma, dedicado al Apóstol San Bartolomé, que fué declarado Patrono Celestial del Caserío.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Palma de Mallorca",
+        "addressRegion": "Islas Baleares",
+        "streetAddress": " Plaça Vicari Llinàs, 2"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Palma"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.58674991912201,
+        "longitude": 2.6163670640702463
+      },
+      "hasMap": "https://www.google.com/maps?q=39.58674991912201,2.6163670640702463",
+      "telephone": "+34 971 79 24 45",
+      "sameAs": [],
+      "openingHours": "Mo-Fri 19:00-21:00; Sun 10:00-12:00, 19:00-21:00",
+      "isAccessibleForFree": true,
+      "maximumAttendeeCapacity": 100,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "11"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia005.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia005.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia005.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia005.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia005.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia005.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia005.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia005.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia005.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia005-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia005-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia005-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia005-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia005-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia005-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia005-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia005-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia005-2.avif",
+          "encodingFormat": "image/avif"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "santoTitular",
+          "value": "Apóstol San Bartolomé"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "architecturalStyle",
+          "value": "Gótico"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "foundingDate",
+          "value": "1880"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Dimensiones",
+          "value": "420 m2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "email",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "video_url",
+          "value": "./assets/video/pruebaVideo.mp4"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Church",
+        "TouristAttraction"
+      ],
+      "@id": "https://tudominio.com/iglesias/esglesia-santa-maria-major-inca#church",
+      "identifier": "I006",
+      "url": "https://tudominio.com/iglesias/esglesia-santa-maria-major-inca",
+      "name": "Església de Santa Maria la Major",
+      "alternateName": "Iglesia de Santa María la Mayor de Inca",
+      "description": "La Església de Santa Maria la Major de Inca es uno de los templos más emblemáticos del interior de Mallorca. Construida entre los siglos XVIII y XIX sobre edificaciones anteriores, destaca por su monumental fachada barroca y su amplia nave central. Constituye el principal centro religioso y patrimonial del municipio de Inca.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Inca",
+        "addressRegion": "Islas Baleares",
+        "streetAddress": "Plaça de Santa Maria la Major"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Inca"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.721412040923745,
+        "longitude": 2.9116914149814748
+      },
+      "hasMap": "https://maps.app.goo.gl/H1yxqRd6hjoKRL927",
+      "telephone": "+34 671 64 35 48",
+      "sameAs": [],
+      "openingHours": [
+        "Mo 17:00-20:00",
+        "Tu 10:30-13:30",
+        "Th 17:00-20:00"
+      ],
+      "isAccessibleForFree": true,
+      "maximumAttendeeCapacity": 900,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.4",
+        "reviewCount": "243"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia006.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia006.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia006.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia006.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia006.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia006.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia006.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia006.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia006.avif",
+          "encodingFormat": "image/avif"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "santoTitular",
+          "value": "Santa María"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "architecturalStyle",
+          "value": "Barroco"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "foundingDate",
+          "value": "1838"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Dimensiones",
+          "value": "1350 m2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "email",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "video_url",
+          "value": "./assets/video/pruebaVideo.mp4"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Church",
+        "TouristAttraction"
+      ],
+      "@id": "https://tudominio.com/iglesias/mare-de-deu-dels-dolors-manacor#church",
+      "identifier": "I007",
+      "url": "https://tudominio.com/iglesias/mare-de-deu-dels-dolors-manacor",
+      "name": "Parròquia de la Mare de Déu dels Dolors",
+      "alternateName": "Iglesia de los Dolores de Manacor",
+      "description": "La Parròquia de la Mare de Déu dels Dolors es el principal templo religioso de Manacor. Construcción iniciada el 1890, destaca por su imponente campanario neogótico, uno de los más altos de Mallorca. Fue construida donde había una mezquita. Conocida por la celebración de 'les completes' en Sant Antoni.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Manacor",
+        "addressRegion": "Islas Baleares",
+        "streetAddress": "Plaça Rector Rubí"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Manacor"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.56865555044044,
+        "longitude": 3.2106875665716053
+      },
+      "hasMap": "https://maps.app.goo.gl/nYgEcaH43qCJHGX36",
+      "telephone": "+34 971 55 09 83",
+      "sameAs": [],
+      "openingHours": [
+        "Mo-Su 08:30-12:45",
+        "Mo-Su 17:30-20:00"
+      ],
+      "isAccessibleForFree": true,
+      "maximumAttendeeCapacity": 1700,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "490"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia007.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia007.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia007.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia007.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia007.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia007.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia007.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia007.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia007.avif",
+          "encodingFormat": "image/avif"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "architecturalStyle",
+          "value": "Neogótico"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "foundingDate",
+          "value": "1890"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Dimensiones",
+          "value": "1800 m2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "email",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "video_url",
+          "value": "./assets/video/pruebaVideo.mp4"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Church",
+        "TouristAttraction"
+      ],
+      "@id": "https://tudominio.com/iglesias/esglesia-nova-son-servera#church",
+      "identifier": "I008",
+      "url": "https://tudominio.com/iglesias/esglesia-nova-son-servera",
+      "name": "Església Nova de Son Servera",
+      "alternateName": "Iglesia Nueva de Son Servera",
+      "description": "La Església Nova es un singular templo inacabado situado en Son Servera. Diseñado por el arquitecto Joan Rubió, discípulo de Antoni Gaudí, fue iniciado en 1905 y nunca se terminó debido a dificultades económicas y a la Primera Guerra Mundial. Actualmente es un espacio cultural y uno de los monumentos más originales de Mallorca.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Son Servera",
+        "addressRegion": "Islas Baleares",
+        "streetAddress": "Carrer de l'Església Nova"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Son Servera"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.62083257589195,
+        "longitude": 3.359434588353013
+      },
+      "hasMap": "https://maps.app.goo.gl/yxd3MtzwkTDXE3KR7",
+      "telephone": "+34 971 56 71 53",
+      "sameAs": [],
+      "openingHours": [
+        "Mo-Fr 09:00-13:30",
+        "Sa-Su 10:30-17:00"
+      ],
+      "isAccessibleForFree": true,
+      "maximumAttendeeCapacity": 900,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "1301"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia008.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia008.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia008.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia008.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia008.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia008.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia008.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia008.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia008.avif",
+          "encodingFormat": "image/avif"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "architecturalStyle",
+          "value": "Modernismo Catalán"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "foundingDate",
+          "value": "1905"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Dimensiones",
+          "value": "1100 m2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "email",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "video_url",
+          "value": "./assets/video/pruebaVideo.mp4"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Church",
+        "TouristAttraction"
+      ],
+      "@id": "https://tudominio.com/iglesias/catedral-santa-maria-mallorca#church",
+      "identifier": "I009",
+      "url": "https://tudominio.com/iglesias/catedral-santa-maria-mallorca",
+      "name": "Catedral-Basílica de Santa María de Mallorca",
+      "alternateName": "La Seu de Mallorca",
+      "description": "La Catedral-Basílica de Santa María de Mallorca, conocida como La Seu, es el monumento gótico más importante de las Islas Baleares. Su construcción comenzó en 1229 tras la conquista cristiana de Mallorca y se prolongó durante varios siglos. Destaca por su enorme rosetón gótico, uno de los mayores del mundo, y por las intervenciones arquitectónicas posteriores realizadas por Antoni Gaudí y Miquel Barceló.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Palma",
+        "addressRegion": "Islas Baleares",
+        "streetAddress": "Plaça de la Seu, s/n"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Palma"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.56743392387484,
+        "longitude": 2.6482979710380308
+      },
+      "hasMap": "https://maps.app.goo.gl/AwZwHqRdMZFcjiEW9",
+      "telephone": "+34 971 71 31 33",
+      "sameAs": [],
+      "openingHours": "Mo-Sa 10:00-17:15",
+      "isAccessibleForFree": false,
+      "maximumAttendeeCapacity": 18000,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "63397"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia009.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia009.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia009.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia009.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia009.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia009.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia009.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia009.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia009.avif",
+          "encodingFormat": "image/avif"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "santoTitular",
+          "value": "Santa María"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "architecturalStyle",
+          "value": "Gótico"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "foundingDate",
+          "value": "1229"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Dimensiones",
+          "value": "6600 m2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "email",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "video_url",
+          "value": "./assets/video/pruebaVideo.mp4"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Church",
+        "TouristAttraction"
+      ],
+      "@id": "https://tudominio.com/iglesias/sant-francesc-assis-pilari#church",
+      "identifier": "I010",
+      "url": "https://tudominio.com/iglesias/sant-francesc-assis-pilari",
+      "name": "Església de Sant Francesc d'Assís del Pil·larí",
+      "alternateName": "Iglesia del Pil·larí",
+      "description": "La iglesia de Sant Francesc d'Assís del Pil·larí es el principal templo parroquial de este núcleo rural de Palma. Construida durante el siglo XX para atender el crecimiento de la población local, destaca por su arquitectura sencilla y funcional, representativa de las parroquias mallorquinas contemporáneas.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Palma",
+        "addressRegion": "Islas Baleares",
+        "streetAddress": "Plaça Sant Francesc"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Palma"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.52991864707119,
+        "longitude": 2.757527147767907
+      },
+      "hasMap": "https://maps.app.goo.gl/eWsqq1kSK1XoThhN7",
+      "telephone": "+34 971 71 26 95",
+      "sameAs": [],
+      "openingHours": null,
+      "isAccessibleForFree": true,
+      "maximumAttendeeCapacity": 250,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.4",
+        "reviewCount": "5"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia010.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia010.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia010.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia010.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia010.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia010.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia010.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia010.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia010.avif",
+          "encodingFormat": "image/avif"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "santoTitular",
+          "value": "Sant Francesc d'Assís"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "architecturalStyle",
+          "value": "Gótico"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "foundingDate",
+          "value": "1940"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Dimensiones",
+          "value": "600 m2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "email",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "video_url",
+          "value": "./assets/video/pruebaVideo.mp4"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Church",
+        "TouristAttraction"
+      ],
+      "@id": "https://tudominio.com/iglesias/sant-jaume-Alcúdia#church",
+      "identifier": "I011",
+      "url": "https://tudominio.com/iglesias/sant-jaume-Alcúdia",
+      "name": "Església de Sant Jaume d'Alcúdia",
+      "alternateName": "Iglesia de Sant Jaume",
+      "description": "La iglesia de Sant Jaume d'Alcúdia se sitúa en el interior del recinto amurallado medieval. Construida el siglo XIV y reformada el siglo XIX, constituye el principal templo religioso del municipio y un elemento esencial del patrimonio histórico de Alcúdia.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Alcúdia",
+        "addressRegion": "Islas Baleares",
+        "streetAddress": "Plaça de Jaume Ques"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Alcúdia"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.85154903898735,
+        "longitude": 3.1207468721411735
+      },
+      "hasMap": "https://maps.app.goo.gl/7rcWyUrjVynfHNVe6",
+      "telephone": "+34 971 54 86 65",
+      "sameAs": [],
+      "openingHours": "Mo-Sa 10:00-13:00",
+      "isAccessibleForFree": true,
+      "maximumAttendeeCapacity": 800,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "1293"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia011.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia011.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia011.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia011.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia011.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia011.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia011.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia011.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia011.avif",
+          "encodingFormat": "image/avif"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "architecturalStyle",
+          "value": "Gótico"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "foundingDate",
+          "value": "1302"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Dimensiones",
+          "value": "1400 m2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "email",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "video_url",
+          "value": "./assets/video/pruebaVideo.mp4"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Church",
+        "TouristAttraction"
+      ],
+      "@id": "https://tudominio.com/iglesias/transfiguracio-senyor-arta#church",
+      "identifier": "I012",
+      "url": "https://tudominio.com/iglesias/transfiguracio-senyor-arta",
+      "name": "Església de la Transfiguració del Senyor",
+      "alternateName": "Iglesia parroquial de Artà",
+      "description": "La iglesia de la Transfiguració del Senyor domina el paisaje urbano de Artà desde una posición elevada. Construida entre los siglos XVI y XVII, presenta características de iglesia fortificada mallorquina y se conecta visualmente con el santuario de Sant Salvador.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Artà",
+        "addressRegion": "Islas Baleares",
+        "streetAddress": "Carrer de les Figueretes"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Artà"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.69543849504148,
+        "longitude": 3.3525895381840805
+      },
+      "hasMap": "https://maps.app.goo.gl/wELPxBC1epysJJmz8",
+      "telephone": null,
+      "sameAs": [],
+      "openingHours": [
+        "Mo-Fri 10:00-17:00",
+        "Sa 10:00-14:00",
+        "Su 11:30-12:15"
+      ],
+      "isAccessibleForFree": true,
+      "maximumAttendeeCapacity": 900,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.4",
+        "reviewCount": "258"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia012.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia012.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia012.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia012.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia012.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia012.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia012.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia012.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia012.avif",
+          "encodingFormat": "image/avif"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "foundingDate",
+          "value": "1789"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Dimensiones",
+          "value": "1500 m2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "email",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "video_url",
+          "value": "./assets/video/pruebaVideo.mp4"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Church",
+        "TouristAttraction"
+      ],
+      "@id": "https://tudominio.com/iglesias/sant-bartomeu-valldemossa#church",
+      "identifier": "I013",
+      "url": "https://tudominio.com/iglesias/sant-bartomeu-valldemossa",
+      "name": "Església de Sant Bartomeu de Valldemossa",
+      "alternateName": "Iglesia de Valldemossa",
+      "description": "La construcción de esta iglesia se inició en el siglo XIV con la edificación de un pequeño templo de solo dos tramos. Este se fue modificando y ampliando, de modo que en 1863 se realizaron las obras de la fachada y el campanario, con un estilo muy parecido al de la Cartuja.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Valldemossa",
+        "addressRegion": "Islas Baleares",
+        "streetAddress": "Carrer Rectoria"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Valldemossa"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.71029337462584,
+        "longitude": 2.6254527823652327
+      },
+      "hasMap": "https://maps.app.goo.gl/PdRDbDQUxs3mRm6i8",
+      "telephone": "+34 971 61 20 24",
+      "sameAs": [],
+      "openingHours": null,
+      "isAccessibleForFree": true,
+      "maximumAttendeeCapacity": 300,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "242"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia013.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia013.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia013.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia013.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia013.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia013.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia013.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia013.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia013.avif",
+          "encodingFormat": "image/avif"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Dimensiones",
+          "value": "650 m2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "email",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "video_url",
+          "value": "./assets/video/pruebaVideo.mp4"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Church",
+        "TouristAttraction"
+      ],
+      "@id": "https://tudominio.com/iglesias/sant-joan-baptista-muro#church",
+      "identifier": "I014",
+      "url": "https://tudominio.com/iglesias/sant-joan-baptista-muro",
+      "name": "Església de Sant Joan Baptista de Muro",
+      "alternateName": "Iglesia de Muro",
+      "description": "La iglesia de Sant Joan de Muro fue construida en el siglo XVII, y es uno de los principales ejemplos de arquitectura gótica en Mallorca. Su fachada principal, construida en piedra arenisca, destaca por sus detalles decorativos y por las imponentes torres que flanquean la entrada. En el interior de la iglesia, podrás admirar impresionantes obras de arte religioso, como retablos, esculturas y pinturas que datan de distintas épocas.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Muro",
+        "addressRegion": "Islas Baleares",
+        "streetAddress": "Carrer Bisbe Ramon de Torrella, 1, 07440 Muro, Illes Balears"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Muro"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.73716,
+        "longitude": 3.057391
+      },
+      "hasMap": "https://www.google.com/maps?q=39.7,3.054858",
+      "telephone": "+34 971 53 70 22",
+      "sameAs": [],
+      "openingHours": "Mo-Su 24h",
+      "isAccessibleForFree": true,
+      "maximumAttendeeCapacity": 700,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.3",
+        "reviewCount": "68"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-4.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-4.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-4.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-4.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-4.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-4.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-4.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-4.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-4.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-5.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-5.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-5.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-5.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-5.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-5.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-5.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-5.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-5.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-6.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-6.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-6.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-6.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-6.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-6.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-6.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-6.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-6.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-7.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-7.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-7.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-7.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-7.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-7.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-7.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-7.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-7.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-8.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-8.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia014-8.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-8.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-8.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia014-8.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-8.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-8.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia014-8.avif",
+          "encodingFormat": "image/avif"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "santoTitular",
+          "value": "Sant Joan Baptista"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "architecturalStyle",
+          "value": "Gótico"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "foundingDate",
+          "value": "1611"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Dimensiones",
+          "value": "1100 m2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "email",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "video_url",
+          "value": "./assets/video/iglesia014.mp4"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Church",
+        "TouristAttraction"
+      ],
+      "@id": "https://tudominio.com/iglesias/sant-pere-petra#church",
+      "identifier": "I015",
+      "url": "https://tudominio.com/iglesias/sant-pere-petra",
+      "name": "Església de Sant Pere de Petra",
+      "alternateName": "Iglesia de Petra",
+      "description": "La iglesia actual de San Pedro de Petra fue construida a lo largo de dos siglos, empezándola en el siglo XVI (concretamente en 1582) y terminándola en el siglo XVIII. Aunque el primer templo ya se documenta en el siglo XIII, el tercer templo levantado es el que actualmente se conserva. De planta basilical con bóveda de crucería y capillas laterales, conserva el modelo característico de tradición gótica, aunque se construye a lo largo de dos centurias. Se diferencian de la tradición arquitectónica gótica, el portal renacentista de la sacristía o la capilla barroca del Roser; así como bienes muebles conservados en su interior.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Petra",
+        "addressRegion": "Islas Baleares",
+        "streetAddress": "Carrer Rectoria, 2, 07520 Petra, Illes Balears"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Petra"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.6153046456319,
+        "longitude": 3.110806311859319
+      },
+      "hasMap": "https://www.google.com/maps?q=39.6153046456319,3.110806311859319",
+      "telephone": "+34 971 56 10 17",
+      "sameAs": [],
+      "openingHours": "Mo-Sa 10:30-12:00",
+      "isAccessibleForFree": true,
+      "maximumAttendeeCapacity": 650,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "reviewCount": "295"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-4.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-4.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-4.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-4.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-4.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-4.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-4.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-4.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-4.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-5.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-5.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-5.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-5.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-5.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-5.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-5.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-5.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-5.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-6.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-6.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-6.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-6.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-6.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-6.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-6.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-6.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-6.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-7.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-7.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-7.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-7.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-7.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-7.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-7.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-7.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-7.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-8.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-8.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-8.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-8.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-8.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-8.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-8.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-8.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-8.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-9.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-9.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-9.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-9.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-9.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-9.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-9.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-9.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-9.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-10.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-10.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia015-10.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-10.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-10.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia015-10.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-10.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-10.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia015-10.avif",
+          "encodingFormat": "image/avif"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "santoTitular",
+          "value": "Sant Pere"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "architecturalStyle",
+          "value": "Gótico"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "foundingDate",
+          "value": "1582"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Dimensiones",
+          "value": "1.085 m2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "email",
+          "value": "parroquiapetra@gmail.com"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "video_url",
+          "value": "./assets/video/iglesia015.mp4"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Church",
+        "TouristAttraction"
+      ],
+      "@id": "https://tudominio.com/iglesias/nostra-senyora-atotxa-ariany#church",
+      "identifier": "I016",
+      "url": "https://tudominio.com/iglesias/nostra-senyora-atotxa-ariany",
+      "name": "Església de la Mare de Déu d'Atocha d'Ariany",
+      "alternateName": "Iglesia de Ariany",
+      "description": "El origen de la actual parroquia está intrínsecamente conectado con la familia Cotoner. Ya en el siglo XVI, esta estirpe comenzó a parcelar terrenos en el término de Petra con la visión de crear un núcleo urbano. Sin embargo, el impulso definitivo para la construcción del templo llegó tras la Guerra de Sucesión Española. Marc Antoni Cotoner y Sureda de Vivot, primer Marqués de Ariany, recibió este título de manos del rey Felipe V en agradecimiento a su lealtad durante el conflicto. Como gesto de devoción y vínculo con la corte de Madrid, el Marqués trajo en 1717 una imagen de la Virgen de Atocha desde la capital del reino.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ariany",
+        "addressRegion": "Islas Baleares",
+        "streetAddress": "Carrer Pietat, 16, 07529 Ariany, Illes Balears"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Ariany"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.64901370697379,
+        "longitude": 3.1086603919602354
+      },
+      "hasMap": "https://www.google.com/maps?q=39.64901370697379,3.1086603919602354",
+      "telephone": "+34 971 56 12 02",
+      "sameAs": [],
+      "openingHours": "Mo-Su 09:00-12:00, 18:00-20:00",
+      "isAccessibleForFree": true,
+      "maximumAttendeeCapacity": 400,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "48"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-4.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-4.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-4.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-4.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-4.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-4.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-4.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-4.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-4.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-5.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-5.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-5.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-5.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-5.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-5.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-5.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-5.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-5.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-6.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-6.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-6.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-6.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-6.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-6.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-6.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-6.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-6.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-7.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-7.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-7.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-7.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-7.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-7.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-7.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-7.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-7.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-8.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-8.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-8.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-8.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-8.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-8.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-8.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-8.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-8.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-9.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-9.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-9.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-9.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-9.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-9.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-9.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-9.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-9.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-10.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-10.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-10.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-10.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-10.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-10.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-10.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-10.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-10.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-11.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-11.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia016-11.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-11.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-11.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia016-11.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-11.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-11.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia016-11.avif",
+          "encodingFormat": "image/avif"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "santoTitular",
+          "value": "Mare de Déu d'Atocha"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "architecturalStyle",
+          "value": "Gótico"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "foundingDate",
+          "value": "1737"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Dimensiones",
+          "value": "600 m2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "email",
+          "value": null
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "video_url",
+          "value": "./assets/video/iglesia016.mp4"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Church",
+        "TouristAttraction"
+      ],
+      "@id": "https://tudominio.com/iglesias/nostra-senyora-salut-maria-salut#church",
+      "identifier": "I017",
+      "url": "https://tudominio.com/iglesias/nostra-senyora-salut-maria-salut",
+      "name": "Església de la Mare de Déu de la Salut",
+      "alternateName": "Iglesia de Maria de la Salut",
+      "description": "A lo largo de los siglos XVII y XVIII, y vinculado al crecimiento demográfico y urbanístico del municipio, el templo se fue reformando y ampliando. Se considera que la construcción finalizó al término del siglo XVIII. Con la construcción finalizada, las obras no acaban. Y para muestra, un botón. La capilla del Santísimo, capilla del Sagrario o más comúnmente conocida como capella Fonda empezó a edificarse a finales del siglo XIX, concretamente en 1891. Las grandes dimensiones de la Capilla afectaron considerablemente la fisonomía del edificio existente hasta el momento. Se levantó en el lateral de la iglesia, cubriendo el antiguo portal de acceso lateral. Las contribuciones de la comunidad no fueron suficientes para mantener activas las obras de la capella Fonda y se prolongaron hasta principios de los años 50 del siglo XX.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Maria de la Salut",
+        "addressRegion": "Islas Baleares",
+        "streetAddress": "Plaça de Dalt, 5, 07519 Maria de la Salut, Illes Balears"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Maria de la Salut"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.666822553417994,
+        "longitude": 3.0731545004547693
+      },
+      "hasMap": "https://www.google.com/maps?q=39.666822553417994,3.0731545004547693",
+      "telephone": "+34 971 52 50 33",
+      "sameAs": [],
+      "openingHours": "cita previa",
+      "isAccessibleForFree": true,
+      "maximumAttendeeCapacity": 500,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.4",
+        "reviewCount": "16"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia017.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia017.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia017.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia017.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia017.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia017.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia017.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia017.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia017.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia017-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia017-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia017-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia017-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia017-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia017-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia017-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia017-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia017-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia017-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia017-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia017-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia017-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia017-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia017-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia017-3.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia017-3.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia017-3.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia017-4.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia017-4.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia017-4.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia017-4.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia017-4.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia017-4.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia017-4.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia017-4.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia017-4.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia017-5.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia017-5.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia017-5.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia017-5.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia017-5.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia017-5.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia017-5.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia017-5.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia017-5.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia017-6.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia017-6.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia017-6.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia017-6.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia017-6.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia017-6.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia017-6.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia017-6.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia017-6.avif",
+          "encodingFormat": "image/avif"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "santoTitular",
+          "value": "Mare de Déu de la Salut"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "architecturalStyle",
+          "value": "Gótico"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "foundingDate",
+          "value": "1786"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Dimensiones",
+          "value": " 300 m2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "email",
+          "value": "carlosmariotoro@hotmail.com"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "video_url",
+          "value": "./assets/video/iglesia017.mp4"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Church",
+        "TouristAttraction"
+      ],
+      "@id": "https://tudominio.com/iglesias/parroquia-san-pedro-claver#church",
+      "identifier": "I018",
+      "url": "https://tudominio.com/iglesias/parroquia-san-pedro-claver",
+      "name": "Parroquia San Pedro Claver",
+      "alternateName": "Ermita de Porto Pi",
+      "description": "La historia de esta pequeña y bella iglesia se remonta a la época del rey Jaime I. En 1246, el monarca cedió a los Jurados de la ciudad y reino de Mallorca unos terrenos limítrofes a la torre de Pelaires. La intención de esa donación no era otra que la de construir un pequeño oratorio para facilitar el servicio religioso a los marineros y pescadores que estaban en Portopí, a quienes les quedaban demasiado lejos las iglesias de la ciudad.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Palma de Mallorca",
+        "addressRegion": "Islas Baleares",
+        "streetAddress": "Carrer ses Rafaletes, 18, 07015 Palma, Illes Balears"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Palma de Mallorca"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.55226906570555,
+        "longitude": 2.622415314210264
+      },
+      "hasMap": "https://www.google.com/maps?q=39.55226906570555,2.622415314210264",
+      "telephone": "+34 971 40 17 42",
+      "sameAs": [],
+      "openingHours": "Mo-Su 19:00",
+      "isAccessibleForFree": true,
+      "maximumAttendeeCapacity": 504,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "16"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia018.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia018.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia018.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia018.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia018.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia018.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia018.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia018.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia018.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia018-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia018-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_small/iglesia018-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia018-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia018-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_medium/iglesia018-2.avif",
+          "encodingFormat": "image/avif"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia018-2.jpg",
+          "encodingFormat": "image/jpeg"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia018-2.webp",
+          "encodingFormat": "image/webp"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "./assets/img/iglesias_large/iglesia018-2.avif",
+          "encodingFormat": "image/avif"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "santoTitular",
+          "value": " Sant Pere Claver"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "architecturalStyle",
+          "value": "Gótico"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "foundingDate",
+          "value": "1246"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Dimensiones",
+          "value": " 251,97 m2"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "email",
+          "value": "null"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "video_url",
+          "value": "./assets/video/iglesia018.mp4"
+        }
+      ]
+    }
+  ]
 }
