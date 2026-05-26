@@ -85,6 +85,13 @@ export interface PropertyValue {
   value?: string;
 }
 
+/** ImageObject from Schema.org */
+export interface ImageObject {
+  '@type'?: string;
+  contentUrl: string;
+  encodingFormat?: string;
+}
+
 /** Church / TouristAttraction from iglesias.json (Schema.org format) */
 export interface Church {
   identifier: string;
@@ -103,7 +110,7 @@ export interface Church {
   isAccessibleForFree?: boolean;
   maximumAttendeeCapacity?: number;
   aggregateRating?: AggregateRating;
-  image?: string[];
+  image?: ImageObject[];
   email?: string;
   additionalProperty?: PropertyValue[];
 }

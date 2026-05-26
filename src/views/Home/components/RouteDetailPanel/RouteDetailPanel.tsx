@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import type { Route } from '../../../../types';
 import { useAppStore } from '../../../../store/useAppStore';
+import { useNearbyChurches } from '../../../../hooks/useNearbyChurches';
+import { DistanceSlider } from '../../../../components/DistanceSlider/DistanceSlider';
 import { TTSButton } from '../../../../components/TTSButton/TTSButton';
 import { PoiFavButton } from '../../../../components/PoiFavButton/PoiFavButton';
 import { AudioButton } from '../../../../components/AudioButton/AudioButton';
@@ -39,6 +41,10 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
   const setView = useAppStore((s) => s.setView);
   const closeDetail = useAppStore((s) => s.closeDetail);
   const selectChurch = useAppStore((s) => s.selectChurch);
+  const churchDistanceKm = useAppStore((s) => s.churchDistanceKm);
+  const setChurchDistance = useAppStore((s) => s.setChurchDistance);
+
+  const nearbyChurches = useNearbyChurches(route);
 
   const handleFullView = () => {
     selectRoute(route);
@@ -178,43 +184,46 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
         </>
       )}
 
+      {/* Churches (distancia dinámica) */}
+      {nearbyChurches.length > 0 && (
+        <>
+          <DistanceSlider
+            value={churchDistanceKm}
+            onChange={setChurchDistance}
+            churchCount={nearbyChurches.length}
+          />
+          <h3 className="route-detail-panel__section-title">
+            Iglesias Cercanas
+          </h3>
+          <ul className="route-detail-panel__poi-list" role="list">
+            {nearbyChurches.map((churchPoi) => (
+              <li
+                key={churchPoi.id}
+                className="route-detail-panel__poi-item"
+                role="listitem"
+              >
+                <button
+                  className="route-detail-panel__church-button"
+                  onClick={() => selectChurch(churchPoi.church!)}
+                  style={{ width: '100%', textAlign: 'left', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+                >
+                  <div>
+                    <div className="route-detail-panel__poi-name">{churchPoi.name}</div>
+                    {churchPoi.church?.address?.streetAddress && (
+                      <p style={{ fontSize: '13px', color: '#666', margin: '4px 0 0 0' }}>
+                        📍 {churchPoi.church.address.streetAddress}
+                      </p>
+                    )}
+                  </div>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+
       {/* Actions */}
       <div className="route-detail-panel__actions">
-
-              {/* Churches */}
-              {route.pois.filter((p) => p.type === 'church').length > 0 && (
-                <>
-                  <h3 className="route-detail-panel__section-title">
-                    ⛪ Iglesias Cercanas ({route.pois.filter((p) => p.type === 'church').length})
-                  </h3>
-                  <ul className="route-detail-panel__poi-list" role="list">
-                    {route.pois
-                      .filter((poi) => poi.type === 'church' && poi.church)
-                      .map((poi) => (
-                        <li
-                          key={poi.id}
-                          className="route-detail-panel__poi-item"
-                          role="listitem"
-                        >
-                          <button
-                            className="route-detail-panel__church-button"
-                            onClick={() => selectChurch(poi.church!)}
-                            style={{ width: '100%', textAlign: 'left', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
-                          >
-                            <div>
-                              <div className="route-detail-panel__poi-name">{poi.name}</div>
-                              {poi.church?.address?.streetAddress && (
-                                <p style={{ fontSize: '13px', color: '#666', margin: '4px 0 0 0' }}>
-                                  📍 {poi.church.address.streetAddress}
-                                </p>
-                              )}
-                            </div>
-                          </button>
-                        </li>
-                      ))}
-                  </ul>
-                </>
-              )}
 
         <button
           className={`route-detail-panel__guided-btn ${guidedMode ? 'route-detail-panel__guided-btn--active' : ''}`}

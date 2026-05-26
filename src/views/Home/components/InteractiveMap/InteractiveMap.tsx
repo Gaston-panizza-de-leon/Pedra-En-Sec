@@ -11,20 +11,12 @@ import L from 'leaflet';
 import { Fragment } from 'react';
 import { useAppStore } from '../../../../store/useAppStore';
 import { getPoiPosition } from '../../../../hooks/useGuidedMode';
+import { useNearbyChurches } from '../../../../hooks/useNearbyChurches';
+import { DistanceSlider } from '../../../../components/DistanceSlider/DistanceSlider';
 import type { Route, LatLng } from '../../../../types';
+import '../../../../utils/leafletSetup';
+import { defaultPoiIcon, churchIcon } from '../../../../utils/leafletSetup';
 import './InteractiveMap.css';
-
-/* ── Fix default Leaflet icon paths (Vite bundling) ── */
-import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
-import markerIcon from 'leaflet/dist/images/marker-icon.png';
-import markerShadow from 'leaflet/dist/images/marker-shadow.png';
-
-delete (L.Icon.Default.prototype as unknown as Record<string, unknown>)._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: markerIcon2x,
-  iconUrl: markerIcon,
-  shadowUrl: markerShadow,
-});
 
 /* ── Balearic Islands centre ── */
 const BALEARES_CENTER: [number, number] = [39.6, 2.95];
@@ -87,6 +79,10 @@ export function InteractiveMap({ routes }: InteractiveMapProps) {
   const openDetail = useAppStore((s) => s.openDetail);
   const selectedRoute = useAppStore((s) => s.selectedRoute);
   const guidedMode = useAppStore((s) => s.guidedMode);
+  const churchDistanceKm = useAppStore((s) => s.churchDistanceKm);
+  const setChurchDistance = useAppStore((s) => s.setChurchDistance);
+
+  const nearbyChurches = useNearbyChurches(selectedRoute);
 
   return (
     <div className="interactive-map" role="region" aria-label="Mapa interactivo de rutas de Pedra en Sec">
@@ -154,13 +150,15 @@ export function InteractiveMap({ routes }: InteractiveMapProps) {
           );
         })}
 
-        {/* POI markers for selected route */}
+        {/* POI markers for selected route (excluding churches) */}
         {selectedRoute?.pois.map((poi) => {
+          if (poi.type === 'church') return null;
           const pos = getPoiPosition(poi);
           return (
           <Marker
             key={poi.id}
             position={[pos.lat, pos.lng]}
+            icon={defaultPoiIcon}
           >
             <Tooltip direction="top" offset={[0, -20]}>
               {poi.name}
@@ -169,9 +167,34 @@ export function InteractiveMap({ routes }: InteractiveMapProps) {
           );
         })}
 
+        {/* Church markers for selected route (dynamic distance) */}
+        {selectedRoute && nearbyChurches.map((churchPoi) => {
+          const pos = getPoiPosition(churchPoi);
+          return (
+            <Marker
+              key={churchPoi.id}
+              position={[pos.lat, pos.lng]}
+              icon={churchIcon}
+            >
+              <Tooltip direction="top" offset={[0, -20]}>
+                {churchPoi.name}
+              </Tooltip>
+            </Marker>
+          );
+        })}
+
         {/* User position when in guided mode */}
         {guidedMode && <UserPositionMarker />}
       </MapContainer>
+
+      {/* Distance slider for churches */}
+      {selectedRoute && (
+        <DistanceSlider
+          value={churchDistanceKm}
+          onChange={setChurchDistance}
+          churchCount={nearbyChurches.length}
+        />
+      )}
     </div>
   );
 }

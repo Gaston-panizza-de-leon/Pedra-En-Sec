@@ -11,7 +11,7 @@ import { distanceToPolyline } from '../utils/distance';
 export function filterChurchesByRoute(
   route: Route,
   churches: Church[],
-  maxDistanceKm: number = 1,
+  maxDistanceKm: number = 10,
 ): ChurchPOI[] {
   if (!route.pathSegments || route.pathSegments.length === 0) {
     return [];
@@ -43,7 +43,7 @@ export function filterChurchesByRoute(
         name: church.name,
         type: 'church',
         church,
-        image: church.image?.[0], // Use first image if available
+        image: church.image?.[0]?.contentUrl, // Use first image URL if available
       };
 
       // Use identifier as key to avoid duplicates

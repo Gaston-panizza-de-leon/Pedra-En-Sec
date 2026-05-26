@@ -14,7 +14,7 @@ export function ChurchPopup({ church, onClose }: ChurchPopupProps) {
     return '⭐'.repeat(Math.min(5, Math.max(0, stars)));
   };
 
-  const imageUrl = church.image?.[0];
+  const imageUrl = church.image?.[0]?.contentUrl;
   const rating = church.aggregateRating?.ratingValue;
   const reviewCount = church.aggregateRating?.reviewCount;
   const mapsLink = church.geo

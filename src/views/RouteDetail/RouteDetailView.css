@@ -139,6 +139,28 @@
   margin-bottom: 0.5rem;
 }
 
+.route-detail-view__church-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  margin-top: 0.4rem;
+  border: 1px solid var(--color-stone-300);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-green-700);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.route-detail-view__church-btn:hover,
+.route-detail-view__church-btn:focus-visible {
+  background: var(--color-stone-200);
+  border-color: var(--color-green-600);
+}
+
 /* ── Actions ─────────────────────────── */
 .route-detail-view__actions {
   display: flex;

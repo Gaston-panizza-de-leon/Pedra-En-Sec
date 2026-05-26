@@ -1,9 +1,15 @@
 import { useState, useMemo, useEffect } from 'react';
 import { MapContainer, TileLayer, Polyline, Marker, Tooltip } from 'react-leaflet';
+import '../../utils/leafletSetup';
+import { defaultPoiIcon, churchIcon } from '../../utils/leafletSetup';
 import { useAppStore } from '../../store/useAppStore';
 import { getPoiPosition } from '../../hooks/useGuidedMode';
+import { useNearbyChurches } from '../../hooks/useNearbyChurches';
+import { DistanceSlider } from '../../components/DistanceSlider/DistanceSlider';
 import { TTSButton } from '../../components/TTSButton/TTSButton';
 import { PoiFavButton } from '../../components/PoiFavButton/PoiFavButton';
+import { ChurchPopup } from '../../components/ChurchPopup/ChurchPopup';
+import { RouteModal } from '../../components/RouteModal/RouteModal';
 import type { Route, LatLng } from '../../types';
 import './RouteDetailView.css';
 import { solveHikingTSP } from '../../scripts/routingEngine';
@@ -26,6 +32,13 @@ export function RouteDetailView() {
   const guidedMode = useAppStore((s) => s.guidedMode);
   const toggleGuidedMode = useAppStore((s) => s.toggleGuidedMode);
   const stopGuidedMode = useAppStore((s) => s.stopGuidedMode);
+  const selectedChurch = useAppStore((s) => s.selectedChurch);
+  const selectChurch = useAppStore((s) => s.selectChurch);
+  const clearSelectedChurch = useAppStore((s) => s.clearSelectedChurch);
+  const churchDistanceKm = useAppStore((s) => s.churchDistanceKm);
+  const setChurchDistance = useAppStore((s) => s.setChurchDistance);
+
+  const nearbyChurches = useNearbyChurches(route);
 
   const [selectedPoiIds, setSelectedPoiIds] = useState<Set<string>>(new Set());
   const [optimizedPath, setOptimizedPath] = useState<[number, number][]>([]);
@@ -208,13 +221,22 @@ export function RouteDetailView() {
                 />
               )}
 
-              {/* Marcadores (siempre visibles) */}
+              {/* Marcadores de POIs regulares */}
               {route.pois.map((poi) => {
                 const pos = getPoiPosition(poi);
                 const isSelected = selectedPoiIds.has(poi.id);
                 return (
-                  <Marker key={poi.id} position={[pos.lat, pos.lng]} eventHandlers={{ click: () => togglePoi(poi.id) }}>
+                  <Marker key={poi.id} position={[pos.lat, pos.lng]} icon={defaultPoiIcon} eventHandlers={{ click: () => togglePoi(poi.id) }}>
                     <Tooltip permanent={isSelected}>{isSelected ? `✅ ${poi.name}` : poi.name}</Tooltip>
+                  </Marker>
+                );
+              })}
+              {/* Marcadores de iglesias (distancia dinámica) */}
+              {nearbyChurches.map((churchPoi) => {
+                const pos = getPoiPosition(churchPoi);
+                return (
+                  <Marker key={churchPoi.id} position={[pos.lat, pos.lng]} icon={churchIcon}>
+                    <Tooltip>{churchPoi.name}</Tooltip>
                   </Marker>
                 );
               })}
@@ -270,7 +292,9 @@ export function RouteDetailView() {
         {/* Puntos de interés */}
         {route.pois.length > 0 && (
           <section>
-            <h2 className="route-detail-view__section-title">Puntos de Interés</h2>
+            <h2 className="route-detail-view__section-title">
+              Puntos de Interés
+            </h2>
             <ul className="route-detail-view__pois">
               {route.pois.map((poi) => (
                 <li key={poi.id} className="route-detail-view__poi">
@@ -280,8 +304,50 @@ export function RouteDetailView() {
                   <div>
                     <div className="route-detail-view__poi-name">{poi.name}</div>
                     <p className="route-detail-view__poi-narration">{poi.narration}</p>
-                    <TTSButton text={poi.narration} label={`Escuchar narración de ${poi.name}`} />
+                    <TTSButton text={poi.narration ?? ''} label={`Escuchar narración de ${poi.name}`} />
                     <PoiFavButton poiId={poi.id} poiName={poi.name} />
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {/* Churches (distancia dinámica) */}
+        {nearbyChurches.length > 0 && (
+          <section>
+            <DistanceSlider
+              value={churchDistanceKm}
+              onChange={setChurchDistance}
+              churchCount={nearbyChurches.length}
+            />
+            <h2 className="route-detail-view__section-title">
+              Iglesias Cercanas
+            </h2>
+            <ul className="route-detail-view__pois">
+              {nearbyChurches.map((churchPoi) => (
+                <li key={churchPoi.id} className="route-detail-view__poi">
+                  {churchPoi.church?.image?.[0]?.contentUrl && (
+                    <img
+                      className="route-detail-view__poi-img"
+                      src={churchPoi.church.image[0].contentUrl}
+                      alt={churchPoi.name}
+                      loading="lazy"
+                    />
+                  )}
+                  <div>
+                    <div className="route-detail-view__poi-name">{churchPoi.name}</div>
+                    {churchPoi.church?.address?.streetAddress && (
+                      <p style={{ fontSize: '13px', color: '#666', margin: '4px 0' }}>
+                        {churchPoi.church.address.streetAddress}
+                      </p>
+                    )}
+                    <button
+                      className="route-detail-view__church-btn"
+                      onClick={() => selectChurch(churchPoi.church!)}
+                    >
+                      Ver detalles
+                    </button>
                   </div>
                 </li>
               ))}
@@ -301,6 +367,17 @@ export function RouteDetailView() {
           </button>
         </div>
       </div>
+
+      {/* Church detail modal */}
+      {selectedChurch && (
+        <RouteModal
+          isOpen={!!selectedChurch}
+          onClose={clearSelectedChurch}
+          ariaLabel={`Detalles de ${selectedChurch.name}`}
+        >
+          <ChurchPopup church={selectedChurch} onClose={clearSelectedChurch} />
+        </RouteModal>
+      )}
     </main>
   );
 }

@@ -39,6 +39,26 @@
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
+/* Church marker styling */
+.church-marker {
+  background: none !important;
+  border: none !important;
+}
+
+.church-marker__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  background: #fdf6e3;
+  border: 2px solid #d4a017;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  line-height: 1;
+}
+
 /* User position marker */
 .user-marker {
   background: #3b82f6;

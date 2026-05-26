@@ -40,8 +40,8 @@ export function HomeView() {
           setChurches(churches);
         }
 
-        // Load routes with churches
-        const loadedRoutes = await loadRoutesFromGeoJson(churches);
+        // Load routes
+        const loadedRoutes = await loadRoutesFromGeoJson();
         if (isMounted) {
           setRoutes(loadedRoutes);
           setRoutesError(null);
