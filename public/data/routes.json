@@ -3,7 +3,7 @@
     "id": "ruta-pedra-sec-mallorca",
     "name": "Ruta de Pedra en Sec - Mallorca",
     "shortDescription": "La mítica ruta GR 221 de 185 km a través de la Serra de Tramuntana, sumergiéndose en la arquitectura de piedra seca milenaria de Mallorca.",
-    "longDescription": "Descubre el trazado épico del GR 221, una travesía de casi dos meses que atraviesa la Serra de Tramuntana desde Sant Elm hasta Pollença. Este legendario sendero catalán es un viaje a través de la historia de Mallorca, donde cada kilómetro revela la maestría constructiva de la piedra en seco. Pasarás por pueblos como Valldemossa, Deià y Sóller, cruzarás bosques mediterráneos ancestrales y disfrutarás de vistas panorámicas del mar Mediterráneo. La ruta es una ventana abierta a la técnica constructiva más característica de las Islas Baleares: muros de piedra sin mortero que han resistido siglos de erosión e intemperie. Una experiencia transformadora para todo amante del senderismo, la naturaleza y la arquitectura vernácula.",
+    "longDescription": "Descubre el trazado épico del GR 221, una travesía de casi dos cientos kilómetros que atraviesa la Serra de Tramuntana desde Sant Elm hasta Pollença. Este legendario sendero catalán es un viaje a través de la historia de Mallorca, donde cada kilómetro revela la maestría constructiva de la piedra en seco. Pasarás por pueblos como Valldemossa, Deià y Sóller, cruzarás bosques mediterráneos ancestrales y disfrutarás de vistas panorámicas del mar Mediterráneo. La ruta es una ventana abierta a la técnica constructiva más característica de las Islas Baleares: muros de piedra sin mortero que han resistido siglos de erosión e intemperie. Una experiencia transformadora para todo amante del senderismo, la naturaleza y la arquitectura vernácula.",
     "difficulty": "moderada",
     "distanceKm": 185,
     "durationHours": 72,
@@ -178,7 +178,10 @@
       "/images/santuaridelluc.webp",
       "/images/pontroma.webp",
       "/images/cami-pedra-en-sec.webp",
-      "/images/muro-pedra-en-sec.webp"
+      "/images/muro-pedra-en-sec.webp",
+      "/images/pedra-en-sec-ownc.webp",
+      "/images/cartuja-ownc.webp",
+      "/images/iglesia-ownc.webp"
     ],
     "video": "https://www.youtube.com/embed/44IcjCBG_fQ",
     "color": "#4a7c59"
@@ -206,13 +209,73 @@
           "radiusMeters": 60
         },
         "narration": "Aquí puedes observar un tramo representativo del Camí de Cavalls en Menorca.",
-        "image": "/images/menorca-cami-cavalls.webp"
+        "image": "/images/cami-cavalls.webp"
+      },
+      {
+        "id": "poi-menorca-2",
+        "name": "Ciutadella",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.95404,
+            "lng": 3.82735
+          },
+          "radiusMeters": 150
+        },
+        "narration": "Extremo oeste del Camí de Cavalls, a las puertas de Ciutadella. Aquí los muros de piedra seca enmarcan los campos y descienden hacia las calas de poniente.",
+        "image": "/images/ciutadella.webp"
+      },
+      {
+        "id": "poi-menorca-3",
+        "name": "Son Bou",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.90735,
+            "lng": 4.06694
+          },
+          "radiusMeters": 150
+        },
+        "narration": "Estás en Son Bou, la playa más larga de Menorca. El sendero bordea el humedal y los bancales de piedra seca que protegen el litoral sur.",
+        "image": "/images/son-bou.webp"
+      },
+      {
+        "id": "poi-menorca-4",
+        "name": "Punta Prima",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.82577,
+            "lng": 4.29386
+          },
+          "radiusMeters": 100
+        },
+        "narration": "Punta Prima, el rincón sureste de la isla. Enfrente, el faro de l'Illa de l'Aire; detrás, paredes de piedra seca que resistieron siglos de tramontana.",
+        "image": "/images/punta-prima.webp"
+      },
+      {
+        "id": "poi-menorca-5",
+        "name": "Arenal d'en Castell",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.99461,
+            "lng": 4.23304
+          },
+          "radiusMeters": 120
+        },
+        "narration": "Bahía de Arenal d'en Castell, en la costa noreste. El Camí de Cavalls serpentea entre pinares y muros de piedra seca con vistas a una cala resguardada.",
+        "image": "/images/arenal-den-castell.webp"
       }
     ],
     "photos": [
-      "/images/menorca-ruta-1.webp"
+      "/images/cami-cavalls.webp",
+      "/images/ciutadella.webp",
+      "/images/son-bou.webp",
+      "/images/punta-prima.webp",
+      "/images/arenal-den-castell.webp"
     ],
-    "video": "",
+    "video": "https://www.youtube.com/embed/cIsfJ0tiiv4",
     "color": "#3f7c85"
   },
   {
@@ -232,19 +295,79 @@
         "triggerArea": {
           "type": "circle",
           "center": {
-            "lat": 38.9850,
+            "lat": 38.985,
             "lng": 1.5334
           },
           "radiusMeters": 50
         },
         "narration": "Estás comenzando un tramo destacado de Camí de sa Pujada en Ibiza.",
-        "image": "/images/ibiza-sa-pujada.webp"
+        "image": "/images/cami-sa-pujada.webp"
+      },
+      {
+        "id": "poi-ibiza-2",
+        "name": "Riu de Santa Eulària",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 38.97502,
+            "lng": 1.4276
+          },
+          "radiusMeters": 100
+        },
+        "narration": "Tramo interior junto al Riu de Santa Eulària, el único río de las Pitiusas. Los caminos de piedra seca acompañan las terrazas de cultivo del valle.",
+        "image": "/images/riu-santa-eularia.webp"
+      },
+      {
+        "id": "poi-ibiza-3",
+        "name": "Mirador de sa Pujada",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 38.9332,
+            "lng": 1.48989
+          },
+          "radiusMeters": 90
+        },
+        "narration": "Punto elevado del Camí de sa Pujada, con perspectivas del valle y el mar. Aquí el empedrado tradicional asciende entre paredes secas centenarias.",
+        "image": "/images/mirador-sa-pujada.webp"
+      },
+      {
+        "id": "poi-ibiza-4",
+        "name": "Es Canar",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 38.99245,
+            "lng": 1.55957
+          },
+          "radiusMeters": 110
+        },
+        "narration": "Cerca de Es Canar, en la costa noreste. El sendero combina pinares litorales con muros de piedra seca que delimitan los antiguos campos.",
+        "image": "/images/es-canar.webp"
+      },
+      {
+        "id": "poi-ibiza-5",
+        "name": "Sant Carles de Peralta",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 39.02332,
+            "lng": 1.52362
+          },
+          "radiusMeters": 120
+        },
+        "narration": "Sant Carles de Peralta, final histórico del Camí de sa Pujada. Su entorno rural conserva pozos, norias y paredes de piedra seca de la Ibiza payesa.",
+        "image": "/images/sant-carles.webp"
       }
     ],
     "photos": [
-      "/images/ibiza-ruta-1.webp"
+      "/images/cami-sa-pujada.webp",
+      "/images/riu-santa-eularia.webp",
+      "/images/mirador-sa-pujada.webp",
+      "/images/es-canar.webp",
+      "/images/sant-carles.webp"
     ],
-    "video": "",
+    "video": "https://www.youtube.com/embed/EixcetrNJ_I",
     "color": "#d17a22"
   },
   {
@@ -265,18 +388,48 @@
           "type": "circle",
           "center": {
             "lat": 38.6729,
-            "lng": 1.5200
+            "lng": 1.52
           },
           "radiusMeters": 50
         },
         "narration": "Desde este punto se aprecia la red de caminos tradicionales de Formentera.",
-        "image": "/images/formentera-mola.webp"
+        "image": "/images/mirador-la-mola.webp"
+      },
+      {
+        "id": "poi-formentera-2",
+        "name": "El Pilar de la Mola",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 38.67304,
+            "lng": 1.53719
+          },
+          "radiusMeters": 90
+        },
+        "narration": "El Pilar de la Mola, el pueblo más alto de Formentera. En torno a su iglesia fortificada y su mercado artesanal perviven los caminos empedrados y las paredes de piedra seca de la isla.",
+        "image": "/images/pilar-la-mola.webp"
+      },
+      {
+        "id": "poi-formentera-3",
+        "name": "Far de la Mola",
+        "triggerArea": {
+          "type": "circle",
+          "center": {
+            "lat": 38.66921,
+            "lng": 1.55204
+          },
+          "radiusMeters": 80
+        },
+        "narration": "Extremo oriental de Formentera, camino del Far de la Mola sobre los acantilados. Aquí los muros de piedra seca delimitan los últimos campos antes del mar abierto.",
+        "image": "/images/far-la-mola.webp"
       }
     ],
     "photos": [
-      "/images/formentera-ruta-1.webp"
+      "/images/mirador-la-mola.webp",
+      "/images/pilar-la-mola.webp",
+      "/images/far-la-mola.webp"
     ],
-    "video": "",
+    "video": "https://www.youtube.com/embed/R5Gp3v0ZY4Q",
     "color": "#7b9e3b"
   }
 ]

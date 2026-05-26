@@ -1,0 +1,41 @@
+.poi-fav {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+  padding: 0.35rem 0.7rem;
+  border: 1.5px solid var(--color-stone-300);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.poi-fav:hover {
+  border-color: var(--color-green-700);
+  color: var(--color-green-800);
+  background: var(--color-stone-100);
+}
+
+.poi-fav:focus-visible {
+  outline: 2px solid var(--color-green-700);
+  outline-offset: 2px;
+}
+
+.poi-fav__star {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.poi-fav--active {
+  border-color: #e0a619;
+  color: #b07d0a;
+  background: #fff8e6;
+}
+
+.poi-fav--active .poi-fav__star {
+  color: #e0a619;
+}

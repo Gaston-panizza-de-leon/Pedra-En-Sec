@@ -13,4 +13,28 @@ export default defineConfig({
     }),
     svgr()
   ],
+  build: {
+    minify: 'terser',
+    rollupOptions: {
+      output: [
+        {
+          format: 'es',
+          dir: 'dist',
+          entryFileNames: '[name]-[hash].js',
+          chunkFileNames: '[name]-[hash].js',
+          assetFileNames: '[name]-[hash][extname]',
+        },
+      ],
+      external: [],
+    },
+    chunkSizeWarningLimit: 500,
+    reportCompressedSize: true,
+    sourcemap: false,
+    cssCodeSplit: true,
+  },
+  server: {
+    headers: {
+      'Cache-Control': 'public, max-age=3600',
+    },
+  },
 })

@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useFocusTrap } from '../../hooks/useFocusTrap';
 import { quizQuestions } from '../../data/quizQuestions';
 import './QuizModal.css';
 
@@ -7,7 +8,7 @@ interface QuizModalProps {
   onClose: () => void;
 }
 
-// Fisher-Yates shuffle algorithm
+// Fisher-Yates shuffle
 function shuffleArray<T>(array: T[]): T[] {
   const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -24,14 +25,17 @@ export function QuizModal({ isOpen, onClose }: QuizModalProps) {
   const [score, setScore] = useState(0);
   const [answered, setAnswered] = useState(false);
   const [quizFinished, setQuizFinished] = useState(false);
-  const [shuffledQuestions, setShuffledQuestions] = useState(() => 
+  const [shuffledQuestions, setShuffledQuestions] = useState(() =>
     quizQuestions.map((q) => ({
       ...q,
       shuffledOptions: shuffleArray([...q.answerOptions]),
-    }))
+    })),
   );
 
-  // Regenerate shuffled questions when modal opens
+  // Atrapa el foco dentro del modal y lo restaura al cerrar.
+  useFocusTrap(isOpen, modalRef);
+
+  // Re-baraja preguntas al abrir.
   useEffect(() => {
     if (isOpen) {
       const shuffled = shuffleArray(quizQuestions);
@@ -40,7 +44,7 @@ export function QuizModal({ isOpen, onClose }: QuizModalProps) {
         shuffled.map((q) => ({
           ...q,
           shuffledOptions: shuffleArray([...q.answerOptions]),
-        }))
+        })),
       );
     }
   }, [isOpen]);
@@ -55,7 +59,6 @@ export function QuizModal({ isOpen, onClose }: QuizModalProps) {
     };
 
     document.addEventListener('keydown', handleKey);
-    modalRef.current?.focus();
     document.body.style.overflow = 'hidden';
 
     return () => {
@@ -111,18 +114,14 @@ export function QuizModal({ isOpen, onClose }: QuizModalProps) {
         tabIndex={-1}
         onClick={(e) => e.stopPropagation()}
       >
-        <button
-          className="quiz-modal__close"
-          onClick={handleClose}
-          aria-label="Cerrar quiz"
-        >
+        <button className="quiz-modal__close" onClick={handleClose} aria-label="Cerrar quiz">
           ✕
         </button>
 
         <div className="quiz-modal__body">
           {!quizFinished ? (
             <>
-              {/* Progress bar */}
+              {/* Progreso */}
               <div className="quiz-modal__progress">
                 <div className="quiz-modal__progress-bar">
                   <div
@@ -137,10 +136,10 @@ export function QuizModal({ isOpen, onClose }: QuizModalProps) {
                 </p>
               </div>
 
-              {/* Question */}
+              {/* Pregunta */}
               <h2 className="quiz-modal__question">{currentQuestion.question}</h2>
 
-              {/* Answer options */}
+              {/* Opciones */}
               <div className="quiz-modal__options">
                 {currentQuestion.shuffledOptions.map((option, index) => (
                   <button
@@ -166,7 +165,7 @@ export function QuizModal({ isOpen, onClose }: QuizModalProps) {
                 ))}
               </div>
 
-              {/* Rationale */}
+              {/* Explicación: aria-live para que el lector de pantalla la anuncie */}
               {answered && selectedAnswerIndex !== null && (
                 <div
                   className={`quiz-modal__rationale ${
@@ -174,6 +173,8 @@ export function QuizModal({ isOpen, onClose }: QuizModalProps) {
                       ? 'quiz-modal__rationale--correct'
                       : 'quiz-modal__rationale--incorrect'
                   }`}
+                  role="status"
+                  aria-live="polite"
                 >
                   <p className="quiz-modal__rationale-title">
                     {currentQuestion.shuffledOptions[selectedAnswerIndex].isCorrect
@@ -188,21 +189,16 @@ export function QuizModal({ isOpen, onClose }: QuizModalProps) {
                 </div>
               )}
 
-              {/* Next button */}
+              {/* Siguiente */}
               {answered && (
-                <button
-                  className="quiz-modal__next-btn"
-                  onClick={handleNext}
-                >
-                  {currentQuestionIndex < shuffledQuestions.length - 1
-                    ? 'Siguiente'
-                    : 'Ver resultados'}
+                <button className="quiz-modal__next-btn" onClick={handleNext}>
+                  {currentQuestionIndex < shuffledQuestions.length - 1 ? 'Siguiente' : 'Ver resultados'}
                 </button>
               )}
             </>
           ) : (
             <>
-              {/* Results screen */}
+              {/* Resultados */}
               <div className="quiz-modal__results">
                 <h2 className="quiz-modal__results-title">¡Quiz completado!</h2>
                 <div className="quiz-modal__score">

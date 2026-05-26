@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /dist/
+
+Sitemap: https://pedraensec.online/sitemap.xml
+
+# Delay for aggressive crawlers
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /

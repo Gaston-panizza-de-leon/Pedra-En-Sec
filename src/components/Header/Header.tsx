@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'; // Added hooks
 import { useAppStore } from '../../store/useAppStore';
+import { useAuthStore } from '../../store/useAuthStore';
 import './Header.css';
 
 import HikerIcon from '../../assets/hiker.svg?react'; // Adjust path as needed
@@ -11,6 +12,9 @@ export function Header() {
   const closeDetail = useAppStore((s) => s.closeDetail);
   const stopGuidedMode = useAppStore((s) => s.stopGuidedMode);
   const openQuiz = useAppStore((s) => s.openQuiz);
+  const openAuth = useAppStore((s) => s.openAuth);
+  const currentUser = useAuthStore((s) => s.currentUser);
+  const logout = useAuthStore((s) => s.logout);
 
   // --- Hiker Logic Start ---
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -109,6 +113,27 @@ export function Header() {
         >
           Quiz
         </button>
+
+        {currentUser ? (
+          <span className="header__user">
+            <span className="header__greeting">Hola, {currentUser}</span>
+            <button
+              className="header__btn"
+              onClick={logout}
+              aria-label="Cerrar sesión"
+            >
+              Salir
+            </button>
+          </span>
+        ) : (
+          <button
+            className="header__btn"
+            onClick={openAuth}
+            aria-label="Iniciar sesión o registrarse"
+          >
+            Entrar
+          </button>
+        )}
       </nav>
 
       {/* --- HIKER PROGRESS TRACK --- */}
