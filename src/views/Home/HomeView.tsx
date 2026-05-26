@@ -65,25 +65,6 @@ export function HomeView() {
     };
   }, []);
 
-  if (isLoadingRoutes) {
-    return (
-      <main className="home-view" id="main-content">
-        <Loader text="Cargando rutas desde GeoJSON..." />
-      </main>
-    );
-  }
-
-  if (routesError) {
-    return (
-      <main className="home-view" id="main-content">
-        <section className="home-view__hero" aria-label="Error de carga">
-          <h1 className="home-view__hero-title">No se pudieron cargar las rutas</h1>
-          <p className="home-view__hero-sub">{routesError}</p>
-        </section>
-      </main>
-    );
-  }
-
   return (
     <main className="home-view" id="main-content">
       {/* Hero */}
@@ -99,7 +80,18 @@ export function HomeView() {
 
       {/* Interactive Map */}
       <section className="home-view__map-wrapper" id="map-section" aria-label="Mapa de rutas">
-        <InteractiveMap routes={routes} />
+        {isLoadingRoutes ? (
+          <div className="home-view__map-placeholder">
+            <Loader text="Cargando rutas desde GeoJSON..." />
+          </div>
+        ) : routesError ? (
+          <div className="home-view__map-placeholder home-view__map-placeholder--error" role="alert">
+            <p className="home-view__map-error-title">No se pudieron cargar las rutas</p>
+            <p className="home-view__map-error-detail">{routesError}</p>
+          </div>
+        ) : (
+          <InteractiveMap routes={routes} />
+        )}
       </section>
 
       {/* Cultural info */}

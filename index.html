@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Preconexión a los servidores de tiles de OpenStreetMap (acelera el mapa) -->
+    <link rel="preconnect" href="https://a.tile.openstreetmap.org" crossorigin />
+    <link rel="preconnect" href="https://b.tile.openstreetmap.org" crossorigin />
+    <link rel="preconnect" href="https://c.tile.openstreetmap.org" crossorigin />
     <meta name="description" content="Descubre las rutas de Pedra en Sec en las Islas Baleares. Patrimonio de la Humanidad UNESCO: mapa interactivo, modo guiado con narración y mucho más." />
     <meta name="keywords" content="Pedra en Sec, Baleares, rutas, patrimonio, UNESCO, senderismo, Mallorca, Menorca, Ibiza, Formentera" />
     <meta name="author" content="Pedra en Sec" />
@@ -10,25 +14,23 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
-    <!-- ⚠️ CAMBIA "https://pedraensec.es" por tu dominio real de DonDominio (con https)
-         aquí (og:url, og:image, canonical), en public/robots.txt y en public/sitemap.xml -->
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://pedraensec.es/" />
+    <meta property="og:url" content="https://pedraensec.online/" />
     <meta property="og:title" content="Pedra en Sec – Patrimonio de las Islas Baleares" />
     <meta property="og:description" content="Descubre las rutas de Pedra en Sec en las Islas Baleares. Patrimonio de la Humanidad UNESCO." />
     <meta property="og:site_name" content="Pedra en Sec" />
-    <meta property="og:image" content="https://pedraensec.es/icon-512.png" />
+    <meta property="og:image" content="https://pedraensec.online/icon-512.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:title" content="Pedra en Sec – Patrimonio de las Islas Baleares" />
     <meta property="twitter:description" content="Descubre las rutas de Pedra en Sec en las Islas Baleares. Patrimonio de la Humanidad UNESCO." />
-    <meta property="twitter:image" content="https://pedraensec.es/icon-512.png" />
+    <meta property="twitter:image" content="https://pedraensec.online/icon-512.png" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://pedraensec.es/" />
+    <link rel="canonical" href="https://pedraensec.online/" />
 
     <title>Pedra en Sec – Patrimonio de las Islas Baleares</title>
 
@@ -50,7 +52,7 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Pedra en Sec",
-        "url": "https://pedraensec.es/",
+        "url": "https://pedraensec.online/",
         "inLanguage": "es",
         "description": "Rutas de Pedra en Sec en las Islas Baleares. Patrimonio Cultural Inmaterial de la Humanidad (UNESCO, 2018).",
         "publisher": {
@@ -58,7 +60,7 @@
           "name": "Pedra en Sec",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://pedraensec.es/icon-512.png"
+            "url": "https://pedraensec.online/icon-512.png"
           }
         }
       }

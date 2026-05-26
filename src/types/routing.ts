@@ -1,5 +1,3 @@
-import { Feature, LineString, Point } from 'geojson';
-
 export interface TrailNode {
   id: string; // "lng,lat" string
   coordinates: [number, number];

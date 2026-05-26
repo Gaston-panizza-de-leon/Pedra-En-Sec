@@ -213,3 +213,25 @@
 .header__footprint:nth-child(odd) {
   transform: translateY(2px) rotate(-10deg);
 }
+/* Control de sesión (auth) */
+.header__user {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header__greeting {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-green-800);
+  max-width: 10rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .header__greeting {
+    display: none;
+  }
+}

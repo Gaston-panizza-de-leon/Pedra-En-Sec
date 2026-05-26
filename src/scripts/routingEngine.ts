@@ -53,6 +53,83 @@ export function solveHikingTSP(
 
   if (allTrailPoints.length === 0) return [];
 
+  // 1b. Puentear las componentes desconectadas del trazado (algunos GeoJSON de
+  //     OSM vienen partidos en tramos con huecos, p. ej. el Camí de Cavalls).
+  //     Unimos cada componente menor a la principal por su par de nodos más
+  //     cercano, para que el A* pueda recorrer toda la ruta.
+  const coordCache = new Map<string | number, [number, number]>();
+  graph.forEachNode((node) => {
+    coordCache.set(node.id, coordsOf(node.id));
+  });
+
+  const visited = new Set<string | number>();
+  const components: (string | number)[][] = [];
+  graph.forEachNode((node) => {
+    if (visited.has(node.id)) return;
+    const comp: (string | number)[] = [];
+    const stack: (string | number)[] = [node.id];
+    while (stack.length) {
+      const id = stack.pop() as string | number;
+      if (visited.has(id)) continue;
+      visited.add(id);
+      comp.push(id);
+      graph.forEachLinkedNode(
+        id,
+        (other) => {
+          if (!visited.has(other.id)) stack.push(other.id);
+        },
+        false,
+      );
+    }
+    components.push(comp);
+  });
+
+  if (components.length > 1) {
+    components.sort((a, b) => b.length - a.length);
+    const connIds: (string | number)[] = [...components[0]];
+    const connLat: number[] = [];
+    const connLng: number[] = [];
+    for (const id of connIds) {
+      const c = coordCache.get(id)!;
+      connLat.push(c[0]);
+      connLng.push(c[1]);
+    }
+    for (let k = 1; k < components.length; k++) {
+      const comp = components[k];
+      let best = Infinity;
+      let bu: string | number | null = null;
+      let bv: string | number | null = null;
+      for (const cid of comp) {
+        const c = coordCache.get(cid)!;
+        const cLat = c[0];
+        const cLng = c[1];
+        for (let j = 0; j < connLat.length; j++) {
+          const dLat = cLat - connLat[j];
+          const dLng = cLng - connLng[j];
+          const d2 = dLat * dLat + dLng * dLng;
+          if (d2 < best) {
+            best = d2;
+            bu = cid;
+            bv = connIds[j];
+          }
+        }
+      }
+      if (bu !== null && bv !== null) {
+        const a = coordCache.get(bu)!;
+        const b = coordCache.get(bv)!;
+        const w = turf.distance([a[1], a[0]], [b[1], b[0]]);
+        graph.addLink(bu, bv, { weight: w });
+        graph.addLink(bv, bu, { weight: w });
+        for (const cid of comp) {
+          const cc = coordCache.get(cid)!;
+          connIds.push(cid);
+          connLat.push(cc[0]);
+          connLng.push(cc[1]);
+        }
+      }
+    }
+  }
+
   const trailFeatureCollection = turf.featureCollection(allTrailPoints);
 
   // Encuentra el ID del nodo de la traza más cercano a un POI.

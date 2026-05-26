@@ -2,8 +2,17 @@ import { useState } from 'react';
 import type { Route } from '../../../../types';
 import { useAppStore } from '../../../../store/useAppStore';
 import { TTSButton } from '../../../../components/TTSButton/TTSButton';
+import { PoiFavButton } from '../../../../components/PoiFavButton/PoiFavButton';
+import { AudioButton } from '../../../../components/AudioButton/AudioButton';
 import { PhotoLightbox } from '../../../../components/PhotoLightbox/PhotoLightbox';
 import './RouteDetailPanel.css';
+
+const ROUTE_AUDIO: Record<string, string> = {
+  'ruta-pedra-sec-mallorca': 'Mallorca-audio.mp3',
+  'ruta-cami-cavalls-menorca': 'Menorca-audio.mp3',
+  'ruta-sa-pujada-ibiza': 'Ibiza-audio.mp3',
+  'ruta-cami-pujada-formentera': 'Formentera-audio.mp3',
+};
 
 interface RouteDetailPanelProps {
   route: Route;
@@ -77,11 +86,18 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
       {/* Description */}
       <p className="route-detail-panel__desc">{route.longDescription}</p>
 
-      {/* TTS for description */}
-      <TTSButton
-        text={route.longDescription}
-        label={`Escuchar descripción de ${route.name}`}
-      />
+      {/* Audio propio (voz) para la descripción; TTS de respaldo */}
+      {ROUTE_AUDIO[route.id] ? (
+        <AudioButton
+          src={`${import.meta.env.BASE_URL}audios/${ROUTE_AUDIO[route.id]}`}
+          label={`Escuchar descripción de ${route.name}`}
+        />
+      ) : (
+        <TTSButton
+          text={route.longDescription}
+          label={`Escuchar descripción de ${route.name}`}
+        />
+      )}
 
       {/* Photos */}
       {route.photos.length > 0 && (
@@ -154,6 +170,7 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
                   <p className="route-detail-panel__poi-narration">
                     {poi.narration}
                   </p>
+                  <PoiFavButton poiId={poi.id} poiName={poi.name} />
                 </div>
               </li>
             ))}
