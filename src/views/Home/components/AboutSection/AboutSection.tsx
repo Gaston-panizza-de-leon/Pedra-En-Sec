@@ -41,6 +41,7 @@ export function AboutSection() {
         <div className="about-section__grid">
           {teamMembers.map((member) => (
             <div key={member.name} className="about-section__card">
+              {/*
               <figure className="about-section__card-photo">
                 <img
                   src={member.photo}
@@ -48,6 +49,7 @@ export function AboutSection() {
                   loading="lazy"
                 />
               </figure>
+              */}
               <div className="about-section__card-info">
                 <h3 className="about-section__card-name">{member.name}</h3>
                 <p className="about-section__card-role">{member.role}</p>
