@@ -4,7 +4,6 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
 
-/** Resuelve rutas de /public respetando el `base` de Vite. */
 function withBase(path: string): string {
   return `${baseUrl}${path.startsWith('/') ? path.slice(1) : path}`;
 }
