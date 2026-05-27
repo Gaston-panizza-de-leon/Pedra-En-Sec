@@ -88,32 +88,32 @@ async function fetchLocal(): Promise<Church[]> {
 }
 
 /**
- * Load churches with cache-first strategy:
- * 1. localStorage cache (instant, 24h TTL), refresh remote in background
- * 2. Remote (templum-mallorca.online) with 3s timeout
+ * Load churches with remote-first strategy:
+ * 1. Try remote (templum-mallorca.online) with 8s timeout
+ * 2. Fallback to localStorage cache (24h TTL)
  * 3. Last resort: local JSON file
  */
 export async function loadChurches(): Promise<Church[]> {
-  // 1. Cache-first: return immediately if available
-  const cached = readCache();
-  if (cached) {
-    // Refresh cache in background for next visit
-    fetchRemote().then(writeCache).catch(() => {});
-    return cached;
-  }
-
-  // 2. Try remote
+  // 1. Remote
   try {
     const churches = await fetchRemote();
     writeCache(churches);
     return churches;
   } catch (err) {
-    console.warn('[Churches] Remote fetch failed, trying local:', (err as Error).message);
+    console.warn('[Churches] Remote fetch failed, trying cache:', (err as Error).message);
   }
 
-  // 3. Local file as last resort
+  // 2. LocalStorage cache
+  const cached = readCache();
+  if (cached) {
+    console.info('[Churches] Loaded from localStorage cache');
+    return cached;
+  }
+
+  // 3. Local file (last resort)
   try {
-    return await fetchLocal();
+    const churches = await fetchLocal();
+    return churches;
   } catch (err) {
     console.error('[Churches] All sources failed:', (err as Error).message);
     return [];
