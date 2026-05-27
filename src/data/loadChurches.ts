@@ -5,7 +5,7 @@ const BASE_URL = 'https://www.templum-mallorca.online/';
 const LOCAL_URL = '/data/external/iglesias.json';
 const CACHE_KEY = 'churches_cache';
 const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours
-const REMOTE_TIMEOUT_MS = 8000;
+const REMOTE_TIMEOUT_MS = 3000;
 
 interface CacheEntry {
   timestamp: number;
