@@ -7,8 +7,8 @@ import { RouteModal } from '../../components/RouteModal/RouteModal';
 import { RouteDetailPanel } from './components/RouteDetailPanel/RouteDetailPanel';
 import { Loader } from '../../components/Loader/Loader';
 import { loadRoutesFromGeoJson } from '../../data/loadRoutesFromGeoJson';
+import { loadChurches } from '../../data/loadChurches';
 import type { Route } from '../../types';
-import type { Church } from '../../types';
 import './HomeView.css';
 import { ChurchPopup } from '../../components/ChurchPopup/ChurchPopup';
 
@@ -28,13 +28,8 @@ export function HomeView() {
 
     async function loadData() {
       try {
-        // Load churches first
-        const churchesResponse = await fetch('/data/external/iglesias.json');
-        if (!churchesResponse.ok) {
-          throw new Error(`No se pudieron cargar iglesias (${churchesResponse.status})`);
-        }
-        const churchesData = await churchesResponse.json();
-        const churches = (churchesData['@graph'] || []) as Church[];
+        // Load churches (remote-first with fallback)
+        const churches = await loadChurches();
         
         if (isMounted) {
           setChurches(churches);

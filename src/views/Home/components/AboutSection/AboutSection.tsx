@@ -1,32 +1,21 @@
 import './AboutSection.css';
 
-const baseUrl = import.meta.env.BASE_URL.endsWith('/')
-  ? import.meta.env.BASE_URL
-  : `${import.meta.env.BASE_URL}/`;
-
-function withBase(path: string): string {
-  return `${baseUrl}${path.startsWith('/') ? path.slice(1) : path}`;
-}
-
 interface TeamMember {
   name: string;
   role: string;
-  photo: string;
-  alt: string;
+  initial: string;
 }
 
 const teamMembers: TeamMember[] = [
   {
     name: 'Gregori Serra Vinogradov',
     role: 'Estudiante de la UIB',
-    photo: withBase('/images/placeholder-1.svg'),
-    alt: 'Foto de Gregori Serra Vinogradov',
+    initial: 'G',
   },
   {
     name: 'Lucas Gastón Panizza de León',
     role: 'Estudiante de la UIB',
-    photo: withBase('/images/placeholder-2.svg'),
-    alt: 'Foto de Lucas Gastón Panizza de León',
+    initial: 'L',
   },
 ];
 
@@ -34,26 +23,31 @@ export function AboutSection() {
   return (
     <section className="about-section" aria-labelledby="about-heading">
       <div className="about-section__container">
-        <h2 id="about-heading" className="about-section__title">
-          ¿Quiénes somos?
-        </h2>
+        <div className="about-section__intro">
+          <p className="about-section__overline">El equipo</p>
+          <h2 id="about-heading" className="about-section__title">
+            ¿Quiénes somos?
+          </h2>
+          <p className="about-section__description">
+            Somos un equipo apasionado por el patrimonio cultural de las Islas Baleares.
+            Nuestro objetivo es acercar la riqueza de la arquitectura en piedra seca
+            a todo el mundo, combinando tradición milenaria con tecnología moderna.
+          </p>
+        </div>
 
         <div className="about-section__grid">
           {teamMembers.map((member) => (
             <div key={member.name} className="about-section__card">
-              {/*
-              <figure className="about-section__card-photo">
-                <img
-                  src={member.photo}
-                  alt={member.alt}
-                  loading="lazy"
-                />
-              </figure>
-              */}
-              <div className="about-section__card-info">
+              <div className="about-section__avatar-wrapper">
+                <div className="about-section__avatar">
+                  <span className="about-section__initial">{member.initial}</span>
+                </div>
+              </div>
+              <div className="about-section__card-body">
                 <h3 className="about-section__card-name">{member.name}</h3>
                 <p className="about-section__card-role">{member.role}</p>
               </div>
+              <div className="about-section__card-accent" />
             </div>
           ))}
         </div>
