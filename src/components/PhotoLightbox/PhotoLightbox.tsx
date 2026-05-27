@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useFocusTrap } from '../../hooks/useFocusTrap';
+import { FaXmark } from 'react-icons/fa6';
 import './PhotoLightbox.css';
 
 interface PhotoLightboxProps {
@@ -66,7 +67,7 @@ export function PhotoLightbox({
           aria-label="Cerrar galería"
           type="button"
         >
-          ✕
+          <FaXmark size={24} />
         </button>
 
         {/* Foto principal */}

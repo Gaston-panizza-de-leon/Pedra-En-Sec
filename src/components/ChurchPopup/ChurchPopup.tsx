@@ -1,5 +1,8 @@
 import type { Church } from '../../types';
+import { FaStar, FaXmark, FaLocationDot, FaPhone, FaEnvelope, FaClock, FaUsers, FaCircleInfo, FaMap, FaGlobe } from 'react-icons/fa6';
 import './ChurchPopup.css';
+
+const ICON_SIZE = 15;
 
 interface ChurchPopupProps {
   church: Church;
@@ -11,7 +14,9 @@ export function ChurchPopup({ church, onClose }: ChurchPopupProps) {
     if (!rating) return null;
     const ratingNum = parseFloat(rating);
     const stars = Math.round(ratingNum);
-    return '⭐'.repeat(Math.min(5, Math.max(0, stars)));
+    return Array.from({ length: Math.min(5, Math.max(0, stars)) }, (_, i) => (
+      <FaStar key={i} size={ICON_SIZE} style={{ color: '#e8a317' }} />
+    ));
   };
 
   const imageUrl = church.image?.[0]?.contentUrl;
@@ -24,7 +29,7 @@ export function ChurchPopup({ church, onClose }: ChurchPopupProps) {
   return (
     <div className="church-popup">
       <button className="church-popup__close" onClick={onClose} aria-label="Cerrar">
-        ✕
+        <FaXmark size={18} />
       </button>
 
       {imageUrl && (
@@ -45,7 +50,7 @@ export function ChurchPopup({ church, onClose }: ChurchPopupProps) {
         <div className="church-popup__info">
           {church.address && (
             <div className="church-popup__info-item">
-              <strong>📍 Ubicación:</strong>
+              <strong><FaLocationDot size={ICON_SIZE} /> Ubicación:</strong>
               <p>
                 {church.address.streetAddress && (
                   <>
@@ -65,30 +70,30 @@ export function ChurchPopup({ church, onClose }: ChurchPopupProps) {
 
           {church.telephone && (
             <div className="church-popup__info-item">
-              <strong>📞 Teléfono:</strong>
+              <strong><FaPhone size={ICON_SIZE} /> Teléfono:</strong>
               <a href={`tel:${church.telephone}`}>{church.telephone}</a>
             </div>
           )}
 
           {church.email && (
             <div className="church-popup__info-item">
-              <strong>✉️ Email:</strong>
+              <strong><FaEnvelope size={ICON_SIZE} /> Email:</strong>
               <a href={`mailto:${church.email}`}>{church.email}</a>
             </div>
           )}
 
           {church.openingHours && (
             <div className="church-popup__info-item">
-              <strong>🕐 Horarios:</strong>
+              <strong><FaClock size={ICON_SIZE} /> Horarios:</strong>
               <p>{church.openingHours}</p>
             </div>
           )}
 
           {rating && (
             <div className="church-popup__info-item">
-              <strong>⭐ Valoración:</strong>
+              <strong><FaStar size={ICON_SIZE} style={{ color: '#e8a317' }} /> Valoración:</strong>
               <p>
-                {getRatingStars(rating)} {rating}
+                {getRatingStars(rating)} <span style={{ verticalAlign: 'middle' }}>{rating}</span>
                 {reviewCount && ` (${reviewCount} reseñas)`}
               </p>
             </div>
@@ -96,14 +101,14 @@ export function ChurchPopup({ church, onClose }: ChurchPopupProps) {
 
           {church.maximumAttendeeCapacity && (
             <div className="church-popup__info-item">
-              <strong>👥 Capacidad:</strong>
+              <strong><FaUsers size={ICON_SIZE} /> Capacidad:</strong>
               <p>{church.maximumAttendeeCapacity} personas</p>
             </div>
           )}
 
           {church.additionalProperty && church.additionalProperty.length > 0 && (
             <div className="church-popup__info-item">
-              <strong>ℹ️ Información adicional:</strong>
+              <strong><FaCircleInfo size={ICON_SIZE} /> Información adicional:</strong>
               <ul className="church-popup__additional-properties">
                 {church.additionalProperty.map((prop, idx) => (
                   <li key={idx}>
@@ -123,7 +128,7 @@ export function ChurchPopup({ church, onClose }: ChurchPopupProps) {
               rel="noopener noreferrer"
               className="church-popup__action-btn church-popup__action-btn--maps"
             >
-              🗺️ Ver en Google Maps
+              <FaMap size={ICON_SIZE} /> Ver en Google Maps
             </a>
           )}
           {church.url && (
@@ -133,7 +138,7 @@ export function ChurchPopup({ church, onClose }: ChurchPopupProps) {
               rel="noopener noreferrer"
               className="church-popup__action-btn church-popup__action-btn--web"
             >
-              🌐 Sitio web
+              <FaGlobe size={ICON_SIZE} /> Sitio web
             </a>
           )}
         </div>

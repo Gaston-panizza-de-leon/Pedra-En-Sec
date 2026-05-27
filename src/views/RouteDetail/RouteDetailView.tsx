@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
 import { MapContainer, TileLayer, Polyline, Marker, Tooltip, useMap } from 'react-leaflet';
+import { FaCircle, FaArrowLeft, FaRulerCombined, FaClock, FaCircleCheck, FaStop, FaHeadphones } from 'react-icons/fa6';
 import '../../utils/leafletSetup';
 import { defaultPoiIcon, churchIcon } from '../../utils/leafletSetup';
 import { useAppStore } from '../../store/useAppStore';
@@ -28,13 +29,14 @@ function MapResizer() {
 }
 
 function difficultyLabel(d: Route['difficulty']) {
+  const iconProps = { size: 14, style: { verticalAlign: 'middle', marginRight: 4 } };
   switch (d) {
     case 'fácil':
-      return '🟢 Fácil';
+      return <span><FaCircle {...iconProps} style={{ ...iconProps.style, color: '#22c55e' }} />Fácil</span>;
     case 'moderada':
-      return '🟡 Moderada';
+      return <span><FaCircle {...iconProps} style={{ ...iconProps.style, color: '#eab308' }} />Moderada</span>;
     case 'difícil':
-      return '🔴 Difícil';
+      return <span><FaCircle {...iconProps} style={{ ...iconProps.style, color: '#ef4444' }} />Difícil</span>;
   }
 }
 
@@ -147,15 +149,15 @@ export function RouteDetailView() {
   return (
     <main className="route-detail-view" id="main-content">
       <button className="route-detail-view__back" onClick={goBack}>
-        ← Volver al mapa
+        <FaArrowLeft style={{ marginRight: 6, verticalAlign: 'middle' }} />Volver al mapa
       </button>
 
       <header className="route-detail-view__header">
         <h1 className="route-detail-view__title">{route.name}</h1>
         <div className="route-detail-view__meta">
           <span>{difficultyLabel(route.difficulty)}</span>
-          <span>📏 {route.distanceKm} km</span>
-          <span>⏱️ {route.durationHours} h</span>
+          <span><FaRulerCombined size={13} style={{ marginRight: 3, verticalAlign: 'middle' }} /> {route.distanceKm} km</span>
+          <span><FaClock size={13} style={{ marginRight: 3, verticalAlign: 'middle' }} /> {route.durationHours} h</span>
         </div>
       </header>
 
@@ -187,7 +189,7 @@ export function RouteDetailView() {
                 const isSelected = selectedPoiIds.has(poi.id);
                 return (
                   <Marker key={poi.id} position={[pos.lat, pos.lng]} icon={defaultPoiIcon} eventHandlers={{ click: () => togglePoi(poi.id) }}>
-                    <Tooltip permanent={isSelected}>{isSelected ? `✅ ${poi.name}` : poi.name}</Tooltip>
+                    <Tooltip permanent={isSelected}>{isSelected ? <><FaCircleCheck size={12} style={{ marginRight: 4, verticalAlign: 'middle' }} />{poi.name}</> : poi.name}</Tooltip>
                   </Marker>
                 );
               })}
@@ -197,7 +199,7 @@ export function RouteDetailView() {
                 const isSelected = selectedPoiIds.has(churchPoi.id);
                 return (
                   <Marker key={churchPoi.id} position={[pos.lat, pos.lng]} icon={churchIcon} eventHandlers={{ click: () => togglePoi(churchPoi.id) }}>
-                    <Tooltip permanent={isSelected}>{isSelected ? `✅ ${churchPoi.name}` : churchPoi.name}</Tooltip>
+                    <Tooltip permanent={isSelected}>{isSelected ? <><FaCircleCheck size={12} style={{ marginRight: 4, verticalAlign: 'middle' }} />{churchPoi.name}</> : churchPoi.name}</Tooltip>
                   </Marker>
                 );
               })}
@@ -385,7 +387,7 @@ export function RouteDetailView() {
             aria-pressed={guidedMode}
             aria-label={guidedMode ? 'Desactivar modo guiado' : 'Activar modo guiado'}
           >
-            {guidedMode ? '⏹ Detener Guía' : '🎧 Iniciar Modo Guiado'}
+            {guidedMode ? <><FaStop size={14} style={{ marginRight: 5 }} />Detener Guía</> : <><FaHeadphones size={14} style={{ marginRight: 5 }} />Iniciar Modo Guiado</>}
           </button>
         </div>
       </div>

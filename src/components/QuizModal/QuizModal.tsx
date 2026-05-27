@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useFocusTrap } from '../../hooks/useFocusTrap';
 import { quizQuestions } from '../../data/quizQuestions';
+import { FaXmark } from 'react-icons/fa6';
 import './QuizModal.css';
 
 interface QuizModalProps {
@@ -115,7 +116,7 @@ export function QuizModal({ isOpen, onClose }: QuizModalProps) {
         onClick={(e) => e.stopPropagation()}
       >
         <button className="quiz-modal__close" onClick={handleClose} aria-label="Cerrar quiz">
-          ✕
+          <FaXmark />
         </button>
 
         <div className="quiz-modal__body">

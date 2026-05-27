@@ -23,7 +23,7 @@ export const defaultPoiIcon = L.icon({
 
 export const churchIcon = L.divIcon({
   className: 'church-marker',
-  html: '<span class="church-marker__icon">⛪</span>',
+  html: '<span class="church-marker__icon">&dagger;</span>',
   iconSize: [32, 32],
   iconAnchor: [16, 16],
   tooltipAnchor: [0, -20],

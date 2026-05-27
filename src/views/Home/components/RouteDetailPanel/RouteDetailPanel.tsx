@@ -6,6 +6,7 @@ import { TTSButton } from '../../../../components/TTSButton/TTSButton';
 import { PoiFavButton } from '../../../../components/PoiFavButton/PoiFavButton';
 import { AudioButton } from '../../../../components/AudioButton/AudioButton';
 import { PhotoLightbox } from '../../../../components/PhotoLightbox/PhotoLightbox';
+import { FaRulerCombined, FaClock, FaLocationDot, FaStop, FaHeadphones } from 'react-icons/fa6';
 import './RouteDetailPanel.css';
 
 const ROUTE_AUDIO: Record<string, string> = {
@@ -81,9 +82,9 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
         >
           {route.difficulty}
         </span>
-        <span>📏 {route.distanceKm} km</span>
-        <span>⏱️ {route.durationHours} h</span>
-        <span>📍 {route.pois.length} puntos de interés</span>
+        <span><FaRulerCombined size={13} style={{ marginRight: 3, verticalAlign: 'middle' }} /> {route.distanceKm} km</span>
+        <span><FaClock size={13} style={{ marginRight: 3, verticalAlign: 'middle' }} /> {route.durationHours} h</span>
+        <span><FaLocationDot size={13} style={{ marginRight: 3, verticalAlign: 'middle' }} /> {route.pois.length} puntos de interés</span>
       </div>
 
       {/* Description */}
@@ -203,7 +204,7 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
                     <div className="route-detail-panel__poi-name">{churchPoi.name}</div>
                     {churchPoi.church?.address?.streetAddress && (
                       <p style={{ fontSize: '13px', color: '#666', margin: '4px 0 0 0' }}>
-                        📍 {churchPoi.church.address.streetAddress}
+                        <FaLocationDot size={11} style={{ marginRight: 3, verticalAlign: 'middle' }} />{churchPoi.church.address.streetAddress}
                       </p>
                     )}
                   </div>
@@ -225,7 +226,7 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
             guidedMode ? 'Desactivar modo guiado' : 'Activar modo guiado'
           }
         >
-          {guidedMode ? '⏹ Detener Guía' : '🎧 Modo Guiado'}
+          {guidedMode ? <><FaStop size={14} style={{ marginRight: 5 }} />Detener Guía</> : <><FaHeadphones size={14} style={{ marginRight: 5 }} />Modo Guiado</>}
         </button>
 
         <button
