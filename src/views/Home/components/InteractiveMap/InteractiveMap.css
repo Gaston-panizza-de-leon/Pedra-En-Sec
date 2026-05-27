@@ -84,7 +84,7 @@
 
 /* Sidebar outside the map, on the right */
 .interactive-map__sidebar {
-  flex: 1 0 250px;
+  flex: 1 0 100px;
 }
 
 @media (max-width: 600px) {

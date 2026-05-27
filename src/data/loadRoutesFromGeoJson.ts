@@ -1,4 +1,4 @@
-import * as turf from '@turf/turf';
+import { lineString, simplify } from '@turf/turf';
 import type { LatLng, PointOfInterest, Route } from '../types';
 
 type Difficulty = Route['difficulty'];
@@ -151,8 +151,8 @@ function simplifySegments(segments: LatLng[][], toleranceMeters: number): LatLng
   return segments.map((segment) => {
     if (segment.length < 3) return segment;
     try {
-      const line = turf.lineString(segment.map((p) => [p.lng, p.lat]));
-      const simplified = turf.simplify(line, { tolerance: toleranceDeg, highQuality: false });
+      const line = lineString(segment.map((p) => [p.lng, p.lat]));
+      const simplified = simplify(line, { tolerance: toleranceDeg, highQuality: false });
       const coords = simplified.geometry.coordinates as [number, number][];
       const mapped = coords.map(([lng, lat]) => ({ lat, lng })).filter(isLatLng);
       return mapped.length >= 2 ? dedupePath(mapped) : segment;

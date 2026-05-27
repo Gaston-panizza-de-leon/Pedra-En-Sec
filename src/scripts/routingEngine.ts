@@ -1,6 +1,6 @@
 import createGraph from 'ngraph.graph';
 import { aStar } from 'ngraph.path';
-import * as turf from '@turf/turf';
+import { point, distance as turfDistance, featureCollection, nearestPoint } from '@turf/turf';
 import type { Feature, Point } from 'geojson';
 import type { LatLng } from '../types';
 
@@ -37,15 +37,15 @@ export function solveHikingTSP(
       if (uId === vId) continue;
 
       if (!processedPoints.has(uId)) {
-        allTrailPoints.push(turf.point([snap(u.lng), snap(u.lat)], { id: uId }));
+        allTrailPoints.push(point([snap(u.lng), snap(u.lat)], { id: uId }));
         processedPoints.add(uId);
       }
       if (!processedPoints.has(vId)) {
-        allTrailPoints.push(turf.point([snap(v.lng), snap(v.lat)], { id: vId }));
+        allTrailPoints.push(point([snap(v.lng), snap(v.lat)], { id: vId }));
         processedPoints.add(vId);
       }
 
-      const dist = turf.distance([u.lng, u.lat], [v.lng, v.lat]);
+      const dist = turfDistance([u.lng, u.lat], [v.lng, v.lat]);
       graph.addLink(uId, vId, { weight: dist });
       graph.addLink(vId, uId, { weight: dist });
     }
@@ -117,7 +117,7 @@ export function solveHikingTSP(
       if (bu !== null && bv !== null) {
         const a = coordCache.get(bu)!;
         const b = coordCache.get(bv)!;
-        const w = turf.distance([a[1], a[0]], [b[1], b[0]]);
+        const w = turfDistance([a[1], a[0]], [b[1], b[0]]);
         graph.addLink(bu, bv, { weight: w });
         graph.addLink(bv, bu, { weight: w });
         for (const cid of comp) {
@@ -130,12 +130,12 @@ export function solveHikingTSP(
     }
   }
 
-  const trailFeatureCollection = turf.featureCollection(allTrailPoints);
+  const trailFeatureCollection = featureCollection(allTrailPoints);
 
   // Encuentra el ID del nodo de la traza más cercano a un POI.
   const snapToTrail = (poi: LatLng): string => {
-    const pt = turf.point([poi.lng, poi.lat]);
-    const nearest = turf.nearestPoint(pt, trailFeatureCollection);
+    const pt = point([poi.lng, poi.lat]);
+    const nearest = nearestPoint(pt, trailFeatureCollection);
     return (nearest.properties as TrailPointProps).id;
   };
 
@@ -147,7 +147,7 @@ export function solveHikingTSP(
     heuristic(from, to) {
       const a = coordsOf(from.id);
       const b = coordsOf(to.id);
-      return turf.distance([a[1], a[0]], [b[1], b[0]]);
+      return turfDistance([a[1], a[0]], [b[1], b[0]]);
     },
   });
 
