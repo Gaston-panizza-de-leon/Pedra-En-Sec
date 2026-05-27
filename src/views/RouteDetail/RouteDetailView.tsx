@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import { MapContainer, TileLayer, Polyline, Marker, Tooltip, CircleMarker, useMap } from 'react-leaflet';
 import { FaCircle, FaArrowLeft, FaRulerCombined, FaClock, FaCircleCheck, FaStop, FaHeadphones } from 'react-icons/fa6';
+import { CHURCH_PLACEHOLDER } from '../../utils/imagePlaceholder';
 import '../../utils/leafletSetup';
 import { defaultPoiIcon, churchIcon } from '../../utils/leafletSetup';
 import { useAppStore } from '../../store/useAppStore';
@@ -370,6 +371,7 @@ export function RouteDetailView() {
                       src={churchPoi.church.image[0].contentUrl}
                       alt={churchPoi.name}
                       loading="lazy"
+                      onError={(e) => { (e.target as HTMLImageElement).src = CHURCH_PLACEHOLDER; }}
                     />
                   )}
                   <div>

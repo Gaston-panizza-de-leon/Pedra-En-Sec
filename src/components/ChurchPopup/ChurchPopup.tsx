@@ -1,5 +1,6 @@
 import type { Church } from '../../types';
 import { FaStar, FaXmark, FaLocationDot, FaPhone, FaEnvelope, FaClock, FaUsers, FaCircleInfo, FaMap, FaGlobe } from 'react-icons/fa6';
+import { CHURCH_PLACEHOLDER } from '../../utils/imagePlaceholder';
 import './ChurchPopup.css';
 
 const ICON_SIZE = 15;
@@ -33,7 +34,7 @@ export function ChurchPopup({ church, onClose }: ChurchPopupProps) {
       </button>
 
       {imageUrl && (
-        <img src={imageUrl} alt={church.name} className="church-popup__image" />
+        <img src={imageUrl} alt={church.name} className="church-popup__image" onError={(e) => { (e.target as HTMLImageElement).src = CHURCH_PLACEHOLDER; }} />
       )}
 
       <div className="church-popup__content">

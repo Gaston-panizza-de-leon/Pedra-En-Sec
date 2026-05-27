@@ -7,6 +7,7 @@ import { PoiFavButton } from '../../../../components/PoiFavButton/PoiFavButton';
 import { AudioButton } from '../../../../components/AudioButton/AudioButton';
 import { PhotoLightbox } from '../../../../components/PhotoLightbox/PhotoLightbox';
 import { FaRulerCombined, FaClock, FaLocationDot, FaStop, FaHeadphones } from 'react-icons/fa6';
+import { CHURCH_PLACEHOLDER } from '../../../../utils/imagePlaceholder';
 import './RouteDetailPanel.css';
 
 const ROUTE_AUDIO: Record<string, string> = {
@@ -197,6 +198,7 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
                     src={churchPoi.church.image[0].contentUrl}
                     alt={churchPoi.name}
                     loading="lazy"
+                    onError={(e) => { (e.target as HTMLImageElement).src = CHURCH_PLACEHOLDER; }}
                   />
                 )}
                 <div>
