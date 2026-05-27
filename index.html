@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Preconexión a los servidores de tiles de OpenStreetMap (acelera el mapa) -->
-    <link rel="preconnect" href="https://a.tile.openstreetmap.org" crossorigin />
-    <link rel="preconnect" href="https://b.tile.openstreetmap.org" crossorigin />
-    <link rel="preconnect" href="https://c.tile.openstreetmap.org" crossorigin />
+
+    <link rel="preconnect" href="https://tile.openstreetmap.org" crossorigin />
+
+    <link rel="preload" href="/data/external/iglesias.json" as="fetch" crossorigin="anonymous" />
     <meta name="description" content="Descubre las rutas de Pedra en Sec en las Islas Baleares. Patrimonio de la Humanidad UNESCO: mapa interactivo, modo guiado con narración y mucho más." />
     <meta name="keywords" content="Pedra en Sec, Baleares, rutas, patrimonio, UNESCO, senderismo, Mallorca, Menorca, Ibiza, Formentera" />
     <meta name="author" content="Pedra en Sec" />
@@ -33,11 +33,6 @@
     <link rel="canonical" href="https://pedraensec.online/" />
 
     <title>Pedra en Sec – Patrimonio de las Islas Baleares</title>
-
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
 
     <!-- Icons (rutas relativas para soportar despliegue en subcarpeta) -->
     <link rel="icon" type="image/svg+xml" href="./hiker.svg" />
