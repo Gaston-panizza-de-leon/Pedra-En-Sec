@@ -1,11 +1,19 @@
+import { lazy, Suspense } from 'react';
 import { Header } from './components/Header/Header';
 import { HomeView } from './views/Home/HomeView';
-import { RouteDetailView } from './views/RouteDetail/RouteDetailView';
 import { QuizModal } from './components/QuizModal/QuizModal';
 import { AuthModal } from './components/AuthModal/AuthModal';
+import { Loader } from './components/Loader/Loader';
 import { useAppStore } from './store/useAppStore';
 import { useGuidedMode } from './hooks/useGuidedMode';
 import './App.css';
+
+// Carga diferida de la vista de detalle (incluye el optimizador de ruta).
+const RouteDetailView = lazy(() =>
+  import('./views/RouteDetail/RouteDetailView').then((m) => ({
+    default: m.RouteDetailView,
+  })),
+);
 
 export default function App() {
   const currentView = useAppStore((s) => s.currentView);
@@ -28,7 +36,11 @@ export default function App() {
 
       <div className="app__content">
         {currentView === 'home' && <HomeView />}
-        {currentView === 'routeDetail' && <RouteDetailView />}
+        {currentView === 'routeDetail' && (
+          <Suspense fallback={<Loader text="Cargando ruta…" />}>
+            <RouteDetailView />
+          </Suspense>
+        )}
       </div>
 
       <footer className="app__footer" role="contentinfo">

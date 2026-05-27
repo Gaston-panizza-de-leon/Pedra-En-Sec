@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, lazy, Suspense } from 'react';
 import { useAppStore } from '../../store/useAppStore';
-import { InteractiveMap } from './components/InteractiveMap/InteractiveMap';
 import { InfoSection } from './components/InfoSection/InfoSection';
 import { AboutSection } from './components/AboutSection/AboutSection';
 import { RouteModal } from '../../components/RouteModal/RouteModal';
@@ -11,6 +10,13 @@ import { loadChurches } from '../../data/loadChurches';
 import type { Route, Church } from '../../types';
 import './HomeView.css';
 import { ChurchPopup } from '../../components/ChurchPopup/ChurchPopup';
+
+// Carga diferida del mapa (Leaflet) para aligerar el bundle inicial de la home.
+const InteractiveMap = lazy(() =>
+  import('./components/InteractiveMap/InteractiveMap').then((m) => ({
+    default: m.InteractiveMap,
+  })),
+);
 
 export function HomeView() {
   const [routes, setRoutes] = useState<Route[]>([]);
@@ -82,7 +88,15 @@ export function HomeView() {
             <p className="home-view__map-error-detail">{routesError}</p>
           </div>
         ) : (
-          <InteractiveMap routes={routes} />
+          <Suspense
+            fallback={
+              <div className="home-view__map-placeholder">
+                <Loader text="Cargando mapa…" />
+              </div>
+            }
+          >
+            <InteractiveMap routes={routes} />
+          </Suspense>
         )}
       </section>
 
