@@ -8,7 +8,7 @@ import { RouteDetailPanel } from './components/RouteDetailPanel/RouteDetailPanel
 import { Loader } from '../../components/Loader/Loader';
 import { loadRoutesFromGeoJson } from '../../data/loadRoutesFromGeoJson';
 import { loadChurches } from '../../data/loadChurches';
-import type { Route } from '../../types';
+import type { Route, Church } from '../../types';
 import './HomeView.css';
 import { ChurchPopup } from '../../components/ChurchPopup/ChurchPopup';
 
@@ -27,29 +27,26 @@ export function HomeView() {
     let isMounted = true;
 
     async function loadData() {
-      try {
-        // Load churches (remote-first with fallback)
-        const churches = await loadChurches();
-        
-        if (isMounted) {
-          setChurches(churches);
+      // Load churches and routes in parallel, each with independent error handling
+      const [churches, routesResult] = await Promise.all([
+        loadChurches().catch(() => [] as Church[]),
+        loadRoutesFromGeoJson().then(
+          (r) => ({ ok: true, routes: r } as const),
+          (error) => ({ ok: false, error: error instanceof Error ? error.message : 'Error cargando datos' } as const),
+        ),
+      ]);
+
+      if (isMounted) {
+        setChurches(churches);
+
+        if (routesResult.ok) {
+          setRoutes(routesResult.routes);
+          setRoutesError(null);
+        } else {
+          setRoutesError(routesResult.error);
         }
 
-        // Load routes
-        const loadedRoutes = await loadRoutesFromGeoJson();
-        if (isMounted) {
-          setRoutes(loadedRoutes);
-          setRoutesError(null);
-        }
-      } catch (error) {
-        if (isMounted) {
-          const message = error instanceof Error ? error.message : 'Error cargando datos';
-          setRoutesError(message);
-        }
-      } finally {
-        if (isMounted) {
-          setIsLoadingRoutes(false);
-        }
+        setIsLoadingRoutes(false);
       }
     }
 
