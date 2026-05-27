@@ -6,19 +6,23 @@
   background: var(--color-surface);
   border: 1px solid var(--color-stone-300);
   border-radius: var(--radius-md);
-  min-width: 250px;
+  width: 100%;
 }
 
 .distance-slider__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-width: 0;
+  gap: 0.3rem;
 }
 
 .distance-slider__label {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--color-text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .distance-slider__value {
@@ -31,18 +35,22 @@
 .distance-slider__control {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.35rem;
+  min-width: 0;
 }
 
 .distance-slider__min,
 .distance-slider__max {
-  font-size: 0.75rem;
+  flex: 0 0 auto;
+  font-size: 0.7rem;
   color: var(--color-text-secondary);
-  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .distance-slider__input {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
   height: 6px;
   appearance: none;
   -webkit-appearance: none;

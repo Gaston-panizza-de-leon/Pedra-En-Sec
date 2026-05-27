@@ -8,7 +8,7 @@ import {
   useMap,
 } from 'react-leaflet';
 import L from 'leaflet';
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
 import { useAppStore } from '../../../../store/useAppStore';
 import { getPoiPosition } from '../../../../hooks/useGuidedMode';
 import { useNearbyChurches } from '../../../../hooks/useNearbyChurches';
@@ -73,6 +73,19 @@ function UserPositionMarker() {
   );
 }
 
+function MapResizer() {
+  const map = useMap();
+  useEffect(() => {
+    const container = map.getContainer();
+    const observer = new ResizeObserver(() => {
+      map.invalidateSize();
+    });
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, [map]);
+  return null;
+}
+
 export function InteractiveMap({ routes }: InteractiveMapProps) {
   const hoveredRouteId = useAppStore((s) => s.hoveredRouteId);
   const setHoveredRouteId = useAppStore((s) => s.setHoveredRouteId);
@@ -98,6 +111,7 @@ export function InteractiveMap({ routes }: InteractiveMapProps) {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+          <MapResizer />
 
           <FlyToRoute route={selectedRoute} />
 

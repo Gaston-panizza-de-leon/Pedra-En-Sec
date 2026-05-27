@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
-import { MapContainer, TileLayer, Polyline, Marker, Tooltip } from 'react-leaflet';
+import { MapContainer, TileLayer, Polyline, Marker, Tooltip, useMap } from 'react-leaflet';
 import '../../utils/leafletSetup';
 import { defaultPoiIcon, churchIcon } from '../../utils/leafletSetup';
 import { useAppStore } from '../../store/useAppStore';
@@ -13,6 +13,19 @@ import { RouteModal } from '../../components/RouteModal/RouteModal';
 import type { Route, LatLng } from '../../types';
 import './RouteDetailView.css';
 import { solveHikingTSP } from '../../scripts/routingEngine';
+
+function MapResizer() {
+  const map = useMap();
+  useEffect(() => {
+    const container = map.getContainer();
+    const observer = new ResizeObserver(() => {
+      map.invalidateSize();
+    });
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, [map]);
+  return null;
+}
 
 function difficultyLabel(d: Route['difficulty']) {
   switch (d) {
@@ -93,7 +106,8 @@ export function RouteDetailView() {
   if (!route) return null;
 
   const handleCalculate = () => {
-    const selectedPois = route.pois.filter((p) => selectedPoiIds.has(p.id));
+    const allPois = [...route.pois, ...nearbyChurches];
+    const selectedPois = allPois.filter((p) => selectedPoiIds.has(p.id));
     if (selectedPois.length < 2) {
       setOptimizerMsg('Selecciona al menos 2 puntos en el mapa.');
       return;
@@ -145,64 +159,8 @@ export function RouteDetailView() {
         </div>
       </header>
 
-      {/* Optimizador de ruta */}
-      <section className="route-optimizer" aria-labelledby="optimizer-title">
-        <div className="route-optimizer__head">
-          <h3 id="optimizer-title" className="route-optimizer__title">
-            Optimizador de Ruta
-          </h3>
-          <span className="route-optimizer__counter">
-            {selectedPoiIds.size} / {route.pois.length} seleccionados
-          </span>
-        </div>
-
-        <p className="route-optimizer__help">
-          Pulsa los marcadores del mapa para elegir los puntos que quieres visitar.
-          Con 2 o más, calcula el orden más corto entre ellos.
-        </p>
-
-        <ul className="route-optimizer__legend">
-          <li className="route-optimizer__legend-item">
-            <span className="route-optimizer__swatch" style={{ background: route.color }} />
-            Ruta original
-          </li>
-          <li className="route-optimizer__legend-item">
-            <span className="route-optimizer__swatch route-optimizer__swatch--opt" />
-            Ruta optimizada
-          </li>
-        </ul>
-
-        <div className="route-optimizer__actions">
-          <button
-            onClick={handleCalculate}
-            disabled={selectedPoiIds.size < 2}
-            className="route-optimizer__btn route-optimizer__btn--primary"
-          >
-            Calcular ruta{selectedPoiIds.size >= 2 ? ` (${selectedPoiIds.size})` : ''}
-          </button>
-          {optimizedPath.length > 0 && (
-            <button
-              onClick={() => {
-                setOptimizedPath([]);
-                setOptimizerMsg('');
-                setSelectedPoiIds(new Set());
-              }}
-              className="route-optimizer__btn route-optimizer__btn--ghost"
-            >
-              Limpiar
-            </button>
-          )}
-        </div>
-
-        {optimizerMsg && (
-          <p role="status" aria-live="polite" className="route-optimizer__msg">
-            {optimizerMsg}
-          </p>
-        )}
-      </section>
-
       {/* Full-width minimap outside content constraints */}
-      <section>
+      <section className="route-detail-view__minimap-section">
         <div className="route-detail-view__minimap-wrapper">
           <div className="route-detail-view__minimap">
             <MapContainer center={center} zoom={13} style={{ width: '100%', height: '100%' }}>
@@ -210,9 +168,10 @@ export function RouteDetailView() {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
+              <MapResizer />
 
               {/* Ruta original */}
-              <Polyline positions={positions} pathOptions={{ color: route.color, weight: 4, opacity: 0.4 }} />
+              <Polyline positions={positions} pathOptions={{ color: route.color, weight: 5, opacity: 1, lineCap: 'round', lineJoin: 'round' }} />
 
               {/* Ruta optimizada */}
               {optimizedPath.length > 0 && (
@@ -235,23 +194,79 @@ export function RouteDetailView() {
               {/* Marcadores de iglesias (distancia dinámica) */}
               {nearbyChurches.map((churchPoi) => {
                 const pos = getPoiPosition(churchPoi);
+                const isSelected = selectedPoiIds.has(churchPoi.id);
                 return (
-                  <Marker key={churchPoi.id} position={[pos.lat, pos.lng]} icon={churchIcon}>
-                    <Tooltip>{churchPoi.name}</Tooltip>
+                  <Marker key={churchPoi.id} position={[pos.lat, pos.lng]} icon={churchIcon} eventHandlers={{ click: () => togglePoi(churchPoi.id) }}>
+                    <Tooltip permanent={isSelected}>{isSelected ? `✅ ${churchPoi.name}` : churchPoi.name}</Tooltip>
                   </Marker>
                 );
               })}
             </MapContainer>
           </div>
-          {nearbyChurches.length > 0 && (
-            <div className="route-detail-view__sidebar">
+          <div className="route-detail-view__sidebar">
+            {nearbyChurches.length > 0 && (
               <DistanceSlider
                 value={churchDistanceKm}
                 onChange={setChurchDistance}
                 churchCount={nearbyChurches.length}
               />
-            </div>
-          )}
+            )}
+            {/* Optimizador de ruta */}
+            <section className="route-optimizer" aria-labelledby="optimizer-title">
+              <div className="route-optimizer__head">
+                <h3 id="optimizer-title" className="route-optimizer__title">
+                  Optimizador de Ruta
+                </h3>
+                <span className="route-optimizer__counter">
+                  {selectedPoiIds.size} / {route.pois.length + nearbyChurches.length} seleccionados
+                </span>
+              </div>
+
+              <p className="route-optimizer__help">
+                Pulsa los marcadores del mapa para elegir los puntos que quieres visitar.
+                Con 2 o más, calcula el orden más corto entre ellos.
+              </p>
+
+              <ul className="route-optimizer__legend">
+                <li className="route-optimizer__legend-item">
+                  <span className="route-optimizer__swatch" style={{ background: route.color }} />
+                  Ruta original
+                </li>
+                <li className="route-optimizer__legend-item">
+                  <span className="route-optimizer__swatch route-optimizer__swatch--opt" />
+                  Ruta optimizada
+                </li>
+              </ul>
+
+              <div className="route-optimizer__actions">
+                <button
+                  onClick={handleCalculate}
+                  disabled={selectedPoiIds.size < 2}
+                  className="route-optimizer__btn route-optimizer__btn--primary"
+                >
+                  Calcular ruta{selectedPoiIds.size >= 2 ? ` (${selectedPoiIds.size})` : ''}
+                </button>
+                {optimizedPath.length > 0 && (
+                  <button
+                    onClick={() => {
+                      setOptimizedPath([]);
+                      setOptimizerMsg('');
+                      setSelectedPoiIds(new Set());
+                    }}
+                    className="route-optimizer__btn route-optimizer__btn--ghost"
+                  >
+                    Limpiar
+                  </button>
+                )}
+              </div>
+
+              {optimizerMsg && (
+                <p role="status" aria-live="polite" className="route-optimizer__msg">
+                  {optimizerMsg}
+                </p>
+              )}
+            </section>
+          </div>
         </div>
       </section>
 
