@@ -13,7 +13,6 @@ export function useTTS() {
       return;
     }
 
-    // Cancel any ongoing speech first
     window.speechSynthesis.cancel();
 
     const utterance = new SpeechSynthesisUtterance(text);

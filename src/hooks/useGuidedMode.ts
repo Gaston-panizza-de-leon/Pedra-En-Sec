@@ -42,8 +42,9 @@ function isPointInPolygon(point: LatLng, polygon: LatLng[]): boolean {
  */
 function isInsideTriggerArea(position: LatLng, poi: PointOfInterest): boolean {
   const area = poi.triggerArea;
+  if (!area) return false; // No trigger area (e.g., church)
   if (area.type === 'circle') {
-    return haversineDistance(position, area.center) <= area.radiusMeters;
+    return haversineDistance(position, area.center) <= area.radiusMeters / 1000; // Convert meters to km
   }
   return isPointInPolygon(position, area.coordinates);
 }
@@ -53,13 +54,18 @@ function isInsideTriggerArea(position: LatLng, poi: PointOfInterest): boolean {
  */
 export function getPoiPosition(poi: PointOfInterest): LatLng {
   const area = poi.triggerArea;
+  if (!area) {
+    if (poi.church?.geo) {
+      return { lat: poi.church.geo.latitude, lng: poi.church.geo.longitude };
+    }
+    return { lat: 0, lng: 0 };
+  }
   if (area.type === 'circle') {
     return area.center;
   }
-  // Centroid of the polygon
   const coords = area.coordinates;
-  const lat = coords.reduce((sum, c) => sum + c.lat, 0) / coords.length;
-  const lng = coords.reduce((sum, c) => sum + c.lng, 0) / coords.length;
+  const lat = coords.reduce((sum: number, c) => sum + c.lat, 0) / coords.length;
+  const lng = coords.reduce((sum: number, c) => sum + c.lng, 0) / coords.length;
   return { lat, lng };
 }
 
@@ -73,13 +79,10 @@ export function useGuidedMode() {
   const selectedRoute = useAppStore((s) => s.selectedRoute);
   const { speak, stop } = useTTS();
 
-  // Track which POIs have already been narrated so we don't repeat
   const narratedIds = useRef<Set<string>>(new Set());
 
-  // Activate geolocation when guided mode is on
   useGeolocation(guidedMode);
 
-  // Reset narrated POIs when route changes or guided mode toggles
   useEffect(() => {
     narratedIds.current.clear();
     if (!guidedMode) {
@@ -87,7 +90,6 @@ export function useGuidedMode() {
     }
   }, [guidedMode, selectedRoute, stop]);
 
-  // Check proximity to POIs
   useEffect(() => {
     if (!guidedMode || !userPosition || !selectedRoute) return;
 
@@ -96,10 +98,10 @@ export function useGuidedMode() {
     for (const poi of pois) {
       if (narratedIds.current.has(poi.id)) continue;
 
-      if (isInsideTriggerArea(userPosition, poi)) {
+      if (poi.narration && isInsideTriggerArea(userPosition, poi)) {
         narratedIds.current.add(poi.id);
-        speak(poi.narration);
-        break; // narrate one at a time
+        speak(poi.narration || '');
+        break;
       }
     }
   }, [guidedMode, userPosition, selectedRoute, speak]);

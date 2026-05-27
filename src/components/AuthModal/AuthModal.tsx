@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useFocusTrap } from '../../hooks/useFocusTrap';
 import { useAuthStore } from '../../store/useAuthStore';
+import { FaXmark } from 'react-icons/fa6';
 import './AuthModal.css';
 
 interface AuthModalProps {
@@ -113,7 +114,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
         onClick={(e) => e.stopPropagation()}
       >
         <button className="auth-modal__close" onClick={onClose} aria-label="Cerrar">
-          ✕
+          <FaXmark />
         </button>
 
         <div className="auth-modal__body">

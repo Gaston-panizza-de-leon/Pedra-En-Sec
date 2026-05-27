@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useFocusTrap } from '../../hooks/useFocusTrap';
-import { quizQuestions } from '../../data/quizQuestions';
+import { loadQuizQuestions, type QuizQuestion } from '../../data/quizQuestions';
+import { FaXmark } from 'react-icons/fa6';
 import './QuizModal.css';
 
 interface QuizModalProps {
@@ -20,26 +21,33 @@ function shuffleArray<T>(array: T[]): T[] {
 
 export function QuizModal({ isOpen, onClose }: QuizModalProps) {
   const modalRef = useRef<HTMLDivElement>(null);
+  const [quizQuestions, setQuizQuestions] = useState<QuizQuestion[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);
   const [score, setScore] = useState(0);
   const [answered, setAnswered] = useState(false);
   const [quizFinished, setQuizFinished] = useState(false);
-  const [shuffledQuestions, setShuffledQuestions] = useState(() =>
-    quizQuestions.map((q) => ({
-      ...q,
-      shuffledOptions: shuffleArray([...q.answerOptions]),
-    })),
-  );
+  const [shuffledQuestions, setShuffledQuestions] = useState<Array<QuizQuestion & { shuffledOptions: QuizQuestion['answerOptions'] }>>([]);
 
   // Atrapa el foco dentro del modal y lo restaura al cerrar.
   useFocusTrap(isOpen, modalRef);
 
+  // Carga preguntas del JSON al abrir el modal
+  useEffect(() => {
+    if (!isOpen || quizQuestions.length > 0) return;
+
+    setIsLoading(true);
+    loadQuizQuestions()
+      .then((questions) => setQuizQuestions(questions))
+      .catch(() => setQuizQuestions([]))
+      .finally(() => setIsLoading(false));
+  }, [isOpen, quizQuestions.length]);
+
   // Re-baraja preguntas al abrir.
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen && quizQuestions.length > 0) {
       const shuffled = shuffleArray(quizQuestions);
-      // eslint-disable-next-line react-hooks/set-state-in-effect
       setShuffledQuestions(
         shuffled.map((q) => ({
           ...q,
@@ -47,7 +55,7 @@ export function QuizModal({ isOpen, onClose }: QuizModalProps) {
         })),
       );
     }
-  }, [isOpen]);
+  }, [isOpen, quizQuestions]);
 
   const currentQuestion = shuffledQuestions[currentQuestionIndex];
 
@@ -103,6 +111,21 @@ export function QuizModal({ isOpen, onClose }: QuizModalProps) {
 
   if (!isOpen) return null;
 
+  if (isLoading || shuffledQuestions.length === 0) {
+    return (
+      <div className="quiz-modal-overlay" onClick={handleClose}>
+        <div ref={modalRef} className="quiz-modal" role="dialog" aria-modal="true" aria-label="Quiz">
+          <button className="quiz-modal__close" onClick={handleClose} aria-label="Cerrar quiz">
+            <FaXmark />
+          </button>
+          <div className="quiz-modal__loading">
+            {isLoading ? 'Cargando preguntas...' : 'No hay preguntas disponibles'}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="quiz-modal-overlay" onClick={handleClose}>
       <div
@@ -115,7 +138,7 @@ export function QuizModal({ isOpen, onClose }: QuizModalProps) {
         onClick={(e) => e.stopPropagation()}
       >
         <button className="quiz-modal__close" onClick={handleClose} aria-label="Cerrar quiz">
-          ✕
+          <FaXmark />
         </button>
 
         <div className="quiz-modal__body">
