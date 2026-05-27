@@ -14,6 +14,19 @@ export function useGeolocation(enabled: boolean) {
       return;
     }
 
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        setUserPosition({
+          lat: pos.coords.latitude,
+          lng: pos.coords.longitude,
+        });
+      },
+      (err) => {
+        console.warn('[Geolocation] request failed:', err.message);
+      },
+      { enableHighAccuracy: true, timeout: 10000 },
+    );
+
     watchId.current = navigator.geolocation.watchPosition(
       (pos) => {
         setUserPosition({

@@ -34,12 +34,15 @@ export function InfoSection() {
           <div className="info-section__row-text">
             <h3 className="info-section__subtitle">Una técnica milenaria</h3>
             <p>
-              La <strong>pedra en sec</strong> (piedra en seco) es una técnica
-              constructiva milenaria que consiste en levantar muros y estructuras
-              apilando piedras sin utilizar ningún tipo de mortero ni argamasa.
-              Cada piedra es seleccionada y encajada con precisión, creando
-              construcciones sorprendentemente resistentes que han perdurado
-              durante siglos.
+              Sus orígenes se remontan a las <strong>primeras sociedades 
+              agrícolas</strong> del Mediterráneo. Esta técnica no nació 
+              de un capricho estético, sino de una necesidad pura y dura: 
+              había que limpiar los terrenos pedregosos para poder cultivar. 
+              Nuestros antepasados aprovecharon esa misma piedra extraída para 
+              levantar lindes, asentar bancales y construir refugios. Es un 
+              ejemplo brillante de <strong>economía circular primitiva
+              </strong> que, paradójicamente, ha demostrado ser más resiliente
+              que muchas construcciones modernas.
             </p>
           </div>
           <figure className="info-section__row-image">

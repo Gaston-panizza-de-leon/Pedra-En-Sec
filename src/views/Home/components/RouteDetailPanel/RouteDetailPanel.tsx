@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import type { Route } from '../../../../types';
 import { useAppStore } from '../../../../store/useAppStore';
+import { useNearbyChurches } from '../../../../hooks/useNearbyChurches';
 import { TTSButton } from '../../../../components/TTSButton/TTSButton';
 import { PoiFavButton } from '../../../../components/PoiFavButton/PoiFavButton';
 import { AudioButton } from '../../../../components/AudioButton/AudioButton';
 import { PhotoLightbox } from '../../../../components/PhotoLightbox/PhotoLightbox';
+import { FaRulerCombined, FaClock, FaLocationDot, FaStop, FaHeadphones } from 'react-icons/fa6';
+import { CHURCH_PLACEHOLDER } from '../../../../utils/imagePlaceholder';
 import './RouteDetailPanel.css';
 
 const ROUTE_AUDIO: Record<string, string> = {
@@ -38,6 +41,9 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
   const selectRoute = useAppStore((s) => s.selectRoute);
   const setView = useAppStore((s) => s.setView);
   const closeDetail = useAppStore((s) => s.closeDetail);
+  const selectChurch = useAppStore((s) => s.selectChurch);
+
+  const nearbyChurches = useNearbyChurches(route);
 
   const handleFullView = () => {
     selectRoute(route);
@@ -77,9 +83,9 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
         >
           {route.difficulty}
         </span>
-        <span>📏 {route.distanceKm} km</span>
-        <span>⏱️ {route.durationHours} h</span>
-        <span>📍 {route.pois.length} puntos de interés</span>
+        <span><FaRulerCombined size={13} style={{ marginRight: 3, verticalAlign: 'middle' }} /> {route.distanceKm} km</span>
+        <span><FaClock size={13} style={{ marginRight: 3, verticalAlign: 'middle' }} /> {route.durationHours} h</span>
+        <span><FaLocationDot size={13} style={{ marginRight: 3, verticalAlign: 'middle' }} /> {route.pois.length} puntos de interés</span>
       </div>
 
       {/* Description */}
@@ -177,8 +183,49 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
         </>
       )}
 
+      {/* Churches (distancia dinámica) */}
+      {nearbyChurches.length > 0 && (
+        <>
+          <h3 className="route-detail-panel__section-title">
+            Iglesias Cercanas
+          </h3>
+          <ul className="route-detail-panel__pois">
+            {nearbyChurches.map((churchPoi) => (
+              <li key={churchPoi.id} className="route-detail-panel__poi">
+                {churchPoi.church?.image?.[0]?.contentUrl && (
+                  <img
+                    className="route-detail-panel__poi-img"
+                    src={churchPoi.church.image[0].contentUrl}
+                    alt={churchPoi.name}
+                    loading="lazy"
+                    onError={(e) => { (e.target as HTMLImageElement).src = CHURCH_PLACEHOLDER; }}
+                  />
+                )}
+                <div>
+                  <div className="route-detail-panel__poi-name">{churchPoi.name}</div>
+                  {churchPoi.church?.address?.streetAddress && (
+                    <p className="route-detail-panel__poi-narration">
+                      <FaLocationDot size={11} style={{ marginRight: 3 }} />
+                      {churchPoi.church.address.streetAddress}
+                    </p>
+                  )}
+                  <button
+                    className="route-detail-panel__church-btn"
+                    onClick={() => selectChurch(churchPoi.church!)}
+                  >
+                    Ver detalles
+                  </button>
+                  <PoiFavButton poiId={churchPoi.id} poiName={churchPoi.name} />
+                </div>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+
       {/* Actions */}
       <div className="route-detail-panel__actions">
+
         <button
           className={`route-detail-panel__guided-btn ${guidedMode ? 'route-detail-panel__guided-btn--active' : ''}`}
           onClick={toggleGuidedMode}
@@ -187,7 +234,7 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
             guidedMode ? 'Desactivar modo guiado' : 'Activar modo guiado'
           }
         >
-          {guidedMode ? '⏹ Detener Guía' : '🎧 Modo Guiado'}
+          {guidedMode ? <><FaStop size={14} style={{ marginRight: 5 }} />Detener Guía</> : <><FaHeadphones size={14} style={{ marginRight: 5 }} />Modo Guiado</>}
         </button>
 
         <button

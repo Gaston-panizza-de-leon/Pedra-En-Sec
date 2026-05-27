@@ -1,13 +1,13 @@
 import { useEffect, type RefObject } from 'react';
 
 /**
- * Atrapa el foco dentro de `containerRef` mientras `active` es true:
- * - guarda el elemento que tenía el foco al abrir,
- * - mueve el foco al primer elemento focusable (o al contenedor),
- * - cicla Tab / Shift+Tab dentro del contenedor,
- * - restaura el foco al cerrar o desmontar.
+ * Traps focus within `containerRef` while `active` is true:
+ * - saves the element that had focus upon opening,
+ * - moves focus to the first focusable element (or to the container),
+ * - cycles Tab / Shift+Tab within the container,
+ * - restores focus upon closing or unmounting.
  *
- * El contenedor debe ser focusable (tabIndex={-1}).
+ * The container must be focusable (tabIndex={-1}).
  */
 const FOCUSABLE_SELECTOR =
   'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
@@ -28,7 +28,6 @@ export function useFocusTrap(
         container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR),
       ).filter((el) => el.offsetParent !== null);
 
-    // Foco inicial
     const focusables = getFocusable();
     (focusables[0] ?? container).focus();
 
@@ -59,7 +58,6 @@ export function useFocusTrap(
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      // Restaura el foco al elemento que abrió el modal
       previouslyFocused?.focus?.();
     };
   }, [active, containerRef]);

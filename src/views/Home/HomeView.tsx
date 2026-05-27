@@ -7,8 +7,10 @@ import { RouteModal } from '../../components/RouteModal/RouteModal';
 import { RouteDetailPanel } from './components/RouteDetailPanel/RouteDetailPanel';
 import { Loader } from '../../components/Loader/Loader';
 import { loadRoutesFromGeoJson } from '../../data/loadRoutesFromGeoJson';
+import { loadChurches } from '../../data/loadChurches';
 import type { Route } from '../../types';
 import './HomeView.css';
+import { ChurchPopup } from '../../components/ChurchPopup/ChurchPopup';
 
 export function HomeView() {
   const [routes, setRoutes] = useState<Route[]>([]);
@@ -17,25 +19,41 @@ export function HomeView() {
   const isDetailOpen = useAppStore((s) => s.isDetailOpen);
   const closeDetail = useAppStore((s) => s.closeDetail);
   const selectedRoute = useAppStore((s) => s.selectedRoute);
+  const setChurches = useAppStore((s) => s.setChurches);
+  const selectedChurch = useAppStore((s) => s.selectedChurch);
+  const clearSelectedChurch = useAppStore((s) => s.clearSelectedChurch);
 
   useEffect(() => {
     let isMounted = true;
 
-    loadRoutesFromGeoJson()
-      .then((loadedRoutes) => {
-        if (!isMounted) return;
-        setRoutes(loadedRoutes);
-        setRoutesError(null);
-      })
-      .catch((error) => {
-        if (!isMounted) return;
-        const message = error instanceof Error ? error.message : 'Error cargando rutas';
-        setRoutesError(message);
-      })
-      .finally(() => {
-        if (!isMounted) return;
-        setIsLoadingRoutes(false);
-      });
+    async function loadData() {
+      try {
+        // Load churches (remote-first with fallback)
+        const churches = await loadChurches();
+        
+        if (isMounted) {
+          setChurches(churches);
+        }
+
+        // Load routes
+        const loadedRoutes = await loadRoutesFromGeoJson();
+        if (isMounted) {
+          setRoutes(loadedRoutes);
+          setRoutesError(null);
+        }
+      } catch (error) {
+        if (isMounted) {
+          const message = error instanceof Error ? error.message : 'Error cargando datos';
+          setRoutesError(message);
+        }
+      } finally {
+        if (isMounted) {
+          setIsLoadingRoutes(false);
+        }
+      }
+    }
+
+    loadData();
 
     return () => {
       isMounted = false;
@@ -89,6 +107,17 @@ export function HomeView() {
       >
         {selectedRoute && <RouteDetailPanel route={selectedRoute} />}
       </RouteModal>
+
+          {/* Church detail modal (opens on church marker click) */}
+          {selectedChurch && (
+            <RouteModal
+              isOpen={!!selectedChurch}
+              onClose={clearSelectedChurch}
+              ariaLabel={`Detalles de ${selectedChurch.name}`}
+            >
+              <ChurchPopup church={selectedChurch} onClose={clearSelectedChurch} />
+            </RouteModal>
+          )}
     </main>
   );
 }

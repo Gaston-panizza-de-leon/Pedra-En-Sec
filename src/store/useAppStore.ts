@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import type { Route, ViewName, LatLng } from '../types';
+import type { Route, ViewName, LatLng, Church } from '../types';
 
 interface AppState {
   /* ── Navigation ──────────────────────── */
@@ -36,7 +36,17 @@ interface AppState {
   /* ── Auth modal ──────────────────────── */
   isAuthOpen: boolean;
   openAuth: () => void;
-  closeAuth: () => void;}
+  closeAuth: () => void;
+
+  /* ── Churches ────────────────────────── */
+  churches: Church[];
+  setChurches: (churches: Church[]) => void;
+  selectedChurch: Church | null;
+  selectChurch: (church: Church) => void;
+  clearSelectedChurch: () => void;
+  churchDistanceKm: number;
+  setChurchDistance: (km: number) => void;
+}
 
 export const useAppStore = create<AppState>((set) => ({
   /* Navigation */
@@ -76,4 +86,13 @@ export const useAppStore = create<AppState>((set) => ({
   isAuthOpen: false,
   openAuth: () => set({ isAuthOpen: true }),
   closeAuth: () => set({ isAuthOpen: false }),
+
+  /* Churches */
+  churches: [],
+  setChurches: (churches) => set({ churches }),
+  selectedChurch: null,
+  selectChurch: (church) => set({ selectedChurch: church }),
+  clearSelectedChurch: () => set({ selectedChurch: null }),
+  churchDistanceKm: 1,
+  setChurchDistance: (km) => set({ churchDistanceKm: km }),
 }));
