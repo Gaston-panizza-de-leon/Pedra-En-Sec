@@ -1,4 +1,4 @@
-import * as turf from '@turf/turf';
+import { distance as turfDistance } from '@turf/turf';
 import createGraph from 'ngraph.graph';
 import { aStar } from 'ngraph.path';
 import type { RouteResult, TrailGraph } from '../types/routing';
@@ -12,7 +12,7 @@ function calculatePathDistance(path: Array<{ id: string }>): number {
   for (let index = 0; index < path.length - 1; index++) {
     const from = path[index].id.split(',').map(Number) as [number, number];
     const to = path[index + 1].id.split(',').map(Number) as [number, number];
-    distance += turf.distance(from, to);
+    distance += turfDistance(from, to);
   }
 
   return distance;
@@ -40,7 +40,7 @@ export const calculateOptimalHikingRoute = (
     heuristic(fromNode, toNode) {
       const from = fromNode.id.toString().split(',').map(Number) as [number, number];
       const to = toNode.id.toString().split(',').map(Number) as [number, number];
-      return turf.distance(from, to);
+      return turfDistance(from, to);
     },
   });
 
