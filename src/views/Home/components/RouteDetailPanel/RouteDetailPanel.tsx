@@ -188,27 +188,33 @@ export function RouteDetailPanel({ route }: RouteDetailPanelProps) {
           <h3 className="route-detail-panel__section-title">
             Iglesias Cercanas
           </h3>
-          <ul className="route-detail-panel__poi-list" role="list">
+          <ul className="route-detail-panel__pois">
             {nearbyChurches.map((churchPoi) => (
-              <li
-                key={churchPoi.id}
-                className="route-detail-panel__poi-item"
-                role="listitem"
-              >
-                <button
-                  className="route-detail-panel__church-button"
-                  onClick={() => selectChurch(churchPoi.church!)}
-                  style={{ width: '100%', textAlign: 'left', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
-                >
-                  <div>
-                    <div className="route-detail-panel__poi-name">{churchPoi.name}</div>
-                    {churchPoi.church?.address?.streetAddress && (
-                      <p style={{ fontSize: '13px', color: '#666', margin: '4px 0 0 0' }}>
-                        <FaLocationDot size={11} style={{ marginRight: 3, verticalAlign: 'middle' }} />{churchPoi.church.address.streetAddress}
-                      </p>
-                    )}
-                  </div>
-                </button>
+              <li key={churchPoi.id} className="route-detail-panel__poi">
+                {churchPoi.church?.image?.[0]?.contentUrl && (
+                  <img
+                    className="route-detail-panel__poi-img"
+                    src={churchPoi.church.image[0].contentUrl}
+                    alt={churchPoi.name}
+                    loading="lazy"
+                  />
+                )}
+                <div>
+                  <div className="route-detail-panel__poi-name">{churchPoi.name}</div>
+                  {churchPoi.church?.address?.streetAddress && (
+                    <p className="route-detail-panel__poi-narration">
+                      <FaLocationDot size={11} style={{ marginRight: 3 }} />
+                      {churchPoi.church.address.streetAddress}
+                    </p>
+                  )}
+                  <button
+                    className="route-detail-panel__church-btn"
+                    onClick={() => selectChurch(churchPoi.church!)}
+                  >
+                    Ver detalles
+                  </button>
+                  <PoiFavButton poiId={churchPoi.id} poiName={churchPoi.name} />
+                </div>
               </li>
             ))}
           </ul>

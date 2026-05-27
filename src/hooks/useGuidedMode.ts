@@ -55,17 +55,14 @@ function isInsideTriggerArea(position: LatLng, poi: PointOfInterest): boolean {
 export function getPoiPosition(poi: PointOfInterest): LatLng {
   const area = poi.triggerArea;
   if (!area) {
-    // For churches without trigger area, use church geo if available
     if (poi.church?.geo) {
       return { lat: poi.church.geo.latitude, lng: poi.church.geo.longitude };
     }
-    // Fallback to default position
     return { lat: 0, lng: 0 };
   }
   if (area.type === 'circle') {
     return area.center;
   }
-  // Centroid of the polygon
   const coords = area.coordinates;
   const lat = coords.reduce((sum: number, c) => sum + c.lat, 0) / coords.length;
   const lng = coords.reduce((sum: number, c) => sum + c.lng, 0) / coords.length;
@@ -82,13 +79,10 @@ export function useGuidedMode() {
   const selectedRoute = useAppStore((s) => s.selectedRoute);
   const { speak, stop } = useTTS();
 
-  // Track which POIs have already been narrated so we don't repeat
   const narratedIds = useRef<Set<string>>(new Set());
 
-  // Activate geolocation when guided mode is on
   useGeolocation(guidedMode);
 
-  // Reset narrated POIs when route changes or guided mode toggles
   useEffect(() => {
     narratedIds.current.clear();
     if (!guidedMode) {
@@ -96,7 +90,6 @@ export function useGuidedMode() {
     }
   }, [guidedMode, selectedRoute, stop]);
 
-  // Check proximity to POIs
   useEffect(() => {
     if (!guidedMode || !userPosition || !selectedRoute) return;
 
@@ -105,11 +98,10 @@ export function useGuidedMode() {
     for (const poi of pois) {
       if (narratedIds.current.has(poi.id)) continue;
 
-      // Only process POIs with narration (skip churches which don't have audio)
       if (poi.narration && isInsideTriggerArea(userPosition, poi)) {
         narratedIds.current.add(poi.id);
         speak(poi.narration || '');
-        break; // narrate one at a time
+        break;
       }
     }
   }, [guidedMode, userPosition, selectedRoute, speak]);

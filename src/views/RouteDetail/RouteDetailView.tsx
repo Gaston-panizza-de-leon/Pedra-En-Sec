@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
-import { MapContainer, TileLayer, Polyline, Marker, Tooltip, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, Polyline, Marker, Tooltip, CircleMarker, useMap } from 'react-leaflet';
 import { FaCircle, FaArrowLeft, FaRulerCombined, FaClock, FaCircleCheck, FaStop, FaHeadphones } from 'react-icons/fa6';
 import '../../utils/leafletSetup';
 import { defaultPoiIcon, churchIcon } from '../../utils/leafletSetup';
@@ -26,6 +26,18 @@ function MapResizer() {
     return () => observer.disconnect();
   }, [map]);
   return null;
+}
+
+function UserPositionMarker() {
+  const pos = useAppStore((s) => s.userPosition);
+  if (!pos) return null;
+  return (
+    <CircleMarker
+      center={[pos.lat, pos.lng]}
+      radius={8}
+      pathOptions={{ fillColor: '#3b82f6', fillOpacity: 1, color: '#fff', weight: 3 }}
+    />
+  );
 }
 
 function difficultyLabel(d: Route['difficulty']) {
@@ -171,6 +183,7 @@ export function RouteDetailView() {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
               <MapResizer />
+              {guidedMode && <UserPositionMarker />}
 
               {/* Ruta original */}
               <Polyline positions={positions} pathOptions={{ color: route.color, weight: 5, opacity: 1, lineCap: 'round', lineJoin: 'round' }} />

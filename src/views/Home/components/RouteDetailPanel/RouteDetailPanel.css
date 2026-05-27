@@ -117,6 +117,11 @@
   border-left: 3px solid var(--color-green-700);
 }
 
+.route-detail-panel__poi > div {
+  flex: 1;
+  min-width: 0;
+}
+
 .route-detail-panel__poi-img {
   width: 60px;
   height: 60px;
@@ -200,4 +205,25 @@
 .route-detail-panel__fullview-btn:focus-visible {
   background: var(--color-green-700);
   color: var(--color-white);
+}
+
+.route-detail-panel__church-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.55rem;
+  margin-top: 0.3rem;
+  border: 1px solid var(--color-stone-300);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-green-700);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.route-detail-panel__church-btn:hover,
+.route-detail-panel__church-btn:focus-visible {
+  background: var(--color-stone-200);
 }
