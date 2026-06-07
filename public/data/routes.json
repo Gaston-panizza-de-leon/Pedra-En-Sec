@@ -1,5 +1,7 @@
 [
   {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
     "id": "ruta-pedra-sec-mallorca",
     "name": "Ruta de Pedra en Sec - Mallorca",
     "shortDescription": "La mítica ruta GR 221 de 185 km a través de la Serra de Tramuntana, sumergiéndose en la arquitectura de piedra seca milenaria de Mallorca.",
@@ -11,6 +13,7 @@
     "simplificationToleranceMeters": 35,
     "pois": [
       {
+        "@type": "TouristAttraction",
         "id": "poi-gr221-valldemossa-center",
         "name": "Cartuja de Valldemossa",
         "triggerArea": {
@@ -25,6 +28,7 @@
         "image": "/images/cartuja.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-gr221-cami-arxiduc",
         "name": "Camí de s'Arxiduc",
         "triggerArea": {
@@ -39,6 +43,7 @@
         "image": "/images/camiarxiduc.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-gr221-deia",
         "name": "Deià - Es Clot",
         "triggerArea": {
@@ -53,6 +58,7 @@
         "image": "/images/esclot.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-gr221-muleta",
         "name": "Refugi de Muleta",
         "triggerArea": {
@@ -67,6 +73,7 @@
         "image": "/images/refugidemuleta.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-gr221-soller",
         "name": "Port de Sóller",
         "triggerArea": {
@@ -81,6 +88,7 @@
         "image": "/images/portdesoller.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-gr221-sant-elm",
         "name": "Sant Elm - La Trapa",
         "triggerArea": {
@@ -95,6 +103,7 @@
         "image": "/images/santelm.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-gr221-estellencs",
         "name": "Estellencs",
         "triggerArea": {
@@ -109,6 +118,7 @@
         "image": "/images/estellencs.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-gr221-banyalbufar",
         "name": "Banyalbufar - Ses Animes",
         "triggerArea": {
@@ -123,6 +133,7 @@
         "image": "/images/sesanimes.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-gr221-galilea",
         "name": "Galilea",
         "triggerArea": {
@@ -137,6 +148,7 @@
         "image": "/images/galilea.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-gr221-lluc",
         "name": "Santuari de Lluc",
         "triggerArea": {
@@ -151,6 +163,7 @@
         "image": "/images/santuaridelluc.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-gr221-pollenca",
         "name": "Pollença - Pont Romà",
         "triggerArea": {
@@ -187,6 +200,8 @@
     "color": "#4a7c59"
   },
   {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
     "id": "ruta-cami-cavalls-menorca",
     "name": "Camí de Cavalls - Menorca",
     "shortDescription": "Recorrido circular costero de 185 km alrededor de Menorca, el histórico camino de caballos que une calas paradisíacas con patrimonio de piedra seca.",
@@ -198,6 +213,7 @@
     "simplificationToleranceMeters": 30,
     "pois": [
       {
+        "@type": "TouristAttraction",
         "id": "poi-menorca-1",
         "name": "Tramo histórico del Camí de Cavalls",
         "triggerArea": {
@@ -212,6 +228,7 @@
         "image": "/images/cami-cavalls.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-menorca-2",
         "name": "Ciutadella",
         "triggerArea": {
@@ -226,6 +243,7 @@
         "image": "/images/ciutadella.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-menorca-3",
         "name": "Son Bou",
         "triggerArea": {
@@ -240,6 +258,7 @@
         "image": "/images/son-bou.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-menorca-4",
         "name": "Punta Prima",
         "triggerArea": {
@@ -254,6 +273,7 @@
         "image": "/images/punta-prima.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-menorca-5",
         "name": "Arenal d'en Castell",
         "triggerArea": {
@@ -279,6 +299,8 @@
     "color": "#3f7c85"
   },
   {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
     "id": "ruta-sa-pujada-ibiza",
     "name": "Camí de sa Pujada - Ibiza",
     "shortDescription": "Una ruta de 22 km que cubre los trazados históricos de Ibiza, combinando senderos rurales auténticos con impresionantes perspectivas del Mediterráneo.",
@@ -290,6 +312,7 @@
     "simplificationToleranceMeters": 25,
     "pois": [
       {
+        "@type": "TouristAttraction",
         "id": "poi-ibiza-1",
         "name": "Inicio de Camí de sa Pujada",
         "triggerArea": {
@@ -304,6 +327,7 @@
         "image": "/images/cami-sa-pujada.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-ibiza-2",
         "name": "Riu de Santa Eulària",
         "triggerArea": {
@@ -318,6 +342,7 @@
         "image": "/images/riu-santa-eularia.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-ibiza-3",
         "name": "Mirador de sa Pujada",
         "triggerArea": {
@@ -332,6 +357,7 @@
         "image": "/images/mirador-sa-pujada.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-ibiza-4",
         "name": "Es Canar",
         "triggerArea": {
@@ -346,6 +372,7 @@
         "image": "/images/es-canar.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-ibiza-5",
         "name": "Sant Carles de Peralta",
         "triggerArea": {
@@ -371,6 +398,8 @@
     "color": "#d17a22"
   },
   {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
     "id": "ruta-cami-pujada-formentera",
     "name": "Camí de sa Pujada - Formentera",
     "shortDescription": "Una joya de 12 km en la isla más pequeña y meridional, explorando caminos tradicionales entre acantilados y paisajes de una belleza virgen.",
@@ -382,6 +411,7 @@
     "simplificationToleranceMeters": 18,
     "pois": [
       {
+        "@type": "TouristAttraction",
         "id": "poi-formentera-1",
         "name": "Mirador de La Mola",
         "triggerArea": {
@@ -396,6 +426,7 @@
         "image": "/images/mirador-la-mola.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-formentera-2",
         "name": "El Pilar de la Mola",
         "triggerArea": {
@@ -410,6 +441,7 @@
         "image": "/images/pilar-la-mola.webp"
       },
       {
+        "@type": "TouristAttraction",
         "id": "poi-formentera-3",
         "name": "Far de la Mola",
         "triggerArea": {
