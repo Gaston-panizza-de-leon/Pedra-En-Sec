@@ -1,6 +1,13 @@
 [
   {
-    "@context": "https://schema.org",
+    "@context": {
+      "@vocab": "https://schema.org/",
+      "question": "name",
+      "answerOptions": { "@id": "suggestedAnswer", "@container": "@set" },
+      "text": "text",
+      "rationale": "answerExplanation",
+      "isCorrect": "additionalProperty"
+    },
     "@type": "Question",
     "question": "¿En qué año fue declarada la técnica de la 'pedra en sec' como Patrimonio Cultural Inmaterial de la Humanidad por la UNESCO?",
     "answerOptions": [
@@ -11,7 +18,14 @@
     ]
   },
   {
-    "@context": "https://schema.org",
+    "@context": {
+      "@vocab": "https://schema.org/",
+      "question": "name",
+      "answerOptions": { "@id": "suggestedAnswer", "@container": "@set" },
+      "text": "text",
+      "rationale": "answerExplanation",
+      "isCorrect": "additionalProperty"
+    },
     "@type": "Question",
     "question": "¿Cuál es la principal característica técnica de la construcción en 'pedra en sec'?",
     "answerOptions": [
@@ -22,7 +36,14 @@
     ]
   },
   {
-    "@context": "https://schema.org",
+    "@context": {
+      "@vocab": "https://schema.org/",
+      "question": "name",
+      "answerOptions": { "@id": "suggestedAnswer", "@container": "@set" },
+      "text": "text",
+      "rationale": "answerExplanation",
+      "isCorrect": "additionalProperty"
+    },
     "@type": "Question",
     "question": "¿Cómo se llama tradicionalmente al oficio de la persona experta en construir muros de piedra seca?",
     "answerOptions": [
@@ -33,7 +54,14 @@
     ]
   },
   {
-    "@context": "https://schema.org",
+    "@context": {
+      "@vocab": "https://schema.org/",
+      "question": "name",
+      "answerOptions": { "@id": "suggestedAnswer", "@container": "@set" },
+      "text": "text",
+      "rationale": "answerExplanation",
+      "isCorrect": "additionalProperty"
+    },
     "@type": "Question",
     "question": "La ruta GR 221 en Mallorca empieza en Andratx y termina en:",
     "answerOptions": [
@@ -44,7 +72,14 @@
     ]
   },
   {
-    "@context": "https://schema.org",
+    "@context": {
+      "@vocab": "https://schema.org/",
+      "question": "name",
+      "answerOptions": { "@id": "suggestedAnswer", "@container": "@set" },
+      "text": "text",
+      "rationale": "answerExplanation",
+      "isCorrect": "additionalProperty"
+    },
     "@type": "Question",
     "question": "¿Cuál era la función original del Camí de Cavalls (Menorca) en el siglo XIV?",
     "answerOptions": [
@@ -55,7 +90,14 @@
     ]
   },
   {
-    "@context": "https://schema.org",
+    "@context": {
+      "@vocab": "https://schema.org/",
+      "question": "name",
+      "answerOptions": { "@id": "suggestedAnswer", "@container": "@set" },
+      "text": "text",
+      "rationale": "answerExplanation",
+      "isCorrect": "additionalProperty"
+    },
     "@type": "Question",
     "question": "¿Cuál es la longitud total aproximada del Camí de Cavalls (GR 223)?",
     "answerOptions": [
@@ -66,7 +108,14 @@
     ]
   },
   {
-    "@context": "https://schema.org",
+    "@context": {
+      "@vocab": "https://schema.org/",
+      "question": "name",
+      "answerOptions": { "@id": "suggestedAnswer", "@container": "@set" },
+      "text": "text",
+      "rationale": "answerExplanation",
+      "isCorrect": "additionalProperty"
+    },
     "@type": "Question",
     "question": "El 'Camí de sa Pujada' en Formentera/Ibiza es conocido popularmente como:",
     "answerOptions": [
@@ -77,7 +126,14 @@
     ]
   },
   {
-    "@context": "https://schema.org",
+    "@context": {
+      "@vocab": "https://schema.org/",
+      "question": "name",
+      "answerOptions": { "@id": "suggestedAnswer", "@container": "@set" },
+      "text": "text",
+      "rationale": "answerExplanation",
+      "isCorrect": "additionalProperty"
+    },
     "@type": "Question",
     "question": "¿Qué municipio mallorquín es famoso por sus bancales de piedra seca que caen al mar?",
     "answerOptions": [
@@ -88,7 +144,14 @@
     ]
   },
   {
-    "@context": "https://schema.org",
+    "@context": {
+      "@vocab": "https://schema.org/",
+      "question": "name",
+      "answerOptions": { "@id": "suggestedAnswer", "@container": "@set" },
+      "text": "text",
+      "rationale": "answerExplanation",
+      "isCorrect": "additionalProperty"
+    },
     "@type": "Question",
     "question": "¿Qué famoso compositor pasó un invierno en la Cartuja de Valldemossa (GR 221)?",
     "answerOptions": [
@@ -99,7 +162,14 @@
     ]
   },
   {
-    "@context": "https://schema.org",
+    "@context": {
+      "@vocab": "https://schema.org/",
+      "question": "name",
+      "answerOptions": { "@id": "suggestedAnswer", "@container": "@set" },
+      "text": "text",
+      "rationale": "answerExplanation",
+      "isCorrect": "additionalProperty"
+    },
     "@type": "Question",
     "question": "¿Qué elemento de piedra seca se utiliza para almacenar agua de lluvia?",
     "answerOptions": [
@@ -110,7 +180,14 @@
     ]
   },
   {
-    "@context": "https://schema.org",
+    "@context": {
+      "@vocab": "https://schema.org/",
+      "question": "name",
+      "answerOptions": { "@id": "suggestedAnswer", "@container": "@set" },
+      "text": "text",
+      "rationale": "answerExplanation",
+      "isCorrect": "additionalProperty"
+    },
     "@type": "Question",
     "question": "¿Qué indican los 'fites' (hitos) amontonados en las rutas de montaña?",
     "answerOptions": [
@@ -121,7 +198,14 @@
     ]
   },
   {
-    "@context": "https://schema.org",
+    "@context": {
+      "@vocab": "https://schema.org/",
+      "question": "name",
+      "answerOptions": { "@id": "suggestedAnswer", "@container": "@set" },
+      "text": "text",
+      "rationale": "answerExplanation",
+      "isCorrect": "additionalProperty"
+    },
     "@type": "Question",
     "question": "¿Qué escritor vivió en Deià (Ruta GR 221) y está enterrado allí?",
     "answerOptions": [
@@ -132,7 +216,14 @@
     ]
   },
   {
-    "@context": "https://schema.org",
+    "@context": {
+      "@vocab": "https://schema.org/",
+      "question": "name",
+      "answerOptions": { "@id": "suggestedAnswer", "@container": "@set" },
+      "text": "text",
+      "rationale": "answerExplanation",
+      "isCorrect": "additionalProperty"
+    },
     "@type": "Question",
     "question": "¿De qué madera se fabrican las puertas tradicionales ('barreres') en los muros de Menorca?",
     "answerOptions": [
@@ -143,7 +234,14 @@
     ]
   },
   {
-    "@context": "https://schema.org",
+    "@context": {
+      "@vocab": "https://schema.org/",
+      "question": "name",
+      "answerOptions": { "@id": "suggestedAnswer", "@container": "@set" },
+      "text": "text",
+      "rationale": "answerExplanation",
+      "isCorrect": "additionalProperty"
+    },
     "@type": "Question",
     "question": "¿En qué municipio empieza oficialmente el kilómetro 0 del Camí de Cavalls?",
     "answerOptions": [
@@ -154,7 +252,14 @@
     ]
   },
   {
-    "@context": "https://schema.org",
+    "@context": {
+      "@vocab": "https://schema.org/",
+      "question": "name",
+      "answerOptions": { "@id": "suggestedAnswer", "@container": "@set" },
+      "text": "text",
+      "rationale": "answerExplanation",
+      "isCorrect": "additionalProperty"
+    },
     "@type": "Question",
     "question": "¿Cuál es el objetivo principal de los bancales en la Serra de Tramuntana?",
     "answerOptions": [
